@@ -1,0 +1,146 @@
+[gd_scene load_steps=8 format=3 uid="uid://cqnxumy0afnoj"]
+
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_5vum0"]
+[ext_resource type="PackedScene" uid="uid://dn8nowr0u4ash" path="res://scenes/player.tscn" id="1_wtgoj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gl8y7"]
+bg_color = Color(0.165656, 0.165656, 0.165656, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n4pil"]
+bg_color = Color(0, 0.716494, 0.392681, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_adm0c"]
+bg_color = Color(8.66354e-07, 0.68451, 0.701369, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o87ok"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Curve2D" id="Curve2D_gon1p"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -269, -184, 0, 0, 0, 0, 1206, -195, 0, 0, 0, 0, 1331, -190, 0, 0, 0, 0, 1326, 786, 0, 0, 0, 0, -271, 745, 0, 0, 0, 0, -269, -182)
+}
+point_count = 6
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_5vum0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -99
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+z_index = 1
+offset_top = -14.0
+offset_right = 1155.0
+offset_bottom = 634.0
+
+[node name="HealthBar" type="ProgressBar" parent="CanvasLayer"]
+unique_name_in_owner = true
+z_index = 1
+offset_left = 13.0
+offset_top = 4.0
+offset_right = 252.0
+offset_bottom = 25.0
+theme_override_styles/background = SubResource("StyleBoxFlat_gl8y7")
+theme_override_styles/fill = SubResource("StyleBoxFlat_n4pil")
+value = 100.0
+show_percentage = false
+
+[node name="ExperienceBar" type="ProgressBar" parent="CanvasLayer"]
+unique_name_in_owner = true
+z_index = 1
+offset_left = 17.0
+offset_top = 28.0
+offset_right = 247.0
+offset_bottom = 51.0
+theme_override_styles/background = SubResource("StyleBoxFlat_adm0c")
+theme_override_styles/fill = SubResource("StyleBoxFlat_o87ok")
+
+[node name="StopWatch" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+z_index = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="Player" parent="." instance=ExtResource("1_wtgoj")]
+position = Vector2(589, 328)
+
+[node name="Path2D" type="Path2D" parent="Player"]
+position = Vector2(-589, -328)
+curve = SubResource("Curve2D_gon1p")
+
+[node name="EnemySpawn" type="PathFollow2D" parent="Player/Path2D"]
+unique_name_in_owner = true
+position = Vector2(-269, -184)
+rotation = -0.00745749
+
+[node name="SpawnerTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.5
+autostart = true
+
+[node name="GameTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 1.5
+autostart = true
+
+[node name="GameOver" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -246.0
+offset_top = -161.0
+offset_right = 246.0
+offset_bottom = 161.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.568627)
+
+[node name="Label" type="Label" parent="GameOver/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -11.5
+offset_right = 43.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Game Over"
+
+[connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
+[connection signal="timeout" from="SpawnerTimer" to="." method="_on_spawner_timer_timeout"]
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]

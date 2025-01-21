@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://dn8nowr0u4ash"]
+
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_lsixj"]
+[ext_resource type="Texture2D" uid="uid://dm5ywmsbww3nk" path="res://icon.svg" id="1_vwv2d"]
+[ext_resource type="PackedScene" uid="uid://cguppbyxny434" path="res://scenes/gun.tscn" id="3_3ckr0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xlpw5"]
+size = Vector2(64, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ccvhh"]
+radius = 37.0
+
+[node name="Player" type="CharacterBody2D"]
+platform_floor_layers = 0
+script = ExtResource("1_lsixj")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_vwv2d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xlpw5")
+
+[node name="Gun" parent="." instance=ExtResource("3_3ckr0")]
+position = Vector2(-1.90735e-06, 1.90735e-06)
+
+[node name="HurtBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("CircleShape2D_ccvhh")
+debug_color = Color(0.902571, 0, 0.246526, 0.42)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="health_depleted" from="." to="." method="_on_health_depleted"]
