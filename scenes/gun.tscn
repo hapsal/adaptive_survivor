@@ -24,11 +24,10 @@ texture = ExtResource("2_tqyi8")
 
 [node name="ShootingPoint" type="Marker2D" parent="WeaponPivot/Fshh"]
 unique_name_in_owner = true
-position = Vector2(8.91373, -10.1026)
+position = Vector2(3.87933, -4.11891)
 scale = Vector2(0.3125, 0.132813)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.3
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddrb3w8fls7sx"]
+
+[ext_resource type="Script" path="res://spawner.gd" id="1_3tjua"]
+[ext_resource type="PackedScene" uid="uid://biwm2hrvsp7rb" path="res://scenes/enemy.tscn" id="2_vgp1w"]
+
+[node name="Spawner" type="Node2D"]
+script = ExtResource("1_3tjua")
+enemy = ExtResource("2_vgp1w")
+
+[node name="BallSpawner" type="Timer" parent="."]
+autostart = true
+
+[node name="SnökSpawner" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="Timer3" type="Timer" parent="."]
+wait_time = 9.0
+autostart = true
+
+[connection signal="timeout" from="BallSpawner" to="." method="_on_ball_spawner_timeout"]

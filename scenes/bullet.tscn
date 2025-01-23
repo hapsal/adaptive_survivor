@@ -1,10 +1,41 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgg6jt0gs8viv"]
+[gd_scene load_steps=9 format=3 uid="uid://dgg6jt0gs8viv"]
 
 [ext_resource type="Script" path="res://scenes/bullet.gd" id="1_b455d"]
 [ext_resource type="Texture2D" uid="uid://b1tlq2ksrferc" path="res://sprites/fshh.png" id="2_euhv6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vntb4"]
 radius = 8.24621
+
+[sub_resource type="Gradient" id="Gradient_3uhw4"]
+colors = PackedColorArray(0, 0.333333, 1, 1, 0.644692, 0.683477, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dw2e8"]
+gradient = SubResource("Gradient_3uhw4")
+
+[sub_resource type="Curve" id="Curve_q2xlb"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_vx7xm"]
+curve = SubResource("Curve_q2xlb")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7ftrc"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 8.0
+direction = Vector3(0, 1, 0)
+initial_velocity_min = -10.0
+initial_velocity_max = 10.0
+orbit_velocity_min = -0.112
+orbit_velocity_max = 0.17
+gravity = Vector3(0, 0, 0)
+scale_min = 2.0
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_vx7xm")
+color_ramp = SubResource("GradientTexture1D_dw2e8")
+turbulence_enabled = true
+turbulence_noise_speed = Vector3(0, 1, 0)
+turbulence_influence_max = 0.797
 
 [node name="Bullet" type="Area2D"]
 top_level = true
@@ -21,4 +52,11 @@ position = Vector2(6, -4)
 rotation = 0.305093
 texture = ExtResource("2_euhv6")
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_7ftrc")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

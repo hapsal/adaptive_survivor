@@ -26,7 +26,7 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o87ok"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -34,7 +34,7 @@ corner_radius_bottom_left = 8
 
 [sub_resource type="Curve2D" id="Curve2D_gon1p"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -269, -184, 0, 0, 0, 0, 1206, -195, 0, 0, 0, 0, 1331, -190, 0, 0, 0, 0, 1326, 786, 0, 0, 0, 0, -271, 745, 0, 0, 0, 0, -269, -182)
+"points": PackedVector2Array(0, 0, 0, 0, -836.062, -614.843, 0, 0, 0, 0, 464.572, -588.219, 0, 0, 0, 0, 1291.35, -594.363, 0, 0, 0, 0, 1268.85, 727.956, 0, 0, 0, 0, -798.391, 722.512, 0, 0, 0, 0, -822.183, -625.083)
 }
 point_count = 6
 
@@ -42,20 +42,16 @@ point_count = 6
 y_sort_enabled = true
 script = ExtResource("1_5vum0")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -99
+[node name="UI" type="CanvasLayer" parent="."]
 
-[node name="World" parent="CanvasLayer" instance=ExtResource("2_t3wbw")]
-position = Vector2(-24, 20)
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="UI"]
 visible = false
 z_index = 1
 offset_top = -14.0
 offset_right = 1155.0
 offset_bottom = 634.0
 
-[node name="HealthBar" type="ProgressBar" parent="CanvasLayer"]
+[node name="HealthBar" type="ProgressBar" parent="UI"]
 unique_name_in_owner = true
 z_index = 1
 offset_left = 13.0
@@ -67,7 +63,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_n4pil")
 value = 100.0
 show_percentage = false
 
-[node name="ExperienceBar" type="ProgressBar" parent="CanvasLayer"]
+[node name="ExperienceBar" type="ProgressBar" parent="UI"]
 unique_name_in_owner = true
 z_index = 1
 offset_left = 16.0
@@ -79,7 +75,7 @@ theme_override_styles/background = SubResource("StyleBoxFlat_adm0c")
 theme_override_styles/fill = SubResource("StyleBoxFlat_o87ok")
 show_percentage = false
 
-[node name="StopWatch" type="Label" parent="CanvasLayer"]
+[node name="StopWatch" type="Label" parent="UI"]
 unique_name_in_owner = true
 z_index = 1
 anchors_preset = 5
@@ -92,17 +88,38 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 20
 
+[node name="Level" type="Label" parent="UI"]
+unique_name_in_owner = true
+offset_left = 14.0
+offset_top = 22.0
+offset_right = 63.0
+offset_bottom = 45.0
+text = "Level:"
+
+[node name="Killed" type="Label" parent="UI"]
+unique_name_in_owner = true
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -138.0
+offset_right = 67.0
+offset_bottom = -115.0
+grow_vertical = 2
+text = "Killed: "
+
 [node name="Player" parent="." instance=ExtResource("1_wtgoj")]
 position = Vector2(320, 178)
 
 [node name="Path2D" type="Path2D" parent="Player"]
-position = Vector2(-589, -328)
+position = Vector2(-113.561, -17.3937)
+scale = Vector2(0.400017, 0.367321)
 curve = SubResource("Curve2D_gon1p")
 
 [node name="EnemySpawn" type="PathFollow2D" parent="Player/Path2D"]
 unique_name_in_owner = true
-position = Vector2(-269, -184)
-rotation = -0.00745749
+position = Vector2(-836.062, -614.843)
+rotation = 0.0204673
 
 [node name="BallSpawner" type="Timer" parent="."]
 unique_name_in_owner = true
@@ -111,7 +128,12 @@ autostart = true
 
 [node name="SnökSpawner" type="Timer" parent="."]
 unique_name_in_owner = true
-wait_time = 10.0
+wait_time = 4.0
+autostart = true
+
+[node name="EliteSpawner" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 30.0
 autostart = true
 
 [node name="GameOver" type="CanvasLayer" parent="."]
@@ -148,8 +170,13 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 text = "Game Over"
 
+[node name="World" parent="." instance=ExtResource("2_t3wbw")]
+z_index = -99
+
+[connection signal="level_up" from="." to="Player" method="_on_game_level_up"]
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="BallSpawner" to="." method="_on_ball_spawner_timeout"]
 [connection signal="timeout" from="BallSpawner" to="." method="_on_spawner_timer_timeout"]
 [connection signal="timeout" from="SnökSpawner" to="." method="_on_snök_spawner_timeout"]
 [connection signal="timeout" from="SnökSpawner" to="." method="_on_game_timer_timeout"]
+[connection signal="timeout" from="EliteSpawner" to="." method="_on_elite_spawner_timeout"]
