@@ -26,16 +26,10 @@ func spawn_enemy():
 
 func spawn_enemy2():
 	var new_mob = preload("res://scenes/enemy2.tscn").instantiate()
-	%EnemySpawn.progress_ratio = randf()
+	%EnemySpawn.progress_ratio = randf() + %EnemySpawn.progress
 	new_mob.global_position = %EnemySpawn.global_position
 	add_child(new_mob)
 	new_mob.connect("enemy_dead", Callable(self, "_on_enemy2_dead"))
-
-func _on_spawner_timer_timeout() -> void:
-	spawn_enemy()
-	
-func _on_game_timer_timeout() -> void:
-	spawn_enemy2()
 
 func _on_player_health_depleted() -> void:
 	timer_stopped = true
@@ -47,3 +41,9 @@ func _on_enemy_dead():
 	
 func _on_enemy2_dead():
 	%ExperienceBar.value += 3
+
+func _on_ball_spawner_timeout() -> void:
+	spawn_enemy()
+
+func _on_snök_spawner_timeout() -> void:
+	spawn_enemy2()

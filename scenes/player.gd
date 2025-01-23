@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 signal health_depleted
 
-const PLAYER_SPEED = 600
+const PLAYER_SPEED = 300
 var health = 100.0
 
 func _physics_process(delta: float) -> void:
