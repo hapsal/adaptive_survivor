@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://12co53tf5s2p"]
+
+[ext_resource type="Script" path="res://scenes/enemy5.gd" id="1_cynhr"]
+[ext_resource type="Texture2D" uid="uid://4cfkjq6j1fu5" path="res://sprites/evilhuman1.png" id="2_5pm1o"]
+[ext_resource type="Texture2D" uid="uid://dlakwwoecnvwy" path="res://sprites/evilhuman2.png" id="3_3h3q0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pw6ns"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5pm1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3h3q0")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ic6xe"]
+radius = 8.0
+
+[node name="Enemy5" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_cynhr")
+
+[node name="HumanEnemy" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_pw6ns")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ic6xe")
+
+[connection signal="enemy_dead" from="." to="." method="_on_enemy_dead"]

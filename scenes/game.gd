@@ -50,6 +50,22 @@ func spawn_enemy3():
 		new_mob.global_position = %EnemySpawn.global_position
 		add_child(new_mob)
 		new_mob.connect("enemy_dead", Callable(self, "_on_enemy3_dead"))
+		
+func spawn_enemy4():
+	if time_elapsed >= 15:
+		var new_mob = preload("res://scenes/enemy4.tscn").instantiate()
+		%EnemySpawn.progress_ratio = randf() + %EnemySpawn.progress
+		new_mob.global_position = %EnemySpawn.global_position
+		add_child(new_mob)
+		new_mob.connect("enemy_dead", Callable(self, "_on_enemy4_dead"))
+
+func spawn_enemy5():
+	if time_elapsed >= 80:
+		var new_mob = preload("res://scenes/enemy5.tscn").instantiate()
+		%EnemySpawn.progress_ratio = randf() + %EnemySpawn.progress
+		new_mob.global_position = %EnemySpawn.global_position
+		add_child(new_mob)
+		new_mob.connect("enemy_dead", Callable(self, "_on_enemy5_dead"))			
 
 func _on_player_health_depleted() -> void:
 	timer_stopped = true
@@ -69,6 +85,14 @@ func _on_enemy3_dead():
 	%ExperienceBar.value += 10
 	enemies_killed += 1
 
+func _on_enemy4_dead():
+	%ExperienceBar.value += 15
+	enemies_killed += 1
+	
+func _on_enemy5_dead():
+	%ExperienceBar.value += 20
+	enemies_killed += 1	
+
 func _on_ball_spawner_timeout() -> void:
 	spawn_enemy()
 
@@ -77,3 +101,9 @@ func _on_snök_spawner_timeout() -> void:
 
 func _on_elite_spawner_timeout() -> void:
 	spawn_enemy3()
+
+func _on_doggo_spawner_timeout() -> void:
+	spawn_enemy4()
+
+func _on_human_spawner_timeout() -> void:
+	spawn_enemy5()
