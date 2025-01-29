@@ -17,17 +17,39 @@ func _physics_process(delta: float) -> void:
 
 func take_damage():
 	health -= 1
-	# Play animation when hurt
-	var tween = get_tree().create_tween()
-	tween.tween_property(%BallEnemy, "modulate", Color(3, 0.25, 0.25), 0.2)
-	tween.chain().tween_property(%BallEnemy, "modulate", Color(1, 1, 1), 0.2)
 	
-	dmg_popup(1)
+	var popup = damage_popup.instantiate()
+	popup.text = str(1)
+	get_tree().get_root().add_child(popup)
+	popup.global_position = global_position + Vector2(-60, -25)
 	
-	if health == 0:
-		queue_free()
+	# Animate the popup with scale and fade
+	var popup_tween = create_tween()
+	popup_tween.set_parallel(true)  # This allows multiple properties to animate simultaneously
+	
+	# Scale animation
+	popup_tween.tween_property(popup, "scale", Vector2(2, 2), 0.2)
+	popup_tween.chain().tween_property(popup, "scale", Vector2(1, 1), 0.2)
+	
+	# Fade animation
+	popup_tween.tween_property(popup, "modulate:a", 1.0, 0.1)  # Start fully visible
+	popup_tween.chain().tween_property(popup, "modulate:a", 0.0, 0.3)  # Fade out
+	
+	# Upward movement
+	popup_tween.tween_property(popup, "position", 
+		popup.position + Vector2(0, -30), 0.4)
+	
+	# Play hurt animation
+	if health > 0:
+		var hurt_tween = create_tween()
+		hurt_tween.tween_property(%BallEnemy, "modulate", Color(3, 0.25, 0.25), 0.2)
+		hurt_tween.chain().tween_property(%BallEnemy, "modulate", Color(1, 1, 1), 0.2)
+	else:
 		enemy_dead.emit()
-		# Play animation when enemy dead
+		await get_tree().create_timer(0.2).timeout
+		popup.queue_free()
+		queue_free()
+
 
 func dmg_popup(amount):
 	var popup = damage_popup.instantiate()
