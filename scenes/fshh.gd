@@ -2,7 +2,7 @@ extends Sprite2D
 
 var d := 0.0
 var radius := 150.0
-var speed := 1.0
+var speed := 0.5
 
 func _process(delta: float) -> void:
 	d += delta

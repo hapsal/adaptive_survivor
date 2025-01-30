@@ -2,30 +2,78 @@ extends CharacterBody2D
 
 signal health_depleted
 
-const PLAYER_SPEED = 200
-var health = 100.0
-var damage_rate = 10.0
+# Base stats
+const BASE_SPEED: float = 200.0
+const BASE_HEALTH: float = 100.0
+const BASE_DAMAGE_RATE: float = 10.0
+const MAX_LEVEL: int = 99
+
+# Current stats
+var current_speed: float = BASE_SPEED
+var current_health: float = BASE_HEALTH
+var max_health: float = BASE_HEALTH
+var damage_rate: float = BASE_DAMAGE_RATE
+var level: int = 1
+
+# Scaling factors
+const HEALTH_SCALE_FACTOR: float = 1.15  # 15% increase per level
+const DAMAGE_RESISTANCE_FACTOR: float = 0.98  # 2% damage reduction per level
+const SPEED_SCALE_FACTOR: float = 1.02   # 2% speed increase per level
+
+func _ready() -> void:
+	%HealthBar.max_value = max_health
+	%HealthBar.value = current_health
 
 func _physics_process(delta: float) -> void:
+	handle_movement(delta)
+	handle_damage(delta)
+
+func handle_movement(delta: float) -> void:
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	velocity = direction * PLAYER_SPEED
+	velocity = direction * current_speed
 	move_and_collide(velocity * delta)
 	
 	if velocity.length() > 0.0:
 		%KittyAnimation.play("walk")
 	else:
 		%KittyAnimation.play("idle")
-	
+
+func handle_damage(delta: float) -> void:
 	var overlapping_mobs = %HurtBox.get_overlapping_bodies()
 	
 	if overlapping_mobs.size() > 0:
-		health -= damage_rate * overlapping_mobs.size() * delta
-		%HealthBar.value = health
+		# Apply damage with level-based resistance
+		var damage_multiplier = pow(DAMAGE_RESISTANCE_FACTOR, level - 1)
+		var total_damage = damage_rate * overlapping_mobs.size() * delta * damage_multiplier
 		
-		if health <= 0.0:
+		current_health -= total_damage
+		%HealthBar.value = current_health
+		
+		if current_health <= 0.0:
 			health_depleted.emit()
-			
 
 func _on_game_level_up() -> void:
-	health += 5.0
-	damage_rate += 0.5
+	level = min(level + 1, MAX_LEVEL)
+	
+	# Health scaling
+	var old_health_percent = current_health / max_health
+	max_health = BASE_HEALTH * pow(HEALTH_SCALE_FACTOR, level - 1)
+	current_health = max_health * old_health_percent  # Maintain health percentage
+	
+	# Add bonus health (healing)
+	var heal_amount = max_health * 0.2  # Heal 20% of max health on level up
+	current_health = min(current_health + heal_amount, max_health)
+	
+	# Update health bar
+	%HealthBar.max_value = max_health
+	%HealthBar.value = current_health
+	
+	# Speed scaling
+	current_speed = BASE_SPEED * pow(SPEED_SCALE_FACTOR, level - 1)
+	
+	display_level_up_effects()
+
+func display_level_up_effects() -> void:
+	# Add visual/audio feedback for level up
+	# This is where you'd add particles, sounds, etc.
+	pass

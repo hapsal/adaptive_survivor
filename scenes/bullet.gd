@@ -1,6 +1,14 @@
 extends Area2D
 
 var bullet_distance = 0
+var damage = 1
+const BASE_DAMAGE: float = 1.0
+const DAMAGE_SCALE_FACTOR: float = 2
+
+@onready var player = get_node("/root/Game/Player")
+
+func _ready() -> void:
+	update_damage()
 
 func _physics_process(delta: float) -> void:
 	const BULLET_SPEED = 150
@@ -10,10 +18,13 @@ func _physics_process(delta: float) -> void:
 
 	bullet_distance += BULLET_SPEED * delta
 
-
 func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("take_damage"):
-		body.take_damage()
+		body.take_damage(damage)
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()
+
+func update_damage() -> void:
+	var level_multiplier = pow(DAMAGE_SCALE_FACTOR, player.level - 1)
+	damage = BASE_DAMAGE * level_multiplier
