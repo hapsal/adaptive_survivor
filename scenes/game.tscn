@@ -188,9 +188,7 @@ theme_override_font_sizes/font_size = 40
 text = "Game Over"
 
 [node name="World" parent="." instance=ExtResource("2_t3wbw")]
-visible = false
 z_index = -99
-position = Vector2(0, -2)
 
 [connection signal="level_up" from="." to="Player" method="_on_game_level_up"]
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]

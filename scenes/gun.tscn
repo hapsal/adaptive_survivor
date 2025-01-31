@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b1tlq2ksrferc" path="res://sprites/fshh.png" id="2_tqyi8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b3gk4"]
-radius = 110.277
+radius = 60.9853
 
 [node name="Gun" type="Area2D"]
 rotation = 0.00858274

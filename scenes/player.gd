@@ -20,9 +20,25 @@ const HEALTH_SCALE_FACTOR: float = 1.15  # 15% increase per level
 const DAMAGE_RESISTANCE_FACTOR: float = 0.98  # 2% damage reduction per level
 const SPEED_SCALE_FACTOR: float = 1.02   # 2% speed increase per level
 
+@export var xp_attraction_radius: float = 50.0
+
 func _ready() -> void:
 	%HealthBar.max_value = max_health
 	%HealthBar.value = current_health
+	
+	add_to_group("player")
+	
+	var attraction_area = Area2D.new()
+	var collision_shape = CollisionShape2D.new()
+	var circle_shape = CircleShape2D.new()
+	
+	circle_shape.radius = xp_attraction_radius
+	collision_shape.shape = circle_shape
+	
+	attraction_area.add_child(collision_shape)
+	add_child(attraction_area)
+	
+	attraction_area.area_entered.connect(_on_xp_entered_attraction_range)
 
 func _physics_process(delta: float) -> void:
 	handle_movement(delta)
@@ -77,3 +93,8 @@ func display_level_up_effects() -> void:
 	# Add visual/audio feedback for level up
 	# This is where you'd add particles, sounds, etc.
 	pass
+
+
+func _on_xp_entered_attraction_range(area: Area2D) -> void:
+	if area.has_method("start_moving_to_player"):
+		area.start_moving_to_player(self)

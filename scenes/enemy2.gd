@@ -6,7 +6,7 @@ var damage_popup = preload("res://scenes/damage_popup.tscn")
 var enemy_speed = 80
 var health = 3
 
-signal enemy_dead
+signal enemy_dead(position: Vector2)
 
 func _physics_process(delta: float) -> void:
 	var direction = global_position.direction_to(player.global_position)
@@ -41,7 +41,7 @@ func take_damage(damage_amount):
 		hurt_tween.tween_property(%SnökEnemy, "modulate", Color(3, 0.25, 0.25), 0.2)
 		hurt_tween.chain().tween_property(%SnökEnemy, "modulate", Color(1, 1, 1), 0.2)
 	else:
-		enemy_dead.emit()
+		enemy_dead.emit(global_position)
 		await get_tree().create_timer(0.2).timeout
 		popup.queue_free()
 		queue_free()

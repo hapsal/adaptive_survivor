@@ -3,7 +3,6 @@ extends CharacterBody2D
 @onready var player = get_node("/root/Game/Player")
 var damage_popup = preload("res://scenes/damage_popup.tscn")
 
-# Base stats
 const BASE_HEALTH: float = 2.0
 const BASE_SPEED: float = 90.0
 const HEALTH_SCALE_FACTOR: float = 1.85
@@ -12,7 +11,7 @@ const SPEED_SCALE_FACTOR: float = 1.05
 var enemy_speed = 90
 var health: float = 2.0
 
-signal enemy_dead
+signal enemy_dead(position: Vector2)
 
 func _ready() -> void:
 	var game = get_node("/root/Game")
@@ -51,7 +50,7 @@ func take_damage(damage_amount):
 		hurt_tween.tween_property(%BallEnemy, "modulate", Color(3, 0.25, 0.25), 0.2)
 		hurt_tween.chain().tween_property(%BallEnemy, "modulate", Color(1, 1, 1), 0.2)
 	else:
-		enemy_dead.emit()
+		enemy_dead.emit(global_position)
 		await get_tree().create_timer(0.2).timeout
 		popup.queue_free()
 		queue_free()
@@ -60,4 +59,3 @@ func _on_game_level_up() -> void:
 	health = BASE_HEALTH * pow(HEALTH_SCALE_FACTOR, player.level - 1)
 	
 	enemy_speed = BASE_SPEED * pow(SPEED_SCALE_FACTOR, player.level - 1)
-	
