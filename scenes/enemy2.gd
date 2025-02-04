@@ -4,7 +4,7 @@ extends CharacterBody2D
 var damage_popup = preload("res://scenes/damage_popup.tscn")
 
 var enemy_speed = 80
-var health = 3
+var health = 6
 
 signal enemy_dead(position: Vector2)
 

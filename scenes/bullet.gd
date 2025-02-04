@@ -26,5 +26,4 @@ func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()
 
 func update_damage() -> void:
-	var level_multiplier = pow(DAMAGE_SCALE_FACTOR, player.level - 1)
-	damage = BASE_DAMAGE * level_multiplier
+	damage = BASE_DAMAGE + (DAMAGE_SCALE_FACTOR * (player.level - 1))

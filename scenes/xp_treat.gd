@@ -1,6 +1,6 @@
 extends Area2D
 
-var experience_value: float = 1.0
+var experience_value: float = 0.8
 var move_speed: float = 100.0
 var is_moving_to_player: bool = false
 var player: Node2D = null

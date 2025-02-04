@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var player = get_node("/root/Game/Player")
 var damage_popup = preload("res://scenes/damage_popup.tscn")
 var enemy_speed = 60
-var health = 10
+var health = 15
 
 signal enemy_dead(position: Vector2)
 

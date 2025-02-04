@@ -2,23 +2,20 @@ extends CharacterBody2D
 
 signal health_depleted
 
-# Base stats
 const BASE_SPEED: float = 200.0
 const BASE_HEALTH: float = 100.0
-const BASE_DAMAGE_RATE: float = 10.0
+const BASE_DAMAGE_RATE: float = 15.0
 const MAX_LEVEL: int = 99
 
-# Current stats
 var current_speed: float = BASE_SPEED
 var current_health: float = BASE_HEALTH
 var max_health: float = BASE_HEALTH
 var damage_rate: float = BASE_DAMAGE_RATE
 var level: int = 1
 
-# Scaling factors
-const HEALTH_SCALE_FACTOR: float = 1.15  # 15% increase per level
-const DAMAGE_RESISTANCE_FACTOR: float = 0.98  # 2% damage reduction per level
-const SPEED_SCALE_FACTOR: float = 1.02   # 2% speed increase per level
+const HEALTH_SCALE_FACTOR: float = 1.15
+const DAMAGE_RESISTANCE_FACTOR: float = 0.98
+const SPEED_SCALE_FACTOR: float = 1.02
 
 @export var xp_attraction_radius: float = 50.0
 
@@ -58,7 +55,6 @@ func handle_damage(delta: float) -> void:
 	var overlapping_mobs = %HurtBox.get_overlapping_bodies()
 	
 	if overlapping_mobs.size() > 0:
-		# Apply damage with level-based resistance
 		var damage_multiplier = pow(DAMAGE_RESISTANCE_FACTOR, level - 1)
 		var total_damage = damage_rate * overlapping_mobs.size() * delta * damage_multiplier
 		
@@ -71,20 +67,16 @@ func handle_damage(delta: float) -> void:
 func _on_game_level_up() -> void:
 	level = min(level + 1, MAX_LEVEL)
 	
-	# Health scaling
 	var old_health_percent = current_health / max_health
 	max_health = BASE_HEALTH * pow(HEALTH_SCALE_FACTOR, level - 1)
-	current_health = max_health * old_health_percent  # Maintain health percentage
+	current_health = max_health * old_health_percent
 	
-	# Add bonus health (healing)
-	var heal_amount = max_health * 0.2  # Heal 20% of max health on level up
+	var heal_amount = max_health * 0.2
 	current_health = min(current_health + heal_amount, max_health)
 	
-	# Update health bar
 	%HealthBar.max_value = max_health
 	%HealthBar.value = current_health
 	
-	# Speed scaling
 	current_speed = BASE_SPEED * pow(SPEED_SCALE_FACTOR, level - 1)
 	
 	display_level_up_effects()

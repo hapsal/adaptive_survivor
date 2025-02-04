@@ -15,7 +15,7 @@ var xp_required: float = BASE_XP_REQ
 var level = 1
 var enemies_killed = 0
 
-var time_multiplier: float = 1.0
+var time_multiplier: float = 0.8
 
 signal level_up
 
@@ -30,37 +30,49 @@ const ENEMY_SCENES = {
 const ENEMY_DATA = {
 	"enemy1": {
 		"time_requirement": 5,
-		"experience_value": 5,
-		"weight": 1.0
+		"experience_value": 3,
+		"initial_weight": 1.0,
+		"mid_weight": 0.3,      
+		"final_weight": 0.05   
 	},
 	"enemy2": {
 		"time_requirement": 30,
-		"experience_value": 12,
-		"weight": 0.8
+		"experience_value": 6,
+		"initial_weight": 0.8,
+		"mid_weight": 1.5,      
+		"final_weight": 0.05    
 	},
-	"enemy3": {
-		"time_requirement": 60,
+	"enemy3": { # Elite
+		"time_requirement": 80,
 		"experience_value": 45,
-		"weight": 0.5
+		"initial_weight": 0.5,
+		"mid_weight": 0.8,     
+		"final_weight": 2.5     
 	},
 	"enemy4": {
-		"time_requirement": 15,
-		"experience_value": 15,
-		"weight": 0.7
+		"time_requirement": 50,
+		"experience_value": 10,
+		"initial_weight": 0.7,
+		"mid_weight": 1.2,     
+		"final_weight": 0.05    
 	},
 	"enemy5": {
-		"time_requirement": 20,
-		"experience_value": 25,
-		"weight": 0.6
+		"time_requirement": 60,
+		"experience_value": 15,
+		"initial_weight": 0.6,
+		"mid_weight": 1.3,      
+		"final_weight": 1.8     
 	}
 }
 
 @onready var xp_drop = preload("res://scenes/xp_treat.tscn")
+@onready var spawn_timer = %EnemySpawner
 
 func _ready() -> void:
 	update_xp_requirement()
 	%Level.text = "Level: " + str(level)
 	%Killed.text = "Killed: " + str(enemies_killed)
+	spawn_timer.start()
 
 func _process(delta: float) -> void:
 	if timer_stopped:
@@ -113,15 +125,50 @@ func spawn_enemy(enemy_type: String) -> void:
 			new_mob.enemy_dead.connect(func(pos): _on_enemy_killed(enemy_info.experience_value, pos))
 
 func calculate_spawn_chance(enemy_type: String) -> float:
-	var base_weight = ENEMY_DATA[enemy_type].weight
+	var enemy_data = ENEMY_DATA[enemy_type]
+	
+	const ONE_MINUTE = 60.0
+	const TWO_THIRTY = 150.0 
+	const TRANSITION_PERIOD = 10.0
 	
 	match enemy_type:
-		"enemy1": return base_weight * max(1.0 - time_elapsed/300.0, 0.2)
-		"enemy2": return base_weight * min(time_elapsed/60.0, 1.0)         
-		"enemy3": return base_weight * min(time_elapsed/120.0, 1.0)        
-		"enemy4": return base_weight
-		"enemy5": return base_weight * min(time_elapsed/90.0, 1.0)
-	return base_weight
+		"enemy1":
+			if time_elapsed < ONE_MINUTE:
+				var transition = clamp(time_elapsed/ONE_MINUTE, 0.0, 1.0)
+				return lerp(enemy_data.initial_weight, enemy_data.mid_weight, transition)
+			elif time_elapsed < TWO_THIRTY:
+				return enemy_data.mid_weight
+			else:
+				var transition = clamp((time_elapsed - TWO_THIRTY) / TRANSITION_PERIOD, 0.0, 1.0)
+				return lerp(enemy_data.mid_weight, enemy_data.final_weight, transition)
+		
+		"enemy2", "enemy4":
+			if time_elapsed < ONE_MINUTE:
+				return enemy_data.initial_weight
+			elif time_elapsed < TWO_THIRTY:
+				var transition = clamp((time_elapsed - ONE_MINUTE)/(TWO_THIRTY - ONE_MINUTE), 0.0, 1.0)
+				return lerp(enemy_data.initial_weight, enemy_data.mid_weight, transition)
+			else:
+				var transition = clamp((time_elapsed - TWO_THIRTY) / TRANSITION_PERIOD, 0.0, 1.0)
+				return lerp(enemy_data.mid_weight, enemy_data.final_weight, transition)
+		
+		"enemy3":
+			if time_elapsed < TWO_THIRTY:
+				var transition = clamp(time_elapsed/TWO_THIRTY, 0.0, 1.0)
+				return lerp(enemy_data.initial_weight, enemy_data.mid_weight, transition)
+			else:
+				var transition = clamp((time_elapsed - TWO_THIRTY) / TRANSITION_PERIOD, 0.0, 1.0)
+				return lerp(enemy_data.mid_weight, enemy_data.final_weight, transition)
+		
+		"enemy5":
+			if time_elapsed < TWO_THIRTY:
+				var transition = clamp(time_elapsed/TWO_THIRTY, 0.0, 1.0)
+				return lerp(enemy_data.initial_weight, enemy_data.mid_weight, transition)
+			else:
+				var transition = clamp((time_elapsed - TWO_THIRTY) / TRANSITION_PERIOD, 0.0, 1.0)
+				return lerp(enemy_data.mid_weight, enemy_data.final_weight, transition)
+	
+	return enemy_data.initial_weight
 
 func _on_enemy_killed(experience_value: int, enemy_position: Vector2) -> void:
 	enemies_killed += 1
@@ -154,17 +201,25 @@ func _on_player_health_depleted() -> void:
 	%GameOver.visible = true
 	get_tree().paused = true
 
-func _on_ball_spawner_timeout() -> void:
-	spawn_enemy("enemy1")
 
-func _on_snök_spawner_timeout() -> void:
-	spawn_enemy("enemy2")
-
-func _on_elite_spawner_timeout() -> void:
-	spawn_enemy("enemy3")
-
-func _on_doggo_spawner_timeout() -> void:
-	spawn_enemy("enemy4")
-
-func _on_human_spawner_timeout() -> void:
-	spawn_enemy("enemy5")
+func _on_enemy_spawner_timeout():
+	var total_weight = 0.0
+	var available_enemies = []
+	
+	for enemy_type in ENEMY_DATA.keys():
+		if time_elapsed >= ENEMY_DATA[enemy_type].time_requirement:
+			var weight = calculate_spawn_chance(enemy_type)
+			total_weight += weight
+			available_enemies.append({
+				"type": enemy_type,
+				"weight": weight
+				})
+	
+	var random_value = randf() * total_weight
+	var current_sum = 0.0
+	
+	for enemy in available_enemies:
+		current_sum += enemy.weight
+		if random_value <= current_sum:
+			spawn_enemy(enemy.type)
+			break

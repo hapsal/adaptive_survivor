@@ -4,11 +4,11 @@ extends CharacterBody2D
 var damage_popup = preload("res://scenes/damage_popup.tscn")
 
 const BASE_HEALTH: float = 2.0
-const BASE_SPEED: float = 90.0
+const BASE_SPEED: float = 80.0
 const HEALTH_SCALE_FACTOR: float = 1.85
 const SPEED_SCALE_FACTOR: float = 1.05
 
-var enemy_speed = 90
+var enemy_speed = 80
 var health: float = 2.0
 
 signal enemy_dead(position: Vector2)
