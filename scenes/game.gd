@@ -73,6 +73,7 @@ func _ready() -> void:
 	%Level.text = "Level: " + str(level)
 	%Killed.text = "Killed: " + str(enemies_killed)
 	spawn_timer.start()
+	
 
 func _process(delta: float) -> void:
 	if timer_stopped:

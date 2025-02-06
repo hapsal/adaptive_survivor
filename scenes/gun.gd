@@ -7,15 +7,27 @@ var current_target: Node2D = null
 var target_position: Vector2 = Vector2.ZERO
 
 var base_shoot_time: float = 2.0
-var min_shoot_time: float = 0.1  # Minimum time between shots
-var shoot_time_reduction: float = 0.1  # Reduce by 0.1 seconds per level
+var min_shoot_time: float = 0.1 
+var shoot_time_reduction: float = 0.1
+
+@export var targeting_mode: GameEnums.TargetingMode = GameEnums.TargetingMode.AUTO
 
 func _ready() -> void:
+	add_to_group("gun")
 	var game = get_node("/root/Game")
 	game.level_up.connect(_on_game_level_up)
 	%ShootTimer.wait_time = base_shoot_time
+	
+	targeting_mode = GameState.targeting_mode
 
 func _physics_process(delta: float) -> void:
+	match targeting_mode:
+		GameEnums.TargetingMode.AUTO:
+			handle_auto_targeting(delta)
+		GameEnums.TargetingMode.MOUSE:
+			handle_mouse_targeting(delta)
+
+func handle_auto_targeting(delta: float) -> void:
 	var enemies_in_range = get_overlapping_bodies()
 	if enemies_in_range.is_empty():
 		current_target = null
@@ -25,12 +37,23 @@ func _physics_process(delta: float) -> void:
 	
 	if current_target and is_instance_valid(current_target):
 		target_position = current_target.global_position
-		
-		var desired_angle = global_position.direction_to(target_position).angle()
-		
-		var angle_diff = wrapf(desired_angle - global_rotation, -PI, PI)
-		if abs(angle_diff) > 0.01:
-			global_rotation = lerp_angle(global_rotation, desired_angle, rotation_speed * delta)
+		rotate_towards_target(delta)
+
+func handle_mouse_targeting(delta: float) -> void:
+	target_position = get_global_mouse_position()
+	rotate_towards_target(delta)
+
+func rotate_towards_target(delta: float) -> void:
+	var desired_angle = global_position.direction_to(target_position).angle()
+	var angle_diff = wrapf(desired_angle - global_rotation, -PI, PI)
+	if abs(angle_diff) > 0.01:
+		global_rotation = lerp_angle(global_rotation, desired_angle, rotation_speed * delta)
+
+func toggle_targeting_mode() -> void:
+	if targeting_mode == GameEnums.TargetingMode.AUTO:
+		targeting_mode = GameEnums.TargetingMode.MOUSE
+	else:
+		targeting_mode = GameEnums.TargetingMode.AUTO
 
 func get_best_target(enemies: Array) -> Node2D:
 	var best_target = null
@@ -70,3 +93,7 @@ func _on_game_level_up() -> void:
 	
 	%ShootTimer.wait_time = new_shoot_time
 	%ShootTimer.start()
+	
+func set_targeting_mode(new_mode: GameEnums.TargetingMode) -> void:
+	print("Changing targeting mode to:", new_mode)
+	targeting_mode = new_mode

@@ -1,0 +1,78 @@
+[gd_resource type="Theme" load_steps=24 format=3 uid="uid://bvuyyxstk13dj"]
+
+[ext_resource type="FontFile" uid="uid://0pidl5v2bsnq" path="res://fonts/Early GameBoy.ttf" id="1_lvgrc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0nyax"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lppev"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ej24f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ivxbq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_50ssc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cjtup"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4krnu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w66sy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_61u1b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i1wta"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_isbsa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eokpo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3s2i5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gnf4u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ga0f2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tuksl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fcft6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1r0mw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rh6ka"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j03ly"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xnlx2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l4las"]
+
+[resource]
+default_font = ExtResource("1_lvgrc")
+default_font_size = 16
+Button/colors/font_focus_color = Color(0.514851, 0.543109, 1, 1)
+Button/colors/font_hover_color = Color(0, 0.94902, 0.513726, 1)
+Button/colors/font_pressed_color = Color(0.164706, 1, 0.262745, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/styles/disabled = SubResource("StyleBoxEmpty_0nyax")
+Button/styles/disabled_mirrored = SubResource("StyleBoxEmpty_lppev")
+Button/styles/focus = SubResource("StyleBoxEmpty_ej24f")
+Button/styles/hover = SubResource("StyleBoxEmpty_ivxbq")
+Button/styles/hover_mirrored = SubResource("StyleBoxEmpty_50ssc")
+Button/styles/hover_pressed = SubResource("StyleBoxEmpty_cjtup")
+Button/styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_4krnu")
+Button/styles/normal = SubResource("StyleBoxEmpty_w66sy")
+Button/styles/normal_mirrored = SubResource("StyleBoxEmpty_61u1b")
+Button/styles/pressed = SubResource("StyleBoxEmpty_i1wta")
+Button/styles/pressed_mirrored = SubResource("StyleBoxEmpty_isbsa")
+CheckButton/colors/font_color = Color(0.514851, 0.543109, 1, 1)
+CheckButton/styles/disabled = SubResource("StyleBoxEmpty_eokpo")
+CheckButton/styles/disabled_mirrored = SubResource("StyleBoxEmpty_3s2i5")
+CheckButton/styles/focus = SubResource("StyleBoxEmpty_gnf4u")
+CheckButton/styles/hover = SubResource("StyleBoxEmpty_ga0f2")
+CheckButton/styles/hover_mirrored = SubResource("StyleBoxEmpty_tuksl")
+CheckButton/styles/hover_pressed = SubResource("StyleBoxEmpty_fcft6")
+CheckButton/styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_1r0mw")
+CheckButton/styles/normal = SubResource("StyleBoxEmpty_rh6ka")
+CheckButton/styles/normal_mirrored = SubResource("StyleBoxEmpty_j03ly")
+CheckButton/styles/pressed = SubResource("StyleBoxEmpty_xnlx2")
+CheckButton/styles/pressed_mirrored = SubResource("StyleBoxEmpty_l4las")
