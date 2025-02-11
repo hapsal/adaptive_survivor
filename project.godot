@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GameEnums="*res://scenes/game_enums.gd"
 GameState="*res://scenes/GameState.gd"
+WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
 
 [display]
 
@@ -63,3 +64,8 @@ move_down={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+
+[wwise]
+
+common_user_settings/root_output_path="res://GeneratedSoundBanks"
+project_settings/windows_platform_info="res://Wwise/resources/Windows.tres"

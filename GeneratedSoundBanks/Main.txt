@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1116398592	Hit			\Default Work Unit\Hit	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	582465895	Hit2	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\Windows\SFX\Hit2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hit2		172704
+
