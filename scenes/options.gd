@@ -11,7 +11,11 @@ func _ready() -> void:
 
 func _on_back_pressed() -> void:
 	options_closed.emit()
-	queue_free()
+	hide()
 
 func _on_auto_toggled(toggled_on: bool) -> void:
 	GameState.targeting_mode = GameEnums.TargetingMode.AUTO if toggled_on else GameEnums.TargetingMode.MOUSE
+
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		_on_back_pressed()

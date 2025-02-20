@@ -1,0 +1,510 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3991942870",
+    "Type": "Event",
+    "GUID": "{6B9B1B07-C79E-4C8E-902B-F3EB9B81BC92}",
+    "Language": "SFX",
+    "Hash": "{AE0B48AF-8E9B-3D67-7EC7-6CC3C8E6C680}",
+    "ObjectPath": "Music",
+    "ShortName": "Music",
+    "Path": "Event/Music.bnk",
+    "Media": [
+     {
+      "Id": "9376203",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-A\\Combat-A-StaccStrings1_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/9376203.wem",
+      "CachePath": "CC/{CCF49AA7-C344-B85F-2CD7-8DD4CF7B5700}.wem"
+     },
+     {
+      "Id": "25395674",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-A\\Combat-A-Synth1_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/25395674.wem",
+      "CachePath": "84/{84099692-719C-CD2E-C9F7-38A329C157D0}.wem"
+     },
+     {
+      "Id": "26651455",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-A\\Combat-A-HighChoir_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/26651455.wem",
+      "CachePath": "9A/{9AC89014-CA20-A738-2C35-F7C435465A0F}.wem"
+     },
+     {
+      "Id": "35770975",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-AB-Rhythm-HiHat_138bpm4-4_L4M-P0.wav",
+      "Path": "Media/35770975.wem",
+      "CachePath": "E6/{E6467101-F370-A0FD-21D0-23AAFCAA6DE6}.wem"
+     },
+     {
+      "Id": "138058421",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-B-Bass2_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/138058421.wem",
+      "CachePath": "19/{19507A16-B273-1D8A-16A0-4818DFD3DBB1}.wem"
+     },
+     {
+      "Id": "182269402",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-B-StaccStrings2_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/182269402.wem",
+      "CachePath": "DD/{DDB237B8-D45B-8EE0-AADC-8DF84B14DE1D}.wem"
+     },
+     {
+      "Id": "235375564",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-A\\Combat-A-Bass1_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/235375564.wem",
+      "CachePath": "29/{29520AC4-4A15-669C-208B-62C87A256A53}.wem"
+     },
+     {
+      "Id": "240340097",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-B-Gtr1_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/240340097.wem",
+      "CachePath": "84/{84F87F5B-B9E1-BEFB-F206-51775D69609D}.wem"
+     },
+     {
+      "Id": "262465582",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-TransToBridge_138bpm3-4_L3M-P1M.wav",
+      "Path": "Media/262465582.wem",
+      "CachePath": "56/{56A26FC5-C05E-BC16-1850-09191D4FB58C}.wem"
+     },
+     {
+      "Id": "287697571",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-B-Strings2_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/287697571.wem",
+      "CachePath": "0D/{0DD15A13-5181-3024-B742-0BAE6A7294EB}.wem"
+     },
+     {
+      "Id": "300381902",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-B-Gtr2_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/300381902.wem",
+      "CachePath": "00/{0055E8FD-2B50-C921-BCFE-E7CC10EA97BF}.wem"
+     },
+     {
+      "Id": "313794256",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-A\\Combat-A-LowChoir_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/313794256.wem",
+      "CachePath": "E5/{E5D5C494-BD2A-956C-7103-E81E655E367D}.wem"
+     },
+     {
+      "Id": "325580525",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-B-Synth2_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/325580525.wem",
+      "CachePath": "0D/{0D2F6641-2337-511F-B549-A242D709126C}.wem"
+     },
+     {
+      "Id": "416254479",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-B-StaccStrings1_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/416254479.wem",
+      "CachePath": "4F/{4F986EE9-266A-0A22-9357-FCB2F4AD63D4}.wem"
+     },
+     {
+      "Id": "424148424",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-A\\Combat-A-StaccStrings2_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/424148424.wem",
+      "CachePath": "BB/{BB316DC5-D4B6-06A1-177F-E7EC3D89B3DD}.wem"
+     },
+     {
+      "Id": "439512460",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-AB-Rhythm-PercPulse_138bpm4-4_L4M-P0.wav",
+      "Path": "Media/439512460.wem",
+      "CachePath": "19/{19E98E31-C97E-A9C8-2782-034CFD9DECCC}.wem"
+     },
+     {
+      "Id": "456168348",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-B-LowChoir_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/456168348.wem",
+      "CachePath": "A7/{A704064E-C25D-181E-072A-494B006FD3E9}.wem"
+     },
+     {
+      "Id": "495008002",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-A\\Combat-A-Synth2_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/495008002.wem",
+      "CachePath": "68/{687CC24B-CDC7-D3B2-4F15-65F57228176D}.wem"
+     },
+     {
+      "Id": "496548566",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Stinger-CymbalSwell_138bpm4-4_L0-P3B.wav",
+      "Path": "Media/496548566.wem",
+      "CachePath": "8C/{8C488581-E60D-39A0-012A-7ECBB78FF76F}.wem"
+     },
+     {
+      "Id": "508293775",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-A\\Combat-A-LowBrass_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/508293775.wem",
+      "CachePath": "52/{52E43852-FA8C-6DED-6AAB-CFCCC36A1807}.wem"
+     },
+     {
+      "Id": "538639903",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-B-Arpeggio_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/538639903.wem",
+      "CachePath": "49/{491D540B-097D-6AC4-57B8-3201714AC7B4}.wem"
+     },
+     {
+      "Id": "546468077",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-B-Bass1_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/546468077.wem",
+      "CachePath": "F2/{F21A51C4-E927-9B7A-BC0B-0A8A71477F0D}.wem"
+     },
+     {
+      "Id": "577629701",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-A\\Combat-A-Arpeggio_138bpm4-4-L8M-P0.wav",
+      "Path": "Media/577629701.wem",
+      "CachePath": "86/{86A7B34F-F5A1-5A09-5BB8-573163C5E14D}.wem"
+     },
+     {
+      "Id": "647489161",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-A\\Combat-A-Strings2_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/647489161.wem",
+      "CachePath": "26/{2649BFD0-3991-545C-96DD-130FA34B198A}.wem"
+     },
+     {
+      "Id": "682294353",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-Bridge\\Combat-Bridge-Gtr2_138bpm4-4_L17M-P1B.wav",
+      "Path": "Media/682294353.wem",
+      "CachePath": "98/{9861D752-27B3-BA7D-A56D-E5B78B4CA7A2}.wem"
+     },
+     {
+      "Id": "685237838",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-B-Synth1_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/685237838.wem",
+      "CachePath": "4F/{4F49DC7B-BD2D-23E0-F354-67C8C9521042}.wem"
+     },
+     {
+      "Id": "706225661",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-B-Gtr3_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/706225661.wem",
+      "CachePath": "74/{74D9B9FA-FB53-263E-5C8A-B21F2030AC5F}.wem"
+     },
+     {
+      "Id": "788298587",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-B-HighChoir_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/788298587.wem",
+      "CachePath": "CC/{CC7FF306-0184-5B71-EB14-A0415534A4DA}.wem"
+     },
+     {
+      "Id": "792094764",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-B-LowBrass_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/792094764.wem",
+      "CachePath": "1B/{1BC40076-D25F-71F0-0764-E440D39C32F0}.wem"
+     },
+     {
+      "Id": "795706641",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-Bridge\\Combat-Bridge-Main_138bpm4-4_L17M-P1B.wav",
+      "Path": "Media/795706641.wem",
+      "CachePath": "5F/{5F8FD399-65CD-ED59-3DC6-D6370455C647}.wem"
+     },
+     {
+      "Id": "801458461",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-Bridge\\Combat-Bridge-Gtr3_138bpm4-4_L17M-P1B.wav",
+      "Path": "Media/801458461.wem",
+      "CachePath": "98/{9861D752-27B3-BA7D-A56D-E5B78B4CA7A2}.wem"
+     },
+     {
+      "Id": "819646600",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-Bridge\\Combat-Bridge-Gtr1_138bpm4-4_L17M-P1B.wav",
+      "Path": "Media/819646600.wem",
+      "CachePath": "00/{00ADC44A-90C1-36F1-20E5-57B5E1390C87}.wem"
+     },
+     {
+      "Id": "831924622",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-A\\Combat-A-Bass2_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/831924622.wem",
+      "CachePath": "F5/{F5799D41-33F2-1880-734A-6D6DC571612D}.wem"
+     },
+     {
+      "Id": "906116562",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-A\\Combat-A-Strings1_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/906116562.wem",
+      "CachePath": "B1/{B15DF290-BA1D-8F2F-2383-5FD46FD16F7F}.wem"
+     },
+     {
+      "Id": "907830914",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-A\\Combat-A-Gtr3_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/907830914.wem",
+      "CachePath": "74/{74504596-3E33-8F35-712F-318160654E51}.wem"
+     },
+     {
+      "Id": "923166075",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-A\\Combat-A-Gtr2_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/923166075.wem",
+      "CachePath": "5D/{5DBD689B-7220-7614-9843-AA5BDCED94C0}.wem"
+     },
+     {
+      "Id": "974158151",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-B-Strings1_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/974158151.wem",
+      "CachePath": "C9/{C94698B4-97BB-2573-4782-29DC7C534AA5}.wem"
+     },
+     {
+      "Id": "980477008",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-A\\Combat-A-Gtr1_138bpm4-4_L8M-P0.wav",
+      "Path": "Media/980477008.wem",
+      "CachePath": "40/{400A185F-9D1F-CA09-27A1-A3B3FAA4B68A}.wem"
+     },
+     {
+      "Id": "1044774251",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Combat-AB-Rhythm-Main_138bpm4-4_L4M-P0.wav",
+      "Path": "Media/1044774251.wem",
+      "CachePath": "B7/{B701CE91-2A9C-99BF-C7EB-D966EEE7A6A0}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3991942870",
+      "Name": "Music",
+      "ObjectPath": "\\Events\\Music\\Music",
+      "GUID": "{6B9B1B07-C79E-4C8E-902B-F3EB9B81BC92}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "9376203"
+       },
+       {
+        "Id": "25395674"
+       },
+       {
+        "Id": "26651455"
+       },
+       {
+        "Id": "35770975"
+       },
+       {
+        "Id": "138058421"
+       },
+       {
+        "Id": "182269402"
+       },
+       {
+        "Id": "235375564"
+       },
+       {
+        "Id": "240340097"
+       },
+       {
+        "Id": "262465582"
+       },
+       {
+        "Id": "287697571"
+       },
+       {
+        "Id": "300381902"
+       },
+       {
+        "Id": "313794256"
+       },
+       {
+        "Id": "325580525"
+       },
+       {
+        "Id": "416254479"
+       },
+       {
+        "Id": "424148424"
+       },
+       {
+        "Id": "439512460"
+       },
+       {
+        "Id": "456168348"
+       },
+       {
+        "Id": "495008002"
+       },
+       {
+        "Id": "496548566"
+       },
+       {
+        "Id": "508293775"
+       },
+       {
+        "Id": "538639903"
+       },
+       {
+        "Id": "546468077"
+       },
+       {
+        "Id": "577629701"
+       },
+       {
+        "Id": "647489161"
+       },
+       {
+        "Id": "682294353"
+       },
+       {
+        "Id": "685237838"
+       },
+       {
+        "Id": "706225661"
+       },
+       {
+        "Id": "788298587"
+       },
+       {
+        "Id": "792094764"
+       },
+       {
+        "Id": "795706641"
+       },
+       {
+        "Id": "801458461"
+       },
+       {
+        "Id": "819646600"
+       },
+       {
+        "Id": "831924622"
+       },
+       {
+        "Id": "906116562"
+       },
+       {
+        "Id": "907830914"
+       },
+       {
+        "Id": "923166075"
+       },
+       {
+        "Id": "974158151"
+       },
+       {
+        "Id": "980477008"
+       },
+       {
+        "Id": "1044774251"
+       }
+      ]
+     }
+    ],
+    "Triggers": [
+     {
+      "Id": "1665515263",
+      "Name": "Cymba_Swell",
+      "ObjectPath": "\\Triggers\\Music\\Cymba_Swell",
+      "GUID": "{DD9FE0D9-FCF7-4EEE-B660-969B9693BAAF}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CF686938-F4A2-2E50-E08C-4448B4D9AF66}"
+ }
+}

@@ -43,11 +43,11 @@ const ENEMY_DATA = {
 		"final_weight": 0.05    
 	},
 	"enemy3": { # Elite
-		"time_requirement": 80,
+		"time_requirement": 1,
 		"experience_value": 45,
 		"initial_weight": 0.5,
 		"mid_weight": 0.8,     
-		"final_weight": 2.5     
+		"final_weight": 4.5     
 	},
 	"enemy4": {
 		"time_requirement": 50,
@@ -67,6 +67,7 @@ const ENEMY_DATA = {
 
 @onready var xp_drop = preload("res://scenes/xp_treat.tscn")
 @onready var spawn_timer = %EnemySpawner
+@onready var pause_menu = %PauseMenu
 
 func _ready() -> void:
 	update_xp_requirement()

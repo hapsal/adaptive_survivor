@@ -1,0 +1,14 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3991942870	Music			\Music\Music	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	151362964	PlayerHealth			\Default Work Unit\PlayerHealth	
+
+State	ID	Name	State Group			Notes
+	655265632	Alive	PlayerHealth			
+	748895195	None	PlayerHealth			
+	2044049779	Dead	PlayerHealth			
+
+Trigger	ID	Name			Wwise Object Path	Notes
+	1665515263	Cymba_Swell			\Music\Cymba_Swell	
+

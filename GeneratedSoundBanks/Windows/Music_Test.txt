@@ -1,0 +1,36 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2314578166	Cymbal_Test			\Default Work Unit\Cymbal_Test	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	151362964	PlayerHealth			\Default Work Unit\PlayerHealth	
+
+State	ID	Name	State Group			Notes
+	655265632	Alive	PlayerHealth			
+	748895195	None	PlayerHealth			
+	2044049779	Dead	PlayerHealth			
+
+Trigger	ID	Name			Wwise Object Path	Notes
+	1665515263	Cymba_Swell			\Music\Cymba_Swell	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	9376203	Combat-A-StaccStrings1_138bpm4-4_L8M-P0	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\CC\{CCF49AA7-C344-B85F-2CD7-8DD4CF7B5700}.wem		\Interactive Music Hierarchy\Music\Combat\Adaptive\Combat\Combat-A\Combat-A-StaccStrings1_138bpm4-4_L8M-P0		3005312
+	25395674	Combat-A-Synth1_138bpm4-4_L8M-P0	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\84\{84099692-719C-CD2E-C9F7-38A329C157D0}.wem		\Interactive Music Hierarchy\Music\Combat\Adaptive\Combat\Combat-A\Combat-A-Synth1_138bpm4-4_L8M-P0		2671348
+	26651455	Combat-A-HighChoir_138bpm4-4_L8M-P0	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\9A\{9AC89014-CA20-A738-2C35-F7C435465A0F}.wem		\Interactive Music Hierarchy\Music\Combat\Adaptive\Combat\Combat-A\Combat-A-HighChoir_138bpm4-4_L8M-P0		3339228
+	35770975	Combat-AB-Rhythm-HiHat_138bpm4-4_L4M-P0	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\E6\{E6467101-F370-A0FD-21D0-23AAFCAA6DE6}.wem		\Interactive Music Hierarchy\Music\Combat\Adaptive\Combat\Combat-A\Combat-AB-Rhythm-HiHat_138bpm4-4_L4M-P0		1335748
+	235375564	Combat-A-Bass1_138bpm4-4_L8M-P0	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\29\{29520AC4-4A15-669C-208B-62C87A256A53}.wem		\Interactive Music Hierarchy\Music\Combat\Adaptive\Combat\Combat-A\Combat-A-Bass1_138bpm4-4_L8M-P0		2671400
+	262465582	Combat-TransToBridge_138bpm3-4_L3M-P1M	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\56\{56A26FC5-C05E-BC16-1850-09191D4FB58C}.wem		\Interactive Music Hierarchy\Music\Combat\Adaptive\Combat\Combat-TransToBridge_138bpm3-4_L3M-P1M\Combat-TransToBridge_138bpm3-4_L3M-P1M		2254008
+	313794256	Combat-A-HighChoir_138bpm4-4_L8M-P0	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\E5\{E5D5C494-BD2A-956C-7103-E81E655E367D}.wem		\Interactive Music Hierarchy\Music\Combat\Adaptive\Combat\Combat-A\Combat-A-HighChoir_138bpm4-4_L8M-P0		3339228
+	424148424	Combat-A-StaccStrings1_138bpm4-4_L8M-P0	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\BB\{BB316DC5-D4B6-06A1-177F-E7EC3D89B3DD}.wem		\Interactive Music Hierarchy\Music\Combat\Adaptive\Combat\Combat-A\Combat-A-StaccStrings1_138bpm4-4_L8M-P0		3005316
+	439512460	Combat-AB-Rhythm-HiHat_138bpm4-4_L4M-P0	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\19\{19E98E31-C97E-A9C8-2782-034CFD9DECCC}.wem		\Interactive Music Hierarchy\Music\Combat\Adaptive\Combat\Combat-A\Combat-AB-Rhythm-HiHat_138bpm4-4_L4M-P0		1335748
+	495008002	Combat-A-Synth1_138bpm4-4_L8M-P0	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\68\{687CC24B-CDC7-D3B2-4F15-65F57228176D}.wem		\Interactive Music Hierarchy\Music\Combat\Adaptive\Combat\Combat-A\Combat-A-Synth1_138bpm4-4_L8M-P0		2671400
+	496548566	Stinger-CymbalSwell_138bpm4-4_L0-P3B	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\8C\{8C488581-E60D-39A0-012A-7ECBB78FF76F}.wem		\Interactive Music Hierarchy\Music\Stingers\Stinger-CymbalSwell_138bpm4-4_L0-P3B\Stinger-CymbalSwell_138bpm4-4_L0-P3B		1073900
+	508293775	Combat-A-LowBrass_138bpm4-4_L8M-P0	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\52\{52E43852-FA8C-6DED-6AAB-CFCCC36A1807}.wem		\Interactive Music Hierarchy\Music\Combat\Adaptive\Combat\Combat-A\Combat-A-LowBrass_138bpm4-4_L8M-P0		3339228
+	577629701	Arp1	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\86\{86A7B34F-F5A1-5A09-5BB8-573163C5E14D}.wem		\Interactive Music Hierarchy\Music\Combat\Adaptive\Combat\Combat-A\Arp1		3339228
+	647489161	Combat-A-Strings1_138bpm4-4_L8M-P0	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\26\{2649BFD0-3991-545C-96DD-130FA34B198A}.wem		\Interactive Music Hierarchy\Music\Combat\Adaptive\Combat\Combat-A\Combat-A-Strings1_138bpm4-4_L8M-P0		3339228
+	831924622	Combat-A-Bass1_138bpm4-4_L8M-P0	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\F5\{F5799D41-33F2-1880-734A-6D6DC571612D}.wem		\Interactive Music Hierarchy\Music\Combat\Adaptive\Combat\Combat-A\Combat-A-Bass1_138bpm4-4_L8M-P0		2671400
+	906116562	Combat-A-Strings1_138bpm4-4_L8M-P0	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\B1\{B15DF290-BA1D-8F2F-2383-5FD46FD16F7F}.wem		\Interactive Music Hierarchy\Music\Combat\Adaptive\Combat\Combat-A\Combat-A-Strings1_138bpm4-4_L8M-P0		3339228
+	907830914	Combat-A-Gtr1_138bpm4-4_L8M-P0	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\74\{74504596-3E33-8F35-712F-318160654E51}.wem		\Interactive Music Hierarchy\Music\Combat\Adaptive\Combat\Combat-A\Combat-A-Gtr1_138bpm4-4_L8M-P0		2671400
+	923166075	Combat-A-Gtr1_138bpm4-4_L8M-P0	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\5D\{5DBD689B-7220-7614-9843-AA5BDCED94C0}.wem		\Interactive Music Hierarchy\Music\Combat\Adaptive\Combat\Combat-A\Combat-A-Gtr1_138bpm4-4_L8M-P0		2671400
+	980477008	Combat-A-Gtr1_138bpm4-4_L8M-P0	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\40\{400A185F-9D1F-CA09-27A1-A3B3FAA4B68A}.wem		\Interactive Music Hierarchy\Music\Combat\Adaptive\Combat\Combat-A\Combat-A-Gtr1_138bpm4-4_L8M-P0		2420968
+	1044774251	Combat-AB-Rhythm-HiHat_138bpm4-4_L4M-P0	C:\Users\hapsal\Documents\WwiseProjects\test\.cache\B7\{B701CE91-2A9C-99BF-C7EB-D966EEE7A6A0}.wem		\Interactive Music Hierarchy\Music\Combat\Adaptive\Combat\Combat-A\Combat-AB-Rhythm-HiHat_138bpm4-4_L4M-P0		1335752
+

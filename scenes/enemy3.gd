@@ -5,15 +5,42 @@ var damage_popup = preload("res://scenes/damage_popup.tscn")
 var enemy_speed = 20
 var health = 150
 
+@export var attack_range: float = 200.0
+@export var attack_cooldown: float = 2.0
+var can_attack: bool = true
+var projectile = preload("res://scenes/enemy_projectile.tscn")
+
 signal enemy_dead(position: Vector2)
 
 func _physics_process(delta: float) -> void:
+	var distance_to_player = global_position.distance_to(player.global_position)
 	var direction = global_position.direction_to(player.global_position)
-	velocity = direction * enemy_speed
-	move_and_slide()
 	
-	if velocity.length() > 0:
-		%SnökEnemyElite.play("walk")
+	if distance_to_player > attack_range:
+		velocity = direction * enemy_speed
+		move_and_slide()
+		
+		if velocity.length() > 0:
+			%SnökEnemyElite.play("walk")
+	else:
+		velocity = Vector2.ZERO
+		if can_attack:
+			shoot()
+
+func shoot():
+	can_attack = false
+	
+	var proj = projectile.instantiate()
+	get_tree().get_root().add_child(proj)
+	proj.global_position = global_position
+	
+	var direction = global_position.direction_to(player.global_position)
+	proj.direction = direction
+	
+	proj.rotation = direction.angle() + PI/2
+	
+	await get_tree().create_timer(attack_cooldown).timeout
+	can_attack = true
 
 func take_damage(damage_amount):
 	health -= damage_amount

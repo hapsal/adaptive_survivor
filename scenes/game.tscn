@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cqnxumy0afnoj"]
+[gd_scene load_steps=10 format=3 uid="uid://cqnxumy0afnoj"]
 
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_5vum0"]
 [ext_resource type="PackedScene" uid="uid://dn8nowr0u4ash" path="res://scenes/player.tscn" id="1_wtgoj"]
 [ext_resource type="PackedScene" uid="uid://smo7sxiqhbii" path="res://scenes/world.tscn" id="2_t3wbw"]
+[ext_resource type="PackedScene" uid="uid://1yyjavrk1dtr" path="res://scenes/pause_menu.tscn" id="4_d0x7a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gl8y7"]
 bg_color = Color(0.784314, 0, 0.152941, 1)
@@ -44,6 +45,17 @@ y_sort_enabled = true
 script = ExtResource("1_5vum0")
 
 [node name="UI" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="UI" instance=ExtResource("4_d0x7a")]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="ColorRect" type="ColorRect" parent="UI"]
 visible = false

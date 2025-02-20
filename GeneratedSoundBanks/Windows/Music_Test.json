@@ -1,0 +1,243 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1068347553",
+    "Type": "User",
+    "GUID": "{A7317B3F-2AA4-4592-A32A-D1AA2B29F9DE}",
+    "Language": "SFX",
+    "Hash": "{D003740D-50C5-A9FB-98E9-612083F00448}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music_Test",
+    "ShortName": "Music_Test",
+    "Path": "Music_Test.bnk",
+    "Media": [
+     {
+      "Id": "9376203",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Combat-A\\Combat-A-StaccStrings1_138bpm4-4_L8M-P0.wav",
+      "CachePath": "CC/{CCF49AA7-C344-B85F-2CD7-8DD4CF7B5700}.wem"
+     },
+     {
+      "Id": "25395674",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Combat-A\\Combat-A-Synth1_138bpm4-4_L8M-P0.wav",
+      "CachePath": "84/{84099692-719C-CD2E-C9F7-38A329C157D0}.wem"
+     },
+     {
+      "Id": "26651455",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Combat-A\\Combat-A-HighChoir_138bpm4-4_L8M-P0.wav",
+      "CachePath": "9A/{9AC89014-CA20-A738-2C35-F7C435465A0F}.wem"
+     },
+     {
+      "Id": "35770975",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Combat-AB-Rhythm-HiHat_138bpm4-4_L4M-P0.wav",
+      "CachePath": "E6/{E6467101-F370-A0FD-21D0-23AAFCAA6DE6}.wem"
+     },
+     {
+      "Id": "235375564",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Combat-A\\Combat-A-Bass1_138bpm4-4_L8M-P0.wav",
+      "CachePath": "29/{29520AC4-4A15-669C-208B-62C87A256A53}.wem"
+     },
+     {
+      "Id": "262465582",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Combat-TransToBridge_138bpm3-4_L3M-P1M.wav",
+      "CachePath": "56/{56A26FC5-C05E-BC16-1850-09191D4FB58C}.wem"
+     },
+     {
+      "Id": "313794256",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Combat-A\\Combat-A-LowChoir_138bpm4-4_L8M-P0.wav",
+      "CachePath": "E5/{E5D5C494-BD2A-956C-7103-E81E655E367D}.wem"
+     },
+     {
+      "Id": "424148424",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Combat-A\\Combat-A-StaccStrings2_138bpm4-4_L8M-P0.wav",
+      "CachePath": "BB/{BB316DC5-D4B6-06A1-177F-E7EC3D89B3DD}.wem"
+     },
+     {
+      "Id": "439512460",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Combat-AB-Rhythm-PercPulse_138bpm4-4_L4M-P0.wav",
+      "CachePath": "19/{19E98E31-C97E-A9C8-2782-034CFD9DECCC}.wem"
+     },
+     {
+      "Id": "495008002",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Combat-A\\Combat-A-Synth2_138bpm4-4_L8M-P0.wav",
+      "CachePath": "68/{687CC24B-CDC7-D3B2-4F15-65F57228176D}.wem"
+     },
+     {
+      "Id": "496548566",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stinger-CymbalSwell_138bpm4-4_L0-P3B.wav",
+      "CachePath": "8C/{8C488581-E60D-39A0-012A-7ECBB78FF76F}.wem"
+     },
+     {
+      "Id": "508293775",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Combat-A\\Combat-A-LowBrass_138bpm4-4_L8M-P0.wav",
+      "CachePath": "52/{52E43852-FA8C-6DED-6AAB-CFCCC36A1807}.wem"
+     },
+     {
+      "Id": "577629701",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Combat-A\\Combat-A-Arpeggio_138bpm4-4-L8M-P0.wav",
+      "CachePath": "86/{86A7B34F-F5A1-5A09-5BB8-573163C5E14D}.wem"
+     },
+     {
+      "Id": "647489161",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Combat-A\\Combat-A-Strings2_138bpm4-4_L8M-P0.wav",
+      "CachePath": "26/{2649BFD0-3991-545C-96DD-130FA34B198A}.wem"
+     },
+     {
+      "Id": "831924622",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Combat-A\\Combat-A-Bass2_138bpm4-4_L8M-P0.wav",
+      "CachePath": "F5/{F5799D41-33F2-1880-734A-6D6DC571612D}.wem"
+     },
+     {
+      "Id": "906116562",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Combat-A\\Combat-A-Strings1_138bpm4-4_L8M-P0.wav",
+      "CachePath": "B1/{B15DF290-BA1D-8F2F-2383-5FD46FD16F7F}.wem"
+     },
+     {
+      "Id": "907830914",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Combat-A\\Combat-A-Gtr3_138bpm4-4_L8M-P0.wav",
+      "CachePath": "74/{74504596-3E33-8F35-712F-318160654E51}.wem"
+     },
+     {
+      "Id": "923166075",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Combat-A\\Combat-A-Gtr2_138bpm4-4_L8M-P0.wav",
+      "CachePath": "5D/{5DBD689B-7220-7614-9843-AA5BDCED94C0}.wem"
+     },
+     {
+      "Id": "980477008",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Combat-A\\Combat-A-Gtr1_138bpm4-4_L8M-P0.wav",
+      "CachePath": "40/{400A185F-9D1F-CA09-27A1-A3B3FAA4B68A}.wem"
+     },
+     {
+      "Id": "1044774251",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Combat-AB-Rhythm-Main_138bpm4-4_L4M-P0.wav",
+      "CachePath": "B7/{B701CE91-2A9C-99BF-C7EB-D966EEE7A6A0}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2314578166",
+      "Name": "Cymbal_Test",
+      "ObjectPath": "\\Events\\Default Work Unit\\Cymbal_Test",
+      "GUID": "{BA7C4E8E-408A-43C2-A881-76F17A63DAC5}",
+      "DurationType": "OneShot",
+      "DurationMin": "6.0869613",
+      "DurationMax": "6.0869613",
+      "MediaRefs": [
+       {
+        "Id": "496548566"
+       }
+      ],
+      "ActionTrigger": [
+       {
+        "Id": "1665515263",
+        "Name": "Cymba_Swell",
+        "ObjectPath": "\\Triggers\\Music\\Cymba_Swell",
+        "GUID": "{DD9FE0D9-FCF7-4EEE-B660-969B9693BAAF}"
+       }
+      ]
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "151362964",
+      "Name": "PlayerHealth",
+      "ObjectPath": "\\States\\Default Work Unit\\PlayerHealth",
+      "GUID": "{44ACDB65-2F5D-42E4-87CA-1562BD2D082A}",
+      "States": [
+       {
+        "Id": "655265632",
+        "Name": "Alive",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerHealth\\Alive",
+        "GUID": "{681E95EF-4780-4F08-B6BA-76F4938248DB}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerHealth\\None",
+        "GUID": "{5265570B-18E3-4330-93BB-B0FE6A72D751}"
+       },
+       {
+        "Id": "2044049779",
+        "Name": "Dead",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerHealth\\Dead",
+        "GUID": "{CEC36AEB-1860-4CFA-B137-FCB1A655C982}"
+       }
+      ]
+     }
+    ],
+    "Triggers": [
+     {
+      "Id": "1665515263",
+      "Name": "Cymba_Swell",
+      "ObjectPath": "\\Triggers\\Music\\Cymba_Swell",
+      "GUID": "{DD9FE0D9-FCF7-4EEE-B660-969B9693BAAF}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{AD3FD7C2-466F-54E2-F115-C8FAA29690A8}"
+ }
+}
