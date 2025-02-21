@@ -1,145 +1,145 @@
 [gd_resource type="WwiseProjectData" load_steps=45 format=3 uid="uid://c6osi7kep5cn1"]
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_j6wao"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_2wcjb"]
 path = "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Acoustic_Banner"
 type = 15
 name = "Acoustic_Banner"
 guid = "{2F2D53F2-DACC-408E-8B88-98B1B52A26D6}"
 id = 4168643977
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_3ute0"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_ew03i"]
 path = "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Anechoic"
 type = 15
 name = "Anechoic"
 guid = "{8B0AC232-02E2-4EDE-BEAC-FDD1A900E3ED}"
 id = 1873957695
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_7ch4s"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_hdx36"]
 path = "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Brick"
 type = 15
 name = "Brick"
 guid = "{B086A5A9-F204-4C53-A838-BDB18B18F6D6}"
 id = 504532776
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_0s7uc"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_siixq"]
 path = "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Carpet"
 type = 15
 name = "Carpet"
 guid = "{34227589-DC56-4260-96C4-B9F4B669092B}"
 id = 2412606308
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_cpkmp"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_6m4tj"]
 path = "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Concrete"
 type = 15
 name = "Concrete"
 guid = "{5CF81C00-2896-4AE0-AF7C-3080BDABA682}"
 id = 841620460
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_osthh"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_14w7e"]
 path = "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Cork_Tiles"
 type = 15
 name = "Cork_Tiles"
 guid = "{30D2C919-925F-4143-8906-3DBB3C4AE5E2}"
 id = 3195498748
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_ejcv2"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_h8nun"]
 path = "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Curtains"
 type = 15
 name = "Curtains"
 guid = "{F8E69E33-5C97-4968-B508-A1535F2D66E8}"
 id = 2928161104
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_s5ycc"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_jbfia"]
 path = "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Drywall"
 type = 15
 name = "Drywall"
 guid = "{68A4E3F4-4C0B-4687-A8B8-A84DB93DBC8F}"
 id = 3670307564
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_viexq"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_h0668"]
 path = "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Fabric"
 type = 15
 name = "Fabric"
 guid = "{8381D532-DB6E-4EED-A7A3-BC7B0A0B8BA8}"
 id = 1970351858
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_my4uc"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_a2dkr"]
 path = "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Mountain"
 type = 15
 name = "Mountain"
 guid = "{C5933731-001A-4AB4-98DD-9B033A8C8EAB}"
 id = 513139656
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_7tmy5"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_q84fu"]
 path = "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Tile"
 type = 15
 name = "Tile"
 guid = "{A882DAC4-132A-47B7-BA9D-B9907BA29CC0}"
 id = 2637588553
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_jg0nf"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_46sup"]
 path = "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Wood"
 type = 15
 name = "Wood"
 guid = "{1FFFBC96-6FE7-489E-BA6C-7C14A71391AE}"
 id = 2058049674
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_msx3c"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_xmsud"]
 path = "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Wood_Bright"
 type = 15
 name = "Wood_Bright"
 guid = "{7B85D1E5-C1A2-4E63-9A13-CEC54B641ADC}"
 id = 4262522749
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_aov1r"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_3075x"]
 path = "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Wood_Deep"
 type = 15
 name = "Wood_Deep"
 guid = "{5246478E-C5DA-4E0C-A0DE-C98D1479529A}"
 id = 1755085759
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_pj1ku"]
-children = [SubResource("WwiseTreeObject_j6wao"), SubResource("WwiseTreeObject_3ute0"), SubResource("WwiseTreeObject_7ch4s"), SubResource("WwiseTreeObject_0s7uc"), SubResource("WwiseTreeObject_cpkmp"), SubResource("WwiseTreeObject_osthh"), SubResource("WwiseTreeObject_ejcv2"), SubResource("WwiseTreeObject_s5ycc"), SubResource("WwiseTreeObject_viexq"), SubResource("WwiseTreeObject_my4uc"), SubResource("WwiseTreeObject_7tmy5"), SubResource("WwiseTreeObject_jg0nf"), SubResource("WwiseTreeObject_msx3c"), SubResource("WwiseTreeObject_aov1r")]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_pr7vt"]
+children = [SubResource("WwiseTreeObject_2wcjb"), SubResource("WwiseTreeObject_ew03i"), SubResource("WwiseTreeObject_hdx36"), SubResource("WwiseTreeObject_siixq"), SubResource("WwiseTreeObject_6m4tj"), SubResource("WwiseTreeObject_14w7e"), SubResource("WwiseTreeObject_h8nun"), SubResource("WwiseTreeObject_jbfia"), SubResource("WwiseTreeObject_h0668"), SubResource("WwiseTreeObject_a2dkr"), SubResource("WwiseTreeObject_q84fu"), SubResource("WwiseTreeObject_46sup"), SubResource("WwiseTreeObject_xmsud"), SubResource("WwiseTreeObject_3075x")]
 name = "Textures"
 id = 1276632493
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_q7m2y"]
-children = [SubResource("WwiseTreeObject_pj1ku")]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_36y8v"]
+children = [SubResource("WwiseTreeObject_pr7vt")]
 name = "Factory Acoustic Textures"
 id = 2954047558
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_ikdqn"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_qa38h"]
 path = "\\SoundBanks\\Default Work Unit\\Main"
 type = 7
 name = "Main"
 guid = "{0E602EA4-FD81-4EB4-9E40-A042FD84D92B}"
 id = 3161908922
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_oyq58"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_0qruc"]
 path = "\\SoundBanks\\Default Work Unit\\Music_Test"
 type = 7
 name = "Music_Test"
 guid = "{A7317B3F-2AA4-4592-A32A-D1AA2B29F9DE}"
 id = 1068347553
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_mdofk"]
-children = [SubResource("WwiseTreeObject_ikdqn"), SubResource("WwiseTreeObject_oyq58")]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_6vmdm"]
+children = [SubResource("WwiseTreeObject_qa38h"), SubResource("WwiseTreeObject_0qruc")]
 name = "Default Work Unit"
 id = 125608783
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_aue8j"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_jg1px"]
 path = "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus"
 type = 2
 name = "Master Audio Bus"
 guid = "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
 id = 3803692087
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_bqttx"]
-children = [SubResource("WwiseTreeObject_aue8j")]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_4n7wi"]
+children = [SubResource("WwiseTreeObject_jg1px")]
 name = "Default Work Unit"
 id = 125608783
 
-[sub_resource type="WwiseTreeObjectEvent" id="WwiseTreeObjectEvent_mo4hk"]
+[sub_resource type="WwiseTreeObjectEvent" id="WwiseTreeObjectEvent_gfdax"]
 max_duration = 6.08696
 min_duration = 6.08696
 path = "\\Events\\Default Work Unit\\Cymbal_Test"
@@ -148,7 +148,7 @@ name = "Cymbal_Test"
 guid = "{BA7C4E8E-408A-43C2-A881-76F17A63DAC5}"
 id = 2314578166
 
-[sub_resource type="WwiseTreeObjectEvent" id="WwiseTreeObjectEvent_rfmpm"]
+[sub_resource type="WwiseTreeObjectEvent" id="WwiseTreeObjectEvent_siv1x"]
 max_duration = 0.978141
 min_duration = 0.978141
 path = "\\Events\\Default Work Unit\\Hit"
@@ -157,12 +157,12 @@ name = "Hit"
 guid = "{8181AF87-B665-47C1-9873-AECE9B020172}"
 id = 1116398592
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_tfgy0"]
-children = [SubResource("WwiseTreeObjectEvent_mo4hk"), SubResource("WwiseTreeObjectEvent_rfmpm")]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_85ja7"]
+children = [SubResource("WwiseTreeObjectEvent_gfdax"), SubResource("WwiseTreeObjectEvent_siv1x")]
 name = "Default Work Unit"
 id = 125608783
 
-[sub_resource type="WwiseTreeObjectEvent" id="WwiseTreeObjectEvent_5ykwk"]
+[sub_resource type="WwiseTreeObjectEvent" id="WwiseTreeObjectEvent_w7fon"]
 max_duration = 0.0
 min_duration = 0.0
 path = "\\Events\\Music\\Music"
@@ -171,137 +171,137 @@ name = "Music"
 guid = "{6B9B1B07-C79E-4C8E-902B-F3EB9B81BC92}"
 id = 3991942870
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_pt875"]
-children = [SubResource("WwiseTreeObjectEvent_5ykwk")]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_n376r"]
+children = [SubResource("WwiseTreeObjectEvent_w7fon")]
 name = "Music"
 id = 3991942870
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_jo0na"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_dj8fk"]
 path = "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Fear"
 type = 13
 name = "SS_Air_Fear"
 guid = "{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"
 id = 1351367891
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_hc226"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_lg44t"]
 path = "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Freefall"
 type = 13
 name = "SS_Air_Freefall"
 guid = "{2F2DFE37-4F9E-4D94-83D8-53CCA39781AD}"
 id = 3002758120
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_80uns"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_qykg2"]
 path = "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Fury"
 type = 13
 name = "SS_Air_Fury"
 guid = "{A2AE79DC-CA3A-46BA-9652-9986C322A87B}"
 id = 1029930033
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_d37to"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_bprvh"]
 path = "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Month"
 type = 13
 name = "SS_Air_Month"
 guid = "{09E2B445-C4A3-447F-B3CA-818A1D925EF7}"
 id = 2648548617
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_k12dr"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_kgute"]
 path = "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Presence"
 type = 13
 name = "SS_Air_Presence"
 guid = "{E3B7811A-7B2F-490F-B44F-5FE51B468041}"
 id = 3847924954
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_wc0ew"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_w85gq"]
 path = "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_RPM"
 type = 13
 name = "SS_Air_RPM"
 guid = "{A34890AB-B9D5-4526-A64D-5290C43EF2DC}"
 id = 822163944
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_ckoj7"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_jbtbn"]
 path = "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Size"
 type = 13
 name = "SS_Air_Size"
 guid = "{1329EBEF-A193-472E-A38C-64668B494879}"
 id = 3074696722
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_hej6t"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_6g50j"]
 path = "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Storm"
 type = 13
 name = "SS_Air_Storm"
 guid = "{E93F8CDB-06D1-4737-ACAF-7CD44BBED783}"
 id = 3715662592
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_jrisv"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_mfkbo"]
 path = "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_TimeOfDay"
 type = 13
 name = "SS_Air_TimeOfDay"
 guid = "{536FA72C-8C7E-4C8B-AE03-EF34FDADC314}"
 id = 3203397129
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_mskuw"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_qwb1m"]
 path = "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Turbulence"
 type = 13
 name = "SS_Air_Turbulence"
 guid = "{EDA87B19-73AA-40A0-9F19-2073606DB710}"
 id = 4160247818
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_a1bie"]
-children = [SubResource("WwiseTreeObject_jo0na"), SubResource("WwiseTreeObject_hc226"), SubResource("WwiseTreeObject_80uns"), SubResource("WwiseTreeObject_d37to"), SubResource("WwiseTreeObject_k12dr"), SubResource("WwiseTreeObject_wc0ew"), SubResource("WwiseTreeObject_ckoj7"), SubResource("WwiseTreeObject_hej6t"), SubResource("WwiseTreeObject_jrisv"), SubResource("WwiseTreeObject_mskuw")]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_qbygj"]
+children = [SubResource("WwiseTreeObject_dj8fk"), SubResource("WwiseTreeObject_lg44t"), SubResource("WwiseTreeObject_qykg2"), SubResource("WwiseTreeObject_bprvh"), SubResource("WwiseTreeObject_kgute"), SubResource("WwiseTreeObject_w85gq"), SubResource("WwiseTreeObject_jbtbn"), SubResource("WwiseTreeObject_6g50j"), SubResource("WwiseTreeObject_mfkbo"), SubResource("WwiseTreeObject_qwb1m")]
 name = "Factory Soundseed Air Game Syncs"
 id = 3170273871
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_rndga"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_orc5o"]
 path = "\\States\\Default Work Unit\\PlayerHealth\\Alive"
 type = 8
 name = "Alive"
 guid = "{681E95EF-4780-4F08-B6BA-76F4938248DB}"
 id = 655265632
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_ptosn"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_tf68d"]
 path = "\\States\\Default Work Unit\\PlayerHealth\\Dead"
 type = 8
 name = "Dead"
 guid = "{CEC36AEB-1860-4CFA-B137-FCB1A655C982}"
 id = 2044049779
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_371m3"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_mfeul"]
 path = "\\States\\Default Work Unit\\PlayerHealth\\None"
 type = 8
 name = "None"
 guid = "{5265570B-18E3-4330-93BB-B0FE6A72D751}"
 id = 748895195
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_v2h0w"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_wj3w8"]
 path = "\\States\\Default Work Unit\\PlayerHealth"
-children = [SubResource("WwiseTreeObject_rndga"), SubResource("WwiseTreeObject_ptosn"), SubResource("WwiseTreeObject_371m3")]
+children = [SubResource("WwiseTreeObject_orc5o"), SubResource("WwiseTreeObject_tf68d"), SubResource("WwiseTreeObject_mfeul")]
 type = 9
 name = "PlayerHealth"
 guid = "{44ACDB65-2F5D-42E4-87CA-1562BD2D082A}"
 id = 151362964
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_f5a0w"]
-children = [SubResource("WwiseTreeObject_v2h0w")]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_210rk"]
+children = [SubResource("WwiseTreeObject_wj3w8")]
 name = "Default Work Unit"
 id = 125608783
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_syexm"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_cj616"]
 path = "\\Triggers\\Music\\Cymba_Swell"
 type = 14
 name = "Cymba_Swell"
 guid = "{DD9FE0D9-FCF7-4EEE-B660-969B9693BAAF}"
 id = 1665515263
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_hj8tj"]
-children = [SubResource("WwiseTreeObject_syexm")]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_b8iwe"]
+children = [SubResource("WwiseTreeObject_cj616")]
 name = "Music"
 id = 3991942870
 
 [resource]
-acoustic_texture_root = [SubResource("WwiseTreeObject_q7m2y")]
-bus_root = [SubResource("WwiseTreeObject_bqttx")]
-bank_root = [SubResource("WwiseTreeObject_mdofk")]
-event_root = [SubResource("WwiseTreeObject_tfgy0"), SubResource("WwiseTreeObject_pt875")]
-game_parameter_root = [SubResource("WwiseTreeObject_a1bie")]
-state_root = [SubResource("WwiseTreeObject_f5a0w")]
-trigger_root = [SubResource("WwiseTreeObject_hj8tj")]
+acoustic_texture_root = [SubResource("WwiseTreeObject_36y8v")]
+bus_root = [SubResource("WwiseTreeObject_4n7wi")]
+bank_root = [SubResource("WwiseTreeObject_6vmdm")]
+event_root = [SubResource("WwiseTreeObject_85ja7"), SubResource("WwiseTreeObject_n376r")]
+game_parameter_root = [SubResource("WwiseTreeObject_qbygj")]
+state_root = [SubResource("WwiseTreeObject_210rk")]
+trigger_root = [SubResource("WwiseTreeObject_b8iwe")]

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_5vum0"]
 [ext_resource type="PackedScene" uid="uid://dn8nowr0u4ash" path="res://scenes/player.tscn" id="1_wtgoj"]
 [ext_resource type="PackedScene" uid="uid://smo7sxiqhbii" path="res://scenes/world.tscn" id="2_t3wbw"]
-[ext_resource type="PackedScene" uid="uid://1yyjavrk1dtr" path="res://scenes/pause_menu.tscn" id="4_d0x7a"]
+[ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="4_d0x7a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gl8y7"]
 bg_color = Color(0.784314, 0, 0.152941, 1)
@@ -44,6 +44,9 @@ point_count = 6
 y_sort_enabled = true
 script = ExtResource("1_5vum0")
 
+[node name="World" parent="." instance=ExtResource("2_t3wbw")]
+z_index = -99
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("4_d0x7a")]
@@ -56,13 +59,6 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 size_flags_horizontal = 4
 size_flags_vertical = 4
-
-[node name="ColorRect" type="ColorRect" parent="UI"]
-visible = false
-z_index = 1
-offset_top = -14.0
-offset_right = 1155.0
-offset_bottom = 634.0
 
 [node name="HealthBar" type="ProgressBar" parent="UI"]
 unique_name_in_owner = true
@@ -179,11 +175,13 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 text = "Game Over"
 
-[node name="World" parent="." instance=ExtResource("2_t3wbw")]
-z_index = -99
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.732872, 0.799153, 1, 1)
+energy = 0.2
+blend_mode = 1
 
 [connection signal="level_up" from="." to="Player" method="_on_game_level_up"]
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
-[connection signal="timeout" from="EnemySpawner" to="." method="_on_ball_spawner_timeout"]
-[connection signal="timeout" from="EnemySpawner" to="." method="_on_spawner_timer_timeout"]
 [connection signal="timeout" from="EnemySpawner" to="." method="_on_enemy_spawner_timeout"]
+[connection signal="timeout" from="EnemySpawner" to="." method="_on_spawner_timer_timeout"]
+[connection signal="timeout" from="EnemySpawner" to="." method="_on_ball_spawner_timeout"]

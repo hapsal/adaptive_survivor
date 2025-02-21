@@ -70,6 +70,13 @@ func create_chunk(chunk_pos: Vector2i) -> Chunk:
 	return chunk
 
 func add_decoration(chunk: Chunk, texture: Texture2D, pos: Vector2):
+	var shadow = Sprite2D.new()
+	shadow.texture = preload("res://sprites/shadow.png")
+	shadow.position = pos + Vector2(1, 6)
+	shadow.scale = Vector2(1, 1)
+	shadow.modulate = Color(0, 0, 0, 0.4)
+	chunk.decoration_sprites.add_child(shadow)
+	
 	var sprite = Sprite2D.new()
 	sprite.texture = texture
 	sprite.position = pos

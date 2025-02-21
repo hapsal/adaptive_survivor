@@ -7,10 +7,10 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x2upn"]
 shader = ExtResource("2_q2n86")
-shader_parameter/line_thickness = 0.158
-shader_parameter/sin_frequency = 1.0
+shader_parameter/line_thickness = 0.6
+shader_parameter/sin_frequency = 0.2
 shader_parameter/sin_offset = 0.0
-shader_parameter/light_offset = 0.0
+shader_parameter/light_offset = 0.097
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gtedy"]
 animations = [{
@@ -38,7 +38,7 @@ script = ExtResource("1_la3oj")
 [node name="SnökEnemyElite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_x2upn")
-scale = Vector2(1.5, 1.5)
+scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_gtedy")
 animation = &"walk"
 frame_progress = 0.849103

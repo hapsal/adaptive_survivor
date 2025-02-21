@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 signal health_depleted
 
-const BASE_SPEED: float = 200.0
+const BASE_SPEED: float = 100.0
 const BASE_HEALTH: float = 100.0
 const BASE_DAMAGE_RATE: float = 15.0
 const MAX_LEVEL: int = 99
