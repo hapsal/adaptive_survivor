@@ -10,11 +10,203 @@
     "Type": "User",
     "GUID": "{0E602EA4-FD81-4EB4-9E40-A042FD84D92B}",
     "Language": "SFX",
-    "Hash": "{681FE585-D192-78C2-19C6-03D7E7958366}",
+    "Hash": "{95015390-85A7-239B-D32D-009B29AB5C89}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
     "Media": [
+     {
+      "Id": "74584525",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Arp_1.wav",
+      "CachePath": "6A/{6ACD7ECE-FF8F-AEFF-E452-ABC0C1D5B31C}.wem"
+     },
+     {
+      "Id": "94988520",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Intro Bass2_130pbm.wav",
+      "CachePath": "64/{6481EEAE-4C43-D8C0-6B1C-BD1CF992BF2E}.wem"
+     },
+     {
+      "Id": "132022467",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RHYTM CHORDS_1.wav",
+      "CachePath": "1C/{1C9F5A22-9D8B-CD7E-FA8E-717E9F667582}.wem"
+     },
+     {
+      "Id": "154088459",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "HiHat2_130pbm.wav",
+      "CachePath": "C9/{C98B18DE-E176-B98B-AB23-AA6817B45738}.wem"
+     },
+     {
+      "Id": "166920236",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SIMPLE MELODY #2_7-8.wav",
+      "CachePath": "A6/{A6F9AC83-CE3F-7389-3849-EE8FE0897202}.wem"
+     },
+     {
+      "Id": "182469144",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Downlifter.wav",
+      "CachePath": "45/{45562428-18B6-BEE1-9D33-174471DF5E3C}.wem"
+     },
+     {
+      "Id": "203632783",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MAIN BASS PROG #2_7-8.wav",
+      "CachePath": "57/{5733C556-0E92-311D-47FE-CFD3C1200444}.wem"
+     },
+     {
+      "Id": "252216728",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Pad_Transition.wav",
+      "CachePath": "68/{688E2674-6584-CB55-1076-1E2CF66C8127}.wem"
+     },
+     {
+      "Id": "274155727",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "KICK #2_7-8.wav",
+      "CachePath": "C9/{C97A8579-A00E-FB84-B984-C83E5CBE417B}.wem"
+     },
+     {
+      "Id": "294574773",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RHYTM CHORDS #3_4-4.wav",
+      "CachePath": "A8/{A83ACB6A-43F8-A1F8-E925-B16AA009A843}.wem"
+     },
+     {
+      "Id": "304362533",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ARP #2.wav",
+      "CachePath": "24/{2421E33C-3B75-85A7-837B-03D1BA2360CE}.wem"
+     },
+     {
+      "Id": "324823548",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Sub_Chorus.wav",
+      "CachePath": "29/{29DEA046-2899-853E-933B-3E30CEC579D8}.wem"
+     },
+     {
+      "Id": "337117695",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Crash_Transition.wav",
+      "CachePath": "D7/{D79E5C75-9458-A35C-B0B4-E41750C76A0E}.wem"
+     },
+     {
+      "Id": "366247412",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Simple Meldoy_2_130pbm.wav",
+      "CachePath": "C5/{C50F148C-7BC7-75D6-7E8B-0597668A1A71}.wem"
+     },
+     {
+      "Id": "366555021",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "PERCS #2_7-8.wav",
+      "CachePath": "DE/{DE0DF98C-0FA3-3EA3-A88D-11F64D66B8FF}.wem"
+     },
+     {
+      "Id": "389512069",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Reverse_Lifter.wav",
+      "CachePath": "60/{603EA386-831E-FC93-5496-2D60DF8B4A9F}.wem"
+     },
+     {
+      "Id": "395398434",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BASS RUMBLE THANG_remainder.wav",
+      "CachePath": "2B/{2B578190-E372-5E98-8D88-C77CA466DB92}.wem"
+     },
+     {
+      "Id": "426711199",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Kick_4-4_2_130pbm.wav",
+      "CachePath": "9C/{9C601CAB-BF53-CB23-CE13-3DBB30ED4A10}.wem"
+     },
+     {
+      "Id": "433290577",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RHYTM CHORDS #2_7-8.wav",
+      "CachePath": "EC/{EC9A48D1-A9D5-6E39-ACC0-EE9477F87066}.wem"
+     },
+     {
+      "Id": "435504794",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Crash.wav",
+      "CachePath": "D4/{D4910105-2E38-5C77-3437-965C7EEA41E2}.wem"
+     },
+     {
+      "Id": "435678477",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Kick_4-4_130bpm.wav",
+      "CachePath": "75/{75867F8F-ED91-5176-1139-C7B0652459F3}.wem"
+     },
+     {
+      "Id": "437233209",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BLOCK CHORDS.wav",
+      "CachePath": "F1/{F1E55B3A-89A5-9503-2667-0517E8D0FB76}.wem"
+     },
+     {
+      "Id": "548314693",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Intro Bass_130pbm.wav",
+      "CachePath": "4A/{4A2802C6-240F-4100-F372-C8AD3C97A6EE}.wem"
+     },
+     {
+      "Id": "549068336",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Arp_2.wav",
+      "CachePath": "A0/{A0B1A2EC-D304-8F2C-6DE5-A755D73566AE}.wem"
+     },
      {
       "Id": "582465895",
       "Language": "SFX",
@@ -22,6 +214,110 @@
       "Location": "Memory",
       "ShortName": "Hit2.wav",
       "CachePath": "46/{460D01E9-5C4C-ED67-DEE0-05D755D1EE1F}.wem"
+     },
+     {
+      "Id": "594028830",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "COUNTER MELODY.wav",
+      "CachePath": "68/{6886CA87-2E84-C510-5502-51E34F2EFE42}.wem"
+     },
+     {
+      "Id": "609155587",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SIMPLE MELODY #7_7-8_End.wav",
+      "CachePath": "C6/{C6E4EC0E-5A7A-0E89-29E9-D0F939DEB241}.wem"
+     },
+     {
+      "Id": "616204461",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Melody3_Bridge_130bpm.wav",
+      "CachePath": "95/{95A98B71-810C-BB4A-A048-7B3D14B76920}.wem"
+     },
+     {
+      "Id": "631560474",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Melody1_Bridge_130bpm.wav",
+      "CachePath": "7A/{7AFC503B-6703-F587-CB15-9F9C1364BBDE}.wem"
+     },
+     {
+      "Id": "651469519",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "HIHAT #3_7-8.wav",
+      "CachePath": "30/{30653C31-CB94-1A06-E824-1642C29C1966}.wem"
+     },
+     {
+      "Id": "655010347",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "HiHat_130pbm.wav",
+      "CachePath": "E4/{E4BA11EF-B564-DBC4-E642-6204DB723391}.wem"
+     },
+     {
+      "Id": "680958059",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Sub_7-8.wav",
+      "CachePath": "E9/{E985E934-6189-D47F-9E84-BD1C937FB94F}.wem"
+     },
+     {
+      "Id": "693763053",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Simple Melody_1_130bpm.wav",
+      "CachePath": "9C/{9C428CA4-DAE3-ADFD-0EE9-31B02124A509}.wem"
+     },
+     {
+      "Id": "829784446",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "PERCS.wav",
+      "CachePath": "E2/{E2068276-9676-35FD-4ABF-0840FF56144E}.wem"
+     },
+     {
+      "Id": "832027755",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MAIN BASS PROG_Chorus_130pbm.wav",
+      "CachePath": "C7/{C7315A56-469A-3657-4799-C6B2E5660B42}.wem"
+     },
+     {
+      "Id": "838866130",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Melody2_Bridge_130bpm.wav",
+      "CachePath": "E8/{E886FCFC-9A77-38D9-3643-388022EE15BE}.wem"
+     },
+     {
+      "Id": "872934590",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MAIN BASS PROG_1_130bpm.wav",
+      "CachePath": "35/{35BA5D22-C0DD-D957-E440-4D407B081B49}.wem"
+     },
+     {
+      "Id": "899697410",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "High_Pad_130bpm.wav",
+      "CachePath": "74/{7422FCF0-0666-3254-4E1A-DEC351AFE01E}.wem"
      }
     ],
     "Events": [
@@ -38,10 +334,138 @@
         "Id": "582465895"
        }
       ]
+     },
+     {
+      "Id": "2932040671",
+      "Name": "Play_Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Music",
+      "GUID": "{5BC1F5E0-205E-4BD4-B68D-FFE98A598536}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "74584525"
+       },
+       {
+        "Id": "94988520"
+       },
+       {
+        "Id": "132022467"
+       },
+       {
+        "Id": "154088459"
+       },
+       {
+        "Id": "166920236"
+       },
+       {
+        "Id": "182469144"
+       },
+       {
+        "Id": "203632783"
+       },
+       {
+        "Id": "252216728"
+       },
+       {
+        "Id": "274155727"
+       },
+       {
+        "Id": "294574773"
+       },
+       {
+        "Id": "304362533"
+       },
+       {
+        "Id": "324823548"
+       },
+       {
+        "Id": "337117695"
+       },
+       {
+        "Id": "366247412"
+       },
+       {
+        "Id": "366555021"
+       },
+       {
+        "Id": "389512069"
+       },
+       {
+        "Id": "395398434"
+       },
+       {
+        "Id": "426711199"
+       },
+       {
+        "Id": "433290577"
+       },
+       {
+        "Id": "435504794"
+       },
+       {
+        "Id": "435678477"
+       },
+       {
+        "Id": "437233209"
+       },
+       {
+        "Id": "548314693"
+       },
+       {
+        "Id": "549068336"
+       },
+       {
+        "Id": "594028830"
+       },
+       {
+        "Id": "609155587"
+       },
+       {
+        "Id": "616204461"
+       },
+       {
+        "Id": "631560474"
+       },
+       {
+        "Id": "651469519"
+       },
+       {
+        "Id": "655010347"
+       },
+       {
+        "Id": "680958059"
+       },
+       {
+        "Id": "693763053"
+       },
+       {
+        "Id": "829784446"
+       },
+       {
+        "Id": "832027755"
+       },
+       {
+        "Id": "838866130"
+       },
+       {
+        "Id": "872934590"
+       },
+       {
+        "Id": "899697410"
+       }
+      ],
+      "AuxBusRefs": [
+       {
+        "Id": "348963605",
+        "Name": "Reverb",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Reverb",
+        "GUID": "{13F77F69-4DCC-48A3-AED5-6DC7597E8D6E}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{DF61693F-EC65-C2EC-1023-E27489620E9F}"
+  "FileHash": "{9935EAB7-6F5F-A3B3-E8AE-E8A9F2A689C1}"
  }
 }

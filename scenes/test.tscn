@@ -2,7 +2,7 @@
 
 [ext_resource type="WwiseBank" uid="uid://bhib28ufig321" path="res://Wwise/resources/SoundBank/{0E602EA4-FD81-4EB4-9E40-A042FD84D92B}.tres" id="1_i3y4u"]
 [ext_resource type="Script" path="res://scenes/test.gd" id="1_wx54r"]
-[ext_resource type="WwiseEvent" uid="uid://q7aw3bgmyo5r" path="res://Wwise/resources/Event/{8181AF87-B665-47C1-9873-AECE9B020172}.tres" id="2_tp781"]
+[ext_resource type="WwiseEvent" uid="uid://dh85aw6d6skbd" path="res://Wwise/resources/Event/{5BC1F5E0-205E-4BD4-B68D-FFE98A598536}.tres" id="3_kyxqx"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_wx54r")
@@ -14,5 +14,5 @@ load_on = 2
 [node name="AkListener2D" type="AkListener2D" parent="."]
 
 [node name="AkEvent2D" type="AkEvent2D" parent="."]
-event = ExtResource("2_tp781")
+event = ExtResource("3_kyxqx")
 trigger_on = 2

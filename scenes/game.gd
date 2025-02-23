@@ -43,7 +43,7 @@ const ENEMY_DATA = {
 		"final_weight": 0.05    
 	},
 	"enemy3": { # Elite
-		"time_requirement": 1,
+		"time_requirement": 120,
 		"experience_value": 45,
 		"initial_weight": 0.5,
 		"mid_weight": 0.8,     

@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://cqnxumy0afnoj"]
+[gd_scene load_steps=11 format=3 uid="uid://cqnxumy0afnoj"]
 
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_5vum0"]
 [ext_resource type="PackedScene" uid="uid://dn8nowr0u4ash" path="res://scenes/player.tscn" id="1_wtgoj"]
 [ext_resource type="PackedScene" uid="uid://smo7sxiqhbii" path="res://scenes/world.tscn" id="2_t3wbw"]
 [ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="4_d0x7a"]
+[ext_resource type="PackedScene" uid="uid://73dn8grbho13" path="res://scenes/test.tscn" id="5_ovnsu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gl8y7"]
 bg_color = Color(0.784314, 0, 0.152941, 1)
@@ -180,8 +181,10 @@ color = Color(0.732872, 0.799153, 1, 1)
 energy = 0.2
 blend_mode = 1
 
+[node name="Node2D" parent="." instance=ExtResource("5_ovnsu")]
+
 [connection signal="level_up" from="." to="Player" method="_on_game_level_up"]
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
-[connection signal="timeout" from="EnemySpawner" to="." method="_on_enemy_spawner_timeout"]
 [connection signal="timeout" from="EnemySpawner" to="." method="_on_spawner_timer_timeout"]
 [connection signal="timeout" from="EnemySpawner" to="." method="_on_ball_spawner_timeout"]
+[connection signal="timeout" from="EnemySpawner" to="." method="_on_enemy_spawner_timeout"]

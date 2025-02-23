@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID HIT = 1116398592U;
+        static const AkUniqueID PLAY_MUSIC = 2932040671U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
@@ -40,6 +41,11 @@ namespace AK
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID REVERB = 348963605U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {
