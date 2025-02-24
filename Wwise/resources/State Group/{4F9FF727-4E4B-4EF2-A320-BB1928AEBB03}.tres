@@ -1,0 +1,7 @@
+[gd_resource type="WwiseStateGroup" format=3 uid="uid://g81j0uojw5fb"]
+
+[resource]
+name = "PlayerLife"
+id = 444815956
+guid = "{4F9FF727-4E4B-4EF2-A320-BB1928AEBB03}"
+dummy = true

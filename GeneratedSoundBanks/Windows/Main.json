@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{0E602EA4-FD81-4EB4-9E40-A042FD84D92B}",
     "Language": "SFX",
-    "Hash": "{95015390-85A7-239B-D32D-009B29AB5C89}",
+    "Hash": "{8156166C-4F37-0E63-3628-55639845CA8C}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -463,9 +463,17 @@
        }
       ]
      }
+    ],
+    "GameParameters": [
+     {
+      "Id": "151362964",
+      "Name": "PlayerHealth",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\PlayerHealth",
+      "GUID": "{7BFA23C9-1ED0-4543-B41A-1A057F2ED8CD}"
+     }
     ]
    }
   ],
-  "FileHash": "{9935EAB7-6F5F-A3B3-E8AE-E8A9F2A689C1}"
+  "FileHash": "{06D696C6-6D66-79A8-20A7-20B3053D2C58}"
  }
 }

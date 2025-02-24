@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{2466606C-B0B6-20DB-A3F0-42C1A9A0FE21}",
+    "Hash": "{7BD7BD5B-9B80-E635-94B6-13FA7E2401FC}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -84,6 +84,12 @@
     ],
     "GameParameters": [
      {
+      "Id": "151362964",
+      "Name": "PlayerHealth",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\PlayerHealth",
+      "GUID": "{7BFA23C9-1ED0-4543-B41A-1A057F2ED8CD}"
+     },
+     {
       "Id": "822163944",
       "Name": "SS_Air_RPM",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_RPM",
@@ -106,6 +112,12 @@
       "Name": "SS_Air_Month",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Month",
       "GUID": "{09E2B445-C4A3-447F-B3CA-818A1D925EF7}"
+     },
+     {
+      "Id": "2752475886",
+      "Name": "VerseKick",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\VerseKick",
+      "GUID": "{509A1929-8E71-4270-B6C5-B04EFF349D27}"
      },
      {
       "Id": "3002758120",
@@ -142,6 +154,66 @@
       "Name": "SS_Air_Turbulence",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Turbulence",
       "GUID": "{EDA87B19-73AA-40A0-9F19-2073606DB710}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "444815956",
+      "Name": "PlayerLife",
+      "ObjectPath": "\\States\\Default Work Unit\\PlayerLife",
+      "GUID": "{4F9FF727-4E4B-4EF2-A320-BB1928AEBB03}",
+      "States": [
+       {
+        "Id": "655265632",
+        "Name": "Alive",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerLife\\Alive",
+        "GUID": "{EC9338D1-7C5B-4377-B401-A15441B0E977}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerLife\\None",
+        "GUID": "{A89B81CD-6F48-4AB4-8793-0217DECFA888}"
+       },
+       {
+        "Id": "2791675679",
+        "Name": "Defeated",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerLife\\Defeated",
+        "GUID": "{5137E3A7-23C4-474B-A2E0-C88B587434AB}"
+       }
+      ]
+     },
+     {
+      "Id": "520339718",
+      "Name": "EnemyTypes",
+      "ObjectPath": "\\States\\Default Work Unit\\EnemyTypes",
+      "GUID": "{031FB2D2-0C37-49F8-BAF2-FE2CEDAADEAC}",
+      "States": [
+       {
+        "Id": "132730248",
+        "Name": "NoEnemy",
+        "ObjectPath": "\\States\\Default Work Unit\\EnemyTypes\\NoEnemy",
+        "GUID": "{98DC5DB8-B9C3-46D8-BBAD-9520252BC203}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\EnemyTypes\\None",
+        "GUID": "{F368F495-0A49-478B-AE1A-193EA81C6CC9}"
+       },
+       {
+        "Id": "1312765228",
+        "Name": "Enemy1",
+        "ObjectPath": "\\States\\Default Work Unit\\EnemyTypes\\Enemy1",
+        "GUID": "{8ED8BA38-6DFF-4041-B26C-1880147CC50A}"
+       },
+       {
+        "Id": "1312765231",
+        "Name": "Enemy2",
+        "ObjectPath": "\\States\\Default Work Unit\\EnemyTypes\\Enemy2",
+        "GUID": "{48129AF1-6097-44E2-8B2A-5A64ECC93271}"
+       }
+      ]
      }
     ],
     "AcousticTextures": [
@@ -623,6 +695,6 @@
     ]
    }
   ],
-  "FileHash": "{85633C02-26FB-CC76-A92C-B1098A320951}"
+  "FileHash": "{94B09D6A-1944-A46A-BF1D-B6E9FF6A24A0}"
  }
 }

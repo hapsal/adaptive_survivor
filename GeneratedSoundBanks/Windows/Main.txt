@@ -2,6 +2,22 @@ Event	ID	Name			Wwise Object Path	Notes
 	1116398592	Hit			\Default Work Unit\Hit	
 	2932040671	Play_Music			\Default Work Unit\Play_Music	
 
+State Group	ID	Name			Wwise Object Path	Notes
+	444815956	PlayerLife			\Default Work Unit\PlayerLife	
+	520339718	EnemyTypes			\Default Work Unit\EnemyTypes	
+
+State	ID	Name	State Group			Notes
+	655265632	Alive	PlayerLife			
+	748895195	None	PlayerLife			
+	2791675679	Defeated	PlayerLife			
+	132730248	NoEnemy	EnemyTypes			
+	748895195	None	EnemyTypes			
+	1312765228	Enemy1	EnemyTypes			
+	1312765231	Enemy2	EnemyTypes			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	151362964	PlayerHealth			\Default Work Unit\PlayerHealth	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	74584525	Arp_1	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\6A\{6ACD7ECE-FF8F-AEFF-E452-ABC0C1D5B31C}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Bridge\Arp_1		2605436
 	94988520	Intro Bass_130pbm	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\64\{6481EEAE-4C43-D8C0-6B1C-BD1CF992BF2E}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Intro\Intro Bass_130pbm		1302744

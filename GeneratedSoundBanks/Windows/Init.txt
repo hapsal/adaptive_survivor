@@ -1,3 +1,16 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	444815956	PlayerLife			\Default Work Unit\PlayerLife	
+	520339718	EnemyTypes			\Default Work Unit\EnemyTypes	
+
+State	ID	Name	State Group			Notes
+	655265632	Alive	PlayerLife			
+	748895195	None	PlayerLife			
+	2791675679	Defeated	PlayerLife			
+	132730248	NoEnemy	EnemyTypes			
+	748895195	None	EnemyTypes			
+	1312765228	Enemy1	EnemyTypes			
+	1312765231	Enemy2	EnemyTypes			
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	
 	513139656	Mountain			\Factory Acoustic Textures\Textures\Mountain	

@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2940177080",
+    "Type": "Event",
+    "GUID": "{A1052B1E-A505-4B45-8F72-FE55ED6A6C53}",
+    "Language": "SFX",
+    "Hash": "{DCC3769C-B86C-00F7-EBB5-8CAD4C617365}",
+    "ObjectPath": "Resume_Music",
+    "ShortName": "Resume_Music",
+    "Path": "Event/Resume_Music.bnk",
+    "Events": [
+     {
+      "Id": "2940177080",
+      "Name": "Resume_Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Resume_Music",
+      "GUID": "{A1052B1E-A505-4B45-8F72-FE55ED6A6C53}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{30B7CC28-58A2-0690-2D5E-582B864C460F}"
+ }
+}

@@ -29,7 +29,7 @@ const ENEMY_SCENES = {
 
 const ENEMY_DATA = {
 	"enemy1": {
-		"time_requirement": 5,
+		"time_requirement": 15,
 		"experience_value": 3,
 		"initial_weight": 1.0,
 		"mid_weight": 0.3,      
@@ -74,7 +74,9 @@ func _ready() -> void:
 	%Level.text = "Level: " + str(level)
 	%Killed.text = "Killed: " + str(enemies_killed)
 	spawn_timer.start()
-	
+	print("Changing Wwise State: EnemyTypes -> NoEnemy")
+	Wwise.set_state("EnemyTypes", "NoEnemy")
+	Wwise.set_state("PlayerHealth", "Alive")
 
 func _process(delta: float) -> void:
 	if timer_stopped:
@@ -83,7 +85,7 @@ func _process(delta: float) -> void:
 	update_time(delta)
 	update_time_multiplier()
 	update_experience_bar()
-
+	
 func update_time(delta: float) -> void:
 	time_elapsed += delta
 	minutes = time_elapsed / 60
@@ -125,6 +127,10 @@ func spawn_enemy(enemy_type: String) -> void:
 			new_mob.global_position = %EnemySpawn.global_position
 			add_child(new_mob)
 			new_mob.enemy_dead.connect(func(pos): _on_enemy_killed(enemy_info.experience_value, pos))
+			
+			if enemy_type == "enemy1":
+				print("Changing Wwise State: EnemyTypes -> Enemy1")
+				Wwise.set_state("EnemyTypes", "Enemy1")
 
 func calculate_spawn_chance(enemy_type: String) -> float:
 	var enemy_data = ENEMY_DATA[enemy_type]
@@ -225,3 +231,12 @@ func _on_enemy_spawner_timeout():
 		if random_value <= current_sum:
 			spawn_enemy(enemy.type)
 			break
+
+
+func _on_retry_button_pressed() -> void:
+	get_tree().paused = false
+	get_tree().reload_current_scene()
+
+func _on_quit_to_menu_button_pressed() -> void:
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")

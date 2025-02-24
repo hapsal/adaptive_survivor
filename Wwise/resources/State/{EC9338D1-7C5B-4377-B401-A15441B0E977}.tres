@@ -1,0 +1,11 @@
+[gd_resource type="WwiseState" load_steps=2 format=3 uid="uid://bhtk4f1n5mn0j"]
+
+[ext_resource type="WwiseStateGroup" uid="uid://g81j0uojw5fb" path="res://Wwise/resources/State Group/{4F9FF727-4E4B-4EF2-A320-BB1928AEBB03}.tres" id="1_3ten0"]
+
+[resource]
+group_ref = ExtResource("1_3ten0")
+group_id = 444815956
+name = "Alive"
+id = 655265632
+guid = "{EC9338D1-7C5B-4377-B401-A15441B0E977}"
+dummy = true

@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cqnxumy0afnoj"]
+[gd_scene load_steps=12 format=3 uid="uid://cqnxumy0afnoj"]
 
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_5vum0"]
 [ext_resource type="PackedScene" uid="uid://dn8nowr0u4ash" path="res://scenes/player.tscn" id="1_wtgoj"]
 [ext_resource type="PackedScene" uid="uid://smo7sxiqhbii" path="res://scenes/world.tscn" id="2_t3wbw"]
-[ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="4_d0x7a"]
+[ext_resource type="PackedScene" uid="uid://bs4kvlnlgg67t" path="res://scenes/pause_menu.tscn" id="4_d0x7a"]
 [ext_resource type="PackedScene" uid="uid://73dn8grbho13" path="res://scenes/test.tscn" id="5_ovnsu"]
+[ext_resource type="Theme" uid="uid://bvuyyxstk13dj" path="res://themes/def_theme.tres" id="6_i0e42"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gl8y7"]
 bg_color = Color(0.784314, 0, 0.152941, 1)
@@ -44,6 +45,8 @@ point_count = 6
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_5vum0")
+
+[node name="WWISE" parent="." instance=ExtResource("5_ovnsu")]
 
 [node name="World" parent="." instance=ExtResource("2_t3wbw")]
 z_index = -99
@@ -160,31 +163,53 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.568627)
 
-[node name="Label" type="Label" parent="GameOver/ColorRect"]
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOver/ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -43.5
-offset_top = -11.5
-offset_right = 43.5
-offset_bottom = 11.5
+offset_left = -170.0
+offset_top = -65.0
+offset_right = 170.0
+offset_bottom = 65.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("6_i0e42")
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="GameOver/ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "Game Over"
+
+[node name="RetryButton" type="Button" parent="GameOver/ColorRect/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Retry"
+
+[node name="QuitToMenuButton" type="Button" parent="GameOver/ColorRect/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Quit to Menu"
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 color = Color(0.732872, 0.799153, 1, 1)
 energy = 0.2
 blend_mode = 1
 
-[node name="Node2D" parent="." instance=ExtResource("5_ovnsu")]
-
 [connection signal="level_up" from="." to="Player" method="_on_game_level_up"]
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="EnemySpawner" to="." method="_on_spawner_timer_timeout"]
 [connection signal="timeout" from="EnemySpawner" to="." method="_on_ball_spawner_timeout"]
 [connection signal="timeout" from="EnemySpawner" to="." method="_on_enemy_spawner_timeout"]
+[connection signal="pressed" from="GameOver/ColorRect/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="GameOver/ColorRect/VBoxContainer/QuitToMenuButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="GameOver/ColorRect/VBoxContainer/QuitToMenuButton" to="." method="_on_quit_to_menu_button_pressed"]

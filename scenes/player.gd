@@ -22,7 +22,6 @@ const SPEED_SCALE_FACTOR: float = 1.02
 func _ready() -> void:
 	%HealthBar.max_value = max_health
 	%HealthBar.value = current_health
-	
 	add_to_group("player")
 	
 	var attraction_area = Area2D.new()
@@ -54,6 +53,8 @@ func handle_movement(delta: float) -> void:
 func handle_damage(delta: float) -> void:
 	var overlapping_mobs = %HurtBox.get_overlapping_bodies()
 	
+	Wwise.set_rtpc_value("PlayerHealth", current_health, null)
+	
 	if overlapping_mobs.size() > 0:
 		var damage_multiplier = pow(DAMAGE_RESISTANCE_FACTOR, level - 1)
 		var total_damage = damage_rate * overlapping_mobs.size() * delta * damage_multiplier
@@ -72,6 +73,7 @@ func take_damage(damage_amount: float) -> void:
 	%HealthBar.value = current_health
 	
 	if current_health <= 0.0:
+		Wwise.set_state("PlayerHealth", "Defeated")
 		health_depleted.emit()
 
 func _on_game_level_up() -> void:

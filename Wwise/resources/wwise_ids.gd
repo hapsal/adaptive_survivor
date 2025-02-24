@@ -3,16 +3,37 @@ class_name AK
 class EVENTS:
 
 	const HIT : int = 1116398592
+	const PAUSE_MUSIC : int = 2735935537
 	const PLAY_MUSIC : int = 2932040671
+	const RESUME_MUSIC : int = 2940177080
 
 class STATES:
-	pass
+
+	class ENEMYTYPES:
+		const GROUP : int = 520339718
+	
+		class STATE:
+			const ENEMY1 : int = 1312765228
+			const ENEMY2 : int = 1312765231
+			const NOENEMY : int = 132730248
+			const NONE : int = 748895195
+
+	class PLAYERLIFE:
+		const GROUP : int = 444815956
+	
+		class STATE:
+			const ALIVE : int = 655265632
+			const DEFEATED : int = 2791675679
+			const NONE : int = 748895195
+
 
 class SWITCHES:
 	pass
 
 class GAME_PARAMETERS:
 
+	const PLAYERHEALTH : int = 151362964
+	const VERSEKICK : int = 2752475886
 	const SS_AIR_FEAR : int = 1351367891
 	const SS_AIR_FREEFALL : int = 3002758120
 	const SS_AIR_FURY : int = 1029930033
@@ -32,7 +53,8 @@ class BANKS:
 	const MAIN : int = 3161908922
 
 class AUX_BUSSES:
-	pass
+
+	const REVERB : int = 348963605
 
 class ACOUSTIC_TEXTURES:
 
