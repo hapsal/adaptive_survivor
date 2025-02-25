@@ -1,6 +1,7 @@
 extends Area2D
 
-var experience_value: float = 0.8
+var experience_value: float = 1.0
+var healing_value: float = 1.0
 var move_speed: float = 100.0
 var is_moving_to_player: bool = false
 var player: Node2D = null
@@ -17,6 +18,8 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		collect_xp(body)
+		if body.has_method("heal"):
+			body.heal(healing_value)
 
 func collect_xp(player_body: Node2D) -> void:
 	var game = get_node("/root/Game")

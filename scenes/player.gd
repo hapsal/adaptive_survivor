@@ -76,6 +76,10 @@ func take_damage(damage_amount: float) -> void:
 		Wwise.set_state("PlayerHealth", "Defeated")
 		health_depleted.emit()
 
+func heal(amount: float) -> void:
+	current_health = current_health + amount
+	%HealthBar.value = current_health
+
 func _on_game_level_up() -> void:
 	level = min(level + 1, MAX_LEVEL)
 	

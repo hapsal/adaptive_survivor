@@ -29,7 +29,7 @@ const ENEMY_SCENES = {
 
 const ENEMY_DATA = {
 	"enemy1": {
-		"time_requirement": 15,
+		"time_requirement": 5,
 		"experience_value": 3,
 		"initial_weight": 1.0,
 		"mid_weight": 0.3,      
@@ -74,7 +74,7 @@ func _ready() -> void:
 	%Level.text = "Level: " + str(level)
 	%Killed.text = "Killed: " + str(enemies_killed)
 	spawn_timer.start()
-	print("Changing Wwise State: EnemyTypes -> NoEnemy")
+
 	Wwise.set_state("EnemyTypes", "NoEnemy")
 	Wwise.set_state("PlayerHealth", "Alive")
 
@@ -129,7 +129,6 @@ func spawn_enemy(enemy_type: String) -> void:
 			new_mob.enemy_dead.connect(func(pos): _on_enemy_killed(enemy_info.experience_value, pos))
 			
 			if enemy_type == "enemy1":
-				print("Changing Wwise State: EnemyTypes -> Enemy1")
 				Wwise.set_state("EnemyTypes", "Enemy1")
 
 func calculate_spawn_chance(enemy_type: String) -> float:
