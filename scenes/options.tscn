@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwyimh8jdu4kb"]
+[gd_scene load_steps=4 format=3 uid="uid://dwyimh8jdu4kb"]
 
 [ext_resource type="Theme" uid="uid://bvuyyxstk13dj" path="res://themes/def_theme.tres" id="1_j0eie"]
 [ext_resource type="Script" path="res://scenes/options.gd" id="2_vx13s"]
+[ext_resource type="Texture2D" uid="uid://bw21fbl3pjc52" path="res://sprites/key.png" id="3_qy8pc"]
 
 [node name="Options" type="Control"]
 custom_minimum_size = Vector2(640, 360)
@@ -26,6 +27,74 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Key" type="Sprite2D" parent="MarginContainer/VBoxContainer2/HBoxContainer"]
+position = Vector2(471, 117)
+texture = ExtResource("3_qy8pc")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer2/HBoxContainer/Key"]
+offset_left = -6.0
+offset_top = -11.0
+offset_right = 11.0
+offset_bottom = 12.0
+theme = ExtResource("1_j0eie")
+text = "A"
+
+[node name="Key3" type="Sprite2D" parent="MarginContainer/VBoxContainer2/HBoxContainer"]
+position = Vector2(506, 117)
+texture = ExtResource("3_qy8pc")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer2/HBoxContainer/Key3"]
+offset_left = -6.0
+offset_top = -11.0
+offset_right = 11.0
+offset_bottom = 12.0
+theme = ExtResource("1_j0eie")
+text = "S"
+
+[node name="Key2" type="Sprite2D" parent="MarginContainer/VBoxContainer2/HBoxContainer"]
+position = Vector2(542, 117)
+texture = ExtResource("3_qy8pc")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer2/HBoxContainer/Key2"]
+offset_left = -6.0
+offset_top = -11.0
+offset_right = 11.0
+offset_bottom = 12.0
+theme = ExtResource("1_j0eie")
+text = "D
+"
+
+[node name="Key2" type="Sprite2D" parent="MarginContainer/VBoxContainer2"]
+position = Vector2(506, 83)
+texture = ExtResource("3_qy8pc")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer2/Key2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -27.0
+offset_right = -7.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_j0eie")
+text = "W"
+
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 alignment = 1
@@ -44,6 +113,17 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
 
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ButtonsOptions"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Music 
+"
+
+[node name="MusicVolume" type="HSlider" parent="MarginContainer/VBoxContainer/ButtonsOptions"]
+unique_name_in_owner = true
+layout_mode = 2
+value = 100.0
+
 [node name="Auto" type="CheckButton" parent="MarginContainer/VBoxContainer/ButtonsOptions"]
 unique_name_in_owner = true
 layout_mode = 2
@@ -57,4 +137,14 @@ size_flags_vertical = 4
 text = "Back
 "
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 506.0
+offset_top = 70.0
+offset_right = 570.0
+offset_bottom = 90.0
+size_flags_horizontal = 8
+text = "MOVE"
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/ButtonsOptions/MusicVolume" to="." method="_on_music_volume_value_changed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsOptions/Back" to="." method="_on_back_pressed"]
