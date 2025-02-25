@@ -10,7 +10,7 @@ func _ready() -> void:
 	targeting_checkbox.toggled.connect(_on_auto_toggled)
 	targeting_checkbox.button_pressed = (GameState.targeting_mode == GameEnums.TargetingMode.AUTO)
 	music_volume.changed.connect(_on_music_volume_value_changed)
-
+	
 func _on_back_pressed() -> void:
 	options_closed.emit()
 	hide()

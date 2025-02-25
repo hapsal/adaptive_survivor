@@ -77,7 +77,7 @@ func take_damage(damage_amount: float) -> void:
 		health_depleted.emit()
 
 func heal(amount: float) -> void:
-	current_health = current_health + amount
+	current_health = min(current_health + amount, max_health)
 	%HealthBar.value = current_health
 
 func _on_game_level_up() -> void:

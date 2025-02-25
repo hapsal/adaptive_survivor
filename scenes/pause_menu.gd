@@ -5,9 +5,9 @@ func _ready():
 	
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	
-	%Resume_Button.pressed.connect(_on_resume_button_pressed)
-	%Options_Button.pressed.connect(_on_options_button_pressed)
-	%Quit_Button.pressed.connect(_on_quit_button_pressed)
+	#%Resume_Button.pressed.connect(_on_resume_button_pressed)
+	#%Options_Button.pressed.connect(_on_options_button_pressed)
+	#%Quit_Button.pressed.connect(_on_quit_button_pressed)
 	
 	%Options.options_closed.connect(_on_options_closed)
 
@@ -38,8 +38,7 @@ func _on_resume_button_pressed() -> void:
 func _on_options_button_pressed() -> void:
 	%PauseList.hide()
 	%Options.show()
-	
-	# Options menu ei vielä toimi mm. auto targeting ei vaihdu
+	# Ehkä poistaa tämän ja alla olevan
 	
 func _on_options_closed() -> void:
 	%Options.hide()
