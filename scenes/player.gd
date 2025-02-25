@@ -67,7 +67,7 @@ func handle_damage(delta: float) -> void:
 
 func take_damage(damage_amount: float) -> void:
 	var damage_multiplier = pow(DAMAGE_RESISTANCE_FACTOR, level - 1)
-	var final_damage = damage_amount * damage_multiplier
+	var final_damage = damage_amount * damage_multiplier 
 	
 	current_health -= final_damage
 	%HealthBar.value = current_health

@@ -30,14 +30,14 @@ const ENEMY_SCENES = {
 const ENEMY_DATA = {
 	"enemy1": {
 		"time_requirement": 5,
-		"experience_value": 3,
-		"initial_weight": 1.0,
-		"mid_weight": 0.3,      
-		"final_weight": 0.05   
+		"experience_value": 5,
+		"initial_weight": 2.0,
+		"mid_weight": 1.0,      
+		"final_weight": 0.1   
 	},
 	"enemy2": {
 		"time_requirement": 30,
-		"experience_value": 6,
+		"experience_value": 10,
 		"initial_weight": 0.8,
 		"mid_weight": 1.5,      
 		"final_weight": 0.05    
@@ -128,8 +128,8 @@ func spawn_enemy(enemy_type: String) -> void:
 			add_child(new_mob)
 			new_mob.enemy_dead.connect(func(pos): _on_enemy_killed(enemy_info.experience_value, pos))
 			
-			if enemy_type == "enemy1":
-				Wwise.set_state("EnemyTypes", "Enemy1")
+			if enemy_type == "enemy3":
+				Wwise.set_state("EnemyTypes", "EliteEnemy")
 
 func calculate_spawn_chance(enemy_type: String) -> float:
 	var enemy_data = ENEMY_DATA[enemy_type]
@@ -179,8 +179,8 @@ func calculate_spawn_chance(enemy_type: String) -> float:
 
 func _on_enemy_killed(experience_value: int, enemy_position: Vector2) -> void:
 	enemies_killed += 1
-	if experience_value == ENEMY_DATA.enemy1.experience_value:
-		%Killed.text = "Killed: " + str(enemies_killed)
+	Wwise.set_rtpc_value("KillCount", enemies_killed, null)
+	%Killed.text = "Killed: " + str(enemies_killed)
 		
 	spawn_xp_treat(enemy_position, experience_value)
 

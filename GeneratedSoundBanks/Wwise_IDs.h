@@ -14,9 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID HIT = 1116398592U;
-        static const AkUniqueID PAUSE_MUSIC = 2735935537U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
-        static const AkUniqueID RESUME_MUSIC = 2940177080U;
     } // namespace EVENTS
 
     namespace STATES
@@ -27,8 +25,7 @@ namespace AK
 
             namespace STATE
             {
-                static const AkUniqueID ENEMY1 = 1312765228U;
-                static const AkUniqueID ENEMY2 = 1312765231U;
+                static const AkUniqueID ELITEENEMY = 2906824402U;
                 static const AkUniqueID NOENEMY = 132730248U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
@@ -50,6 +47,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID KILLCOUNT = 790457970U;
         static const AkUniqueID PLAYERHEALTH = 151362964U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;

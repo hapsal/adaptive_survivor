@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{7BD7BD5B-9B80-E635-94B6-13FA7E2401FC}",
+    "Hash": "{51254163-4AA4-EA6D-21B4-CFFFD6F268D0}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -88,6 +88,12 @@
       "Name": "PlayerHealth",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\PlayerHealth",
       "GUID": "{7BFA23C9-1ED0-4543-B41A-1A057F2ED8CD}"
+     },
+     {
+      "Id": "790457970",
+      "Name": "KillCount",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\KillCount",
+      "GUID": "{BEB71EF5-4318-4E70-A61F-45B3349F988F}"
      },
      {
       "Id": "822163944",
@@ -193,7 +199,7 @@
         "Id": "132730248",
         "Name": "NoEnemy",
         "ObjectPath": "\\States\\Default Work Unit\\EnemyTypes\\NoEnemy",
-        "GUID": "{98DC5DB8-B9C3-46D8-BBAD-9520252BC203}"
+        "GUID": "{4B17BC45-5A02-443E-B5BF-ACF6B63B3886}"
        },
        {
         "Id": "748895195",
@@ -202,16 +208,10 @@
         "GUID": "{F368F495-0A49-478B-AE1A-193EA81C6CC9}"
        },
        {
-        "Id": "1312765228",
-        "Name": "Enemy1",
-        "ObjectPath": "\\States\\Default Work Unit\\EnemyTypes\\Enemy1",
-        "GUID": "{8ED8BA38-6DFF-4041-B26C-1880147CC50A}"
-       },
-       {
-        "Id": "1312765231",
-        "Name": "Enemy2",
-        "ObjectPath": "\\States\\Default Work Unit\\EnemyTypes\\Enemy2",
-        "GUID": "{48129AF1-6097-44E2-8B2A-5A64ECC93271}"
+        "Id": "2906824402",
+        "Name": "EliteEnemy",
+        "ObjectPath": "\\States\\Default Work Unit\\EnemyTypes\\EliteEnemy",
+        "GUID": "{6970A307-3B8E-46F6-A6E6-DE7B3AADDE55}"
        }
       ]
      }
@@ -695,6 +695,6 @@
     ]
    }
   ],
-  "FileHash": "{94B09D6A-1944-A46A-BF1D-B6E9FF6A24A0}"
+  "FileHash": "{0E280870-B7E2-6639-2A58-9B398584FD05}"
  }
 }

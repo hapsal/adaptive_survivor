@@ -3,9 +3,7 @@ class_name AK
 class EVENTS:
 
 	const HIT : int = 1116398592
-	const PAUSE_MUSIC : int = 2735935537
 	const PLAY_MUSIC : int = 2932040671
-	const RESUME_MUSIC : int = 2940177080
 
 class STATES:
 
@@ -13,8 +11,7 @@ class STATES:
 		const GROUP : int = 520339718
 	
 		class STATE:
-			const ENEMY1 : int = 1312765228
-			const ENEMY2 : int = 1312765231
+			const ELITEENEMY : int = 2906824402
 			const NOENEMY : int = 132730248
 			const NONE : int = 748895195
 
@@ -32,6 +29,7 @@ class SWITCHES:
 
 class GAME_PARAMETERS:
 
+	const KILLCOUNT : int = 790457970
 	const PLAYERHEALTH : int = 151362964
 	const VERSEKICK : int = 2752475886
 	const SS_AIR_FEAR : int = 1351367891
@@ -72,3 +70,4 @@ class ACOUSTIC_TEXTURES:
 	const WOOD : int = 2058049674
 	const WOOD_BRIGHT : int = 4262522749
 	const WOOD_DEEP : int = 1755085759
+

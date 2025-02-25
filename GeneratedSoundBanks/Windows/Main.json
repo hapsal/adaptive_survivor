@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{0E602EA4-FD81-4EB4-9E40-A042FD84D92B}",
     "Language": "SFX",
-    "Hash": "{8156166C-4F37-0E63-3628-55639845CA8C}",
+    "Hash": "{1FBF37DB-54E7-570B-E453-0C898D96FA2A}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -38,6 +38,14 @@
       "Location": "Memory",
       "ShortName": "RHYTM CHORDS_1.wav",
       "CachePath": "1C/{1C9F5A22-9D8B-CD7E-FA8E-717E9F667582}.wem"
+     },
+     {
+      "Id": "153911174",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Pulsing.wav",
+      "CachePath": "15/{15BA8CDB-601C-6348-6FB9-3393FAA770D7}.wem"
      },
      {
       "Id": "154088459",
@@ -112,6 +120,14 @@
       "CachePath": "29/{29DEA046-2899-853E-933B-3E30CEC579D8}.wem"
      },
      {
+      "Id": "327775708",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "COUNTER MELODY #2.wav",
+      "CachePath": "61/{61787E78-2D36-C62B-9E2C-31B8E9341EB0}.wem"
+     },
+     {
       "Id": "337117695",
       "Language": "SFX",
       "Streaming": "false",
@@ -144,12 +160,28 @@
       "CachePath": "60/{603EA386-831E-FC93-5496-2D60DF8B4A9F}.wem"
      },
      {
+      "Id": "394980831",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MID PAD.wav",
+      "CachePath": "81/{812E21B4-BB77-6C83-E873-3393C0E20484}.wem"
+     },
+     {
       "Id": "395398434",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "BASS RUMBLE THANG_remainder.wav",
       "CachePath": "2B/{2B578190-E372-5E98-8D88-C77CA466DB92}.wem"
+     },
+     {
+      "Id": "398405005",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Snare.wav",
+      "CachePath": "CA/{CAFE2506-2F5D-08DE-A72E-EF20D00543F1}.wem"
      },
      {
       "Id": "426711199",
@@ -190,6 +222,14 @@
       "Location": "Memory",
       "ShortName": "BLOCK CHORDS.wav",
       "CachePath": "F1/{F1E55B3A-89A5-9503-2667-0517E8D0FB76}.wem"
+     },
+     {
+      "Id": "547763391",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Pulsing 2.wav",
+      "CachePath": "B2/{B243163F-6B3E-459D-411A-19BE186B1BB0}.wem"
      },
      {
       "Id": "548314693",
@@ -352,6 +392,9 @@
         "Id": "132022467"
        },
        {
+        "Id": "153911174"
+       },
+       {
         "Id": "154088459"
        },
        {
@@ -379,6 +422,9 @@
         "Id": "324823548"
        },
        {
+        "Id": "327775708"
+       },
+       {
         "Id": "337117695"
        },
        {
@@ -391,7 +437,13 @@
         "Id": "389512069"
        },
        {
+        "Id": "394980831"
+       },
+       {
         "Id": "395398434"
+       },
+       {
+        "Id": "398405005"
        },
        {
         "Id": "426711199"
@@ -407,6 +459,9 @@
        },
        {
         "Id": "437233209"
+       },
+       {
+        "Id": "547763391"
        },
        {
         "Id": "548314693"
@@ -470,10 +525,16 @@
       "Name": "PlayerHealth",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\PlayerHealth",
       "GUID": "{7BFA23C9-1ED0-4543-B41A-1A057F2ED8CD}"
+     },
+     {
+      "Id": "790457970",
+      "Name": "KillCount",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\KillCount",
+      "GUID": "{BEB71EF5-4318-4E70-A61F-45B3349F988F}"
      }
     ]
    }
   ],
-  "FileHash": "{06D696C6-6D66-79A8-20A7-20B3053D2C58}"
+  "FileHash": "{C53048C9-8222-F9F1-1F1D-360DF3306848}"
  }
 }

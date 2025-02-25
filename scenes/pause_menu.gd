@@ -1,5 +1,6 @@
 extends Control
 
+
 func _ready():
 	hide()
 	
@@ -22,12 +23,10 @@ func _input(event):
 			pause()
 
 func unpause():
-	Wwise.post_event("Resume_Music", self) # Ei toimi
 	hide()
 	get_tree().paused = false
 
 func pause():
-	Wwise.post_event("Pause_Music", self) # Ei toimi
 	show()
 	get_tree().paused = true
 	%PauseList.show()
