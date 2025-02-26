@@ -1,10 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://cqnxumy0afnoj"]
+[gd_scene load_steps=11 format=3 uid="uid://cqnxumy0afnoj"]
 
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_5vum0"]
 [ext_resource type="PackedScene" uid="uid://dn8nowr0u4ash" path="res://scenes/player.tscn" id="1_wtgoj"]
 [ext_resource type="PackedScene" uid="uid://smo7sxiqhbii" path="res://scenes/world.tscn" id="2_t3wbw"]
 [ext_resource type="PackedScene" uid="uid://bs4kvlnlgg67t" path="res://scenes/pause_menu.tscn" id="4_d0x7a"]
-[ext_resource type="PackedScene" uid="uid://73dn8grbho13" path="res://scenes/test.tscn" id="5_ovnsu"]
 [ext_resource type="Theme" uid="uid://bvuyyxstk13dj" path="res://themes/def_theme.tres" id="6_i0e42"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gl8y7"]
@@ -45,8 +44,6 @@ point_count = 6
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_5vum0")
-
-[node name="WWISE" parent="." instance=ExtResource("5_ovnsu")]
 
 [node name="World" parent="." instance=ExtResource("2_t3wbw")]
 z_index = -99

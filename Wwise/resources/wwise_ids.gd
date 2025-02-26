@@ -15,6 +15,15 @@ class STATES:
 			const NOENEMY : int = 132730248
 			const NONE : int = 748895195
 
+	class MUSICSTATE:
+		const GROUP : int = 1021618141
+	
+		class STATE:
+			const BOSS : int = 1560169506
+			const COMBAT : int = 2764240573
+			const MENU : int = 2607556080
+			const NONE : int = 748895195
+
 	class PLAYERLIFE:
 		const GROUP : int = 444815956
 	
@@ -30,6 +39,7 @@ class SWITCHES:
 class GAME_PARAMETERS:
 
 	const KILLCOUNT : int = 790457970
+	const MUSICVOLUME : int = 2346531308
 	const PLAYERHEALTH : int = 151362964
 	const VERSEKICK : int = 2752475886
 	const SS_AIR_FEAR : int = 1351367891
@@ -44,7 +54,8 @@ class GAME_PARAMETERS:
 	const SS_AIR_TURBULENCE : int = 4160247818
 
 class TRIGGERS:
-	pass
+
+	const CYMBALSWELL : int = 2765540238
 
 class BANKS:
 
@@ -70,3 +81,4 @@ class ACOUSTIC_TEXTURES:
 	const WOOD : int = 2058049674
 	const WOOD_BRIGHT : int = 4262522749
 	const WOOD_DEEP : int = 1755085759
+

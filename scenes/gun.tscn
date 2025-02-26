@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b1tlq2ksrferc" path="res://sprites/fshh.png" id="2_tqyi8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b3gk4"]
-radius = 85.9196
+radius = 94.9191
 
 [node name="Gun" type="Area2D"]
 rotation = 0.00858274
@@ -24,7 +24,7 @@ texture = ExtResource("2_tqyi8")
 
 [node name="ShootingPoint" type="Marker2D" parent="WeaponPivot/Fshh"]
 unique_name_in_owner = true
-position = Vector2(-1.12049, -4.07599)
+position = Vector2(3.87933, -4.11891)
 scale = Vector2(0.3125, 0.132813)
 
 [node name="ShootTimer" type="Timer" parent="."]

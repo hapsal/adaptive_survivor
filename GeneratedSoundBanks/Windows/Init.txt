@@ -1,6 +1,7 @@
 State Group	ID	Name			Wwise Object Path	Notes
 	444815956	PlayerLife			\Default Work Unit\PlayerLife	
 	520339718	EnemyTypes			\Default Work Unit\EnemyTypes	
+	1021618141	MusicState			\Default Work Unit\MusicState	
 
 State	ID	Name	State Group			Notes
 	655265632	Alive	PlayerLife			
@@ -9,6 +10,10 @@ State	ID	Name	State Group			Notes
 	132730248	NoEnemy	EnemyTypes			
 	748895195	None	EnemyTypes			
 	2906824402	EliteEnemy	EnemyTypes			
+	748895195	None	MusicState			
+	1560169506	Boss	MusicState			
+	2607556080	Menu	MusicState			
+	2764240573	Combat	MusicState			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	

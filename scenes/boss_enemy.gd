@@ -13,7 +13,7 @@ var enemy_speed = 40
 
 @export var attack_range: float = 250.0
 var can_attack: bool = true
-var current_phase = 3
+var current_phase = 2
 
 enum AttackPattern {
 	SINGLE_SHOT,
@@ -72,16 +72,16 @@ func execute_attack_pattern() -> void:
 	match chosen_pattern:
 		AttackPattern.SINGLE_SHOT:
 			single_shot()
-			await get_tree().create_timer(2.0).timeout
+			await get_tree().create_timer(2.0, true).timeout
 		AttackPattern.TRIPLE_SHOT:
 			triple_shot()
-			await get_tree().create_timer(3.0).timeout
+			await get_tree().create_timer(3.0, true).timeout
 		AttackPattern.CIRCLE_SHOT:
 			circle_shot()
-			await get_tree().create_timer(4.0).timeout
+			await get_tree().create_timer(4.0, true).timeout
 		AttackPattern.SPIRAL_SHOT:
 			spiral_shot()
-			await get_tree().create_timer(5.0).timeout
+			await get_tree().create_timer(5.0, true).timeout
 	
 	can_attack = true
 
@@ -93,7 +93,7 @@ func triple_shot() -> void:
 	for i in range(-1, 2):
 		var angle = direction.rotated(PI/6 * i)
 		shoot_projectile(angle)
-		await get_tree().create_timer(0.2).timeout
+		await get_tree().create_timer(0.2, true).timeout
 
 func circle_shot() -> void:
 	var num_circles = rng.randf_range(3, 10) 
@@ -109,13 +109,13 @@ func circle_shot() -> void:
 			shoot_projectile(angle)
 		
 		if circle < num_circles - 1:
-			await get_tree().create_timer(circle_delay).timeout
+			await get_tree().create_timer(circle_delay, true).timeout
 
 func spiral_shot() -> void:
 	for i in range(16):
 		var angle = Vector2.RIGHT.rotated(PI/8 * i)
 		shoot_projectile(angle)
-		await get_tree().create_timer(0.1).timeout
+		await get_tree().create_timer(0.1, true).timeout
 
 func shoot_projectile(direction: Vector2) -> void:
 	var proj = projectile.instantiate()

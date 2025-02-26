@@ -31,6 +31,19 @@ namespace AK
             } // namespace STATE
         } // namespace ENEMYTYPES
 
+        namespace MUSICSTATE
+        {
+            static const AkUniqueID GROUP = 1021618141U;
+
+            namespace STATE
+            {
+                static const AkUniqueID BOSS = 1560169506U;
+                static const AkUniqueID COMBAT = 2764240573U;
+                static const AkUniqueID MENU = 2607556080U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace MUSICSTATE
+
         namespace PLAYERLIFE
         {
             static const AkUniqueID GROUP = 444815956U;
@@ -48,6 +61,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID KILLCOUNT = 790457970U;
+        static const AkUniqueID MUSICVOLUME = 2346531308U;
         static const AkUniqueID PLAYERHEALTH = 151362964U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
@@ -61,6 +75,11 @@ namespace AK
         static const AkUniqueID SS_AIR_TURBULENCE = 4160247818U;
         static const AkUniqueID VERSEKICK = 2752475886U;
     } // namespace GAME_PARAMETERS
+
+    namespace TRIGGERS
+    {
+        static const AkUniqueID CYMBALSWELL = 2765540238U;
+    } // namespace TRIGGERS
 
     namespace BANKS
     {

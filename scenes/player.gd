@@ -51,7 +51,7 @@ func handle_movement(delta: float) -> void:
 
 func handle_damage(delta: float) -> void:
 	var overlapping_mobs = %HurtBox.get_overlapping_bodies()
-	
+	#print("Overlapping bodies:", overlapping_mobs)
 	Wwise.set_rtpc_value("PlayerHealth", current_health, null)
 	
 	if overlapping_mobs.size() > 0:
@@ -65,6 +65,7 @@ func handle_damage(delta: float) -> void:
 			health_depleted.emit()
 
 func take_damage(damage_amount: float) -> void:
+	print("Taking damage: " ,damage_amount)
 	var damage_multiplier = pow(DAMAGE_RESISTANCE_FACTOR, level - 1)
 	var final_damage = damage_amount * damage_multiplier 
 	

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{0E602EA4-FD81-4EB4-9E40-A042FD84D92B}",
     "Language": "SFX",
-    "Hash": "{1FBF37DB-54E7-570B-E453-0C898D96FA2A}",
+    "Hash": "{E1BC7375-5B3E-DACE-47C4-F574174BA950}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -373,148 +373,305 @@
        {
         "Id": "582465895"
        }
+      ],
+      "ActionTrigger": [
+       {
+        "Id": "2765540238",
+        "Name": "CymbalSwell",
+        "ObjectPath": "\\Triggers\\Default Work Unit\\CymbalSwell",
+        "GUID": "{1AD132D7-910E-4266-B9C1-13FDE543E968}"
+       }
       ]
      },
      {
       "Id": "2932040671",
       "Name": "Play_Music",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Music",
-      "GUID": "{5BC1F5E0-205E-4BD4-B68D-FFE98A598536}",
+      "GUID": "{D46C1225-3091-4D8E-970B-D4BF5F5EFB7C}",
       "DurationType": "Infinite",
-      "MediaRefs": [
-       {
-        "Id": "74584525"
-       },
-       {
-        "Id": "94988520"
-       },
-       {
-        "Id": "132022467"
-       },
-       {
-        "Id": "153911174"
-       },
-       {
-        "Id": "154088459"
-       },
-       {
-        "Id": "166920236"
-       },
-       {
-        "Id": "182469144"
-       },
-       {
-        "Id": "203632783"
-       },
-       {
-        "Id": "252216728"
-       },
-       {
-        "Id": "274155727"
-       },
-       {
-        "Id": "294574773"
-       },
-       {
-        "Id": "304362533"
-       },
-       {
-        "Id": "324823548"
-       },
-       {
-        "Id": "327775708"
-       },
-       {
-        "Id": "337117695"
-       },
-       {
-        "Id": "366247412"
-       },
-       {
-        "Id": "366555021"
-       },
-       {
-        "Id": "389512069"
-       },
-       {
-        "Id": "394980831"
-       },
-       {
-        "Id": "395398434"
-       },
-       {
-        "Id": "398405005"
-       },
-       {
-        "Id": "426711199"
-       },
-       {
-        "Id": "433290577"
-       },
-       {
-        "Id": "435504794"
-       },
-       {
-        "Id": "435678477"
-       },
-       {
-        "Id": "437233209"
-       },
-       {
-        "Id": "547763391"
-       },
-       {
-        "Id": "548314693"
-       },
-       {
-        "Id": "549068336"
-       },
-       {
-        "Id": "594028830"
-       },
-       {
-        "Id": "609155587"
-       },
-       {
-        "Id": "616204461"
-       },
-       {
-        "Id": "631560474"
-       },
-       {
-        "Id": "651469519"
-       },
-       {
-        "Id": "655010347"
-       },
-       {
-        "Id": "680958059"
-       },
-       {
-        "Id": "693763053"
-       },
-       {
-        "Id": "829784446"
-       },
-       {
-        "Id": "832027755"
-       },
-       {
-        "Id": "838866130"
-       },
-       {
-        "Id": "872934590"
-       },
-       {
-        "Id": "899697410"
-       }
-      ],
       "AuxBusRefs": [
        {
         "Id": "348963605",
         "Name": "Reverb",
         "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Reverb",
         "GUID": "{13F77F69-4DCC-48A3-AED5-6DC7597E8D6E}"
+       }
+      ],
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "444815956",
+         "Id": "655265632",
+         "GUID": "{EC9338D1-7C5B-4377-B401-A15441B0E977}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "1021618141",
+           "Id": "2764240573",
+           "GUID": "{0EB934BE-2DAC-47C4-A812-F2164FB1AD17}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "74584525"
+           },
+           {
+            "Id": "94988520"
+           },
+           {
+            "Id": "132022467"
+           },
+           {
+            "Id": "153911174"
+           },
+           {
+            "Id": "154088459"
+           },
+           {
+            "Id": "182469144"
+           },
+           {
+            "Id": "252216728"
+           },
+           {
+            "Id": "294574773"
+           },
+           {
+            "Id": "304362533"
+           },
+           {
+            "Id": "324823548"
+           },
+           {
+            "Id": "327775708"
+           },
+           {
+            "Id": "337117695"
+           },
+           {
+            "Id": "366247412"
+           },
+           {
+            "Id": "389512069"
+           },
+           {
+            "Id": "394980831"
+           },
+           {
+            "Id": "395398434"
+           },
+           {
+            "Id": "398405005"
+           },
+           {
+            "Id": "426711199"
+           },
+           {
+            "Id": "435504794"
+           },
+           {
+            "Id": "435678477"
+           },
+           {
+            "Id": "437233209"
+           },
+           {
+            "Id": "547763391"
+           },
+           {
+            "Id": "548314693"
+           },
+           {
+            "Id": "549068336"
+           },
+           {
+            "Id": "594028830"
+           },
+           {
+            "Id": "616204461"
+           },
+           {
+            "Id": "631560474"
+           },
+           {
+            "Id": "655010347"
+           },
+           {
+            "Id": "693763053"
+           },
+           {
+            "Id": "829784446"
+           },
+           {
+            "Id": "832027755"
+           },
+           {
+            "Id": "838866130"
+           },
+           {
+            "Id": "872934590"
+           },
+           {
+            "Id": "899697410"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "444815956",
+         "Id": "655265632",
+         "GUID": "{EC9338D1-7C5B-4377-B401-A15441B0E977}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "1021618141",
+           "Id": "1560169506",
+           "GUID": "{7687F220-56AB-45AC-9D39-5F6012388024}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "153911174"
+           },
+           {
+            "Id": "154088459"
+           },
+           {
+            "Id": "166920236"
+           },
+           {
+            "Id": "182469144"
+           },
+           {
+            "Id": "203632783"
+           },
+           {
+            "Id": "252216728"
+           },
+           {
+            "Id": "274155727"
+           },
+           {
+            "Id": "337117695"
+           },
+           {
+            "Id": "366247412"
+           },
+           {
+            "Id": "366555021"
+           },
+           {
+            "Id": "389512069"
+           },
+           {
+            "Id": "395398434"
+           },
+           {
+            "Id": "433290577"
+           },
+           {
+            "Id": "435504794"
+           },
+           {
+            "Id": "435678477"
+           },
+           {
+            "Id": "437233209"
+           },
+           {
+            "Id": "547763391"
+           },
+           {
+            "Id": "594028830"
+           },
+           {
+            "Id": "609155587"
+           },
+           {
+            "Id": "651469519"
+           },
+           {
+            "Id": "655010347"
+           },
+           {
+            "Id": "680958059"
+           },
+           {
+            "Id": "693763053"
+           },
+           {
+            "Id": "872934590"
+           },
+           {
+            "Id": "899697410"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "444815956",
+         "Id": "655265632",
+         "GUID": "{EC9338D1-7C5B-4377-B401-A15441B0E977}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "1021618141",
+           "Id": "2607556080",
+           "GUID": "{F3C081F2-8D1C-4AD1-90CC-133664E33F1D}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "252216728"
+           },
+           {
+            "Id": "337117695"
+           },
+           {
+            "Id": "899697410"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "444815956",
+         "Id": "2791675679",
+         "GUID": "{5137E3A7-23C4-474B-A2E0-C88B587434AB}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "1021618141",
+           "Id": "2607556080",
+           "GUID": "{F3C081F2-8D1C-4AD1-90CC-133664E33F1D}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "252216728"
+           },
+           {
+            "Id": "337117695"
+           },
+           {
+            "Id": "899697410"
+           }
+          ]
+         }
+        ]
        }
       ]
      }
@@ -531,10 +688,84 @@
       "Name": "KillCount",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\KillCount",
       "GUID": "{BEB71EF5-4318-4E70-A61F-45B3349F988F}"
+     },
+     {
+      "Id": "2346531308",
+      "Name": "MusicVolume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\MusicVolume",
+      "GUID": "{5963A92B-2665-4CC0-A01F-B7982FFB1FDB}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "444815956",
+      "Name": "PlayerLife",
+      "ObjectPath": "\\States\\Default Work Unit\\PlayerLife",
+      "GUID": "{4F9FF727-4E4B-4EF2-A320-BB1928AEBB03}",
+      "States": [
+       {
+        "Id": "655265632",
+        "Name": "Alive",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerLife\\Alive",
+        "GUID": "{EC9338D1-7C5B-4377-B401-A15441B0E977}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerLife\\None",
+        "GUID": "{A89B81CD-6F48-4AB4-8793-0217DECFA888}"
+       },
+       {
+        "Id": "2791675679",
+        "Name": "Defeated",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerLife\\Defeated",
+        "GUID": "{5137E3A7-23C4-474B-A2E0-C88B587434AB}"
+       }
+      ]
+     },
+     {
+      "Id": "1021618141",
+      "Name": "MusicState",
+      "ObjectPath": "\\States\\Default Work Unit\\MusicState",
+      "GUID": "{29FA6FE9-F9E2-416C-9C47-524F34088983}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicState\\None",
+        "GUID": "{953EA8A3-5139-4965-B8A3-83A8518153A3}"
+       },
+       {
+        "Id": "1560169506",
+        "Name": "Boss",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicState\\Boss",
+        "GUID": "{7687F220-56AB-45AC-9D39-5F6012388024}"
+       },
+       {
+        "Id": "2607556080",
+        "Name": "Menu",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicState\\Menu",
+        "GUID": "{F3C081F2-8D1C-4AD1-90CC-133664E33F1D}"
+       },
+       {
+        "Id": "2764240573",
+        "Name": "Combat",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicState\\Combat",
+        "GUID": "{0EB934BE-2DAC-47C4-A812-F2164FB1AD17}"
+       }
+      ]
+     }
+    ],
+    "Triggers": [
+     {
+      "Id": "2765540238",
+      "Name": "CymbalSwell",
+      "ObjectPath": "\\Triggers\\Default Work Unit\\CymbalSwell",
+      "GUID": "{1AD132D7-910E-4266-B9C1-13FDE543E968}"
      }
     ]
    }
   ],
-  "FileHash": "{C53048C9-8222-F9F1-1F1D-360DF3306848}"
+  "FileHash": "{7DE3C2D0-E8EF-8810-C3CC-08BCC839CE2F}"
  }
 }

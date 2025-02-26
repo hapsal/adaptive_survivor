@@ -80,7 +80,8 @@ func _ready() -> void:
 	%Level.text = "Level: " + str(level)
 	%Killed.text = "Killed: " + str(enemies_killed)
 	spawn_timer.start()
-
+	
+	Wwise.set_state("MusicState", "Combat")
 	Wwise.set_state("EnemyTypes", "NoEnemy")
 	Wwise.set_state("PlayerHealth", "Alive")
 
@@ -258,6 +259,7 @@ func spawn_final_present() -> void:
 	call_deferred("add_child", new_present)
 
 func _on_present_picked_up() -> void:
+	Wwise.set_state("MusicState", "Boss")
 	var timer = get_tree().create_timer(2.0)
 	await timer.timeout
 	

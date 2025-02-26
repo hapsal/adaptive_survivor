@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdlygqvhn7kf8"]
+[gd_scene load_steps=4 format=3 uid="uid://bdlygqvhn7kf8"]
 
 [ext_resource type="Theme" uid="uid://bvuyyxstk13dj" path="res://themes/def_theme.tres" id="1_u2den"]
 [ext_resource type="Script" path="res://scenes/menu.gd" id="2_chjtw"]
+[ext_resource type="PackedScene" uid="uid://76x20grr40bp" path="res://scenes/music.tscn" id="3_wkoix"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -83,6 +84,8 @@ focus_neighbor_bottom = NodePath("../Start")
 focus_next = NodePath("../Start")
 focus_previous = NodePath("../Options")
 text = "Quit"
+
+[node name="Music" parent="." instance=ExtResource("3_wkoix")]
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Buttons/Start" to="." method="_on_start_pressed"]

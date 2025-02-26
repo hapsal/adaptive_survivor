@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://76x20grr40bp"]
+
+[ext_resource type="Script" path="res://scenes/music.gd" id="1_hi00x"]
+[ext_resource type="WwiseBank" uid="uid://bhib28ufig321" path="res://Wwise/resources/SoundBank/{0E602EA4-FD81-4EB4-9E40-A042FD84D92B}.tres" id="1_ooxre"]
+[ext_resource type="WwiseEvent" uid="uid://c5joi4b0pg61i" path="res://Wwise/resources/Event/{D46C1225-3091-4D8E-970B-D4BF5F5EFB7C}.tres" id="2_qs51j"]
+
+[node name="Music" type="Node2D"]
+script = ExtResource("1_hi00x")
+
+[node name="AkBank" type="AkBank" parent="."]
+bank = ExtResource("1_ooxre")
+load_on = 1
+
+[node name="AkListener2D" type="AkListener2D" parent="."]
+
+[node name="AkEvent2D" type="AkEvent2D" parent="."]
+event = ExtResource("2_qs51j")
+trigger_on = 1

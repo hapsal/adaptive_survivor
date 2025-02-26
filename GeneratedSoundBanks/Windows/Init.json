@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{51254163-4AA4-EA6D-21B4-CFFFD6F268D0}",
+    "Hash": "{C00535F6-A135-21B3-4172-33A271F3229A}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -114,6 +114,12 @@
       "GUID": "{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"
      },
      {
+      "Id": "2346531308",
+      "Name": "MusicVolume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\MusicVolume",
+      "GUID": "{5963A92B-2665-4CC0-A01F-B7982FFB1FDB}"
+     },
+     {
       "Id": "2648548617",
       "Name": "SS_Air_Month",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Month",
@@ -212,6 +218,38 @@
         "Name": "EliteEnemy",
         "ObjectPath": "\\States\\Default Work Unit\\EnemyTypes\\EliteEnemy",
         "GUID": "{6970A307-3B8E-46F6-A6E6-DE7B3AADDE55}"
+       }
+      ]
+     },
+     {
+      "Id": "1021618141",
+      "Name": "MusicState",
+      "ObjectPath": "\\States\\Default Work Unit\\MusicState",
+      "GUID": "{29FA6FE9-F9E2-416C-9C47-524F34088983}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicState\\None",
+        "GUID": "{953EA8A3-5139-4965-B8A3-83A8518153A3}"
+       },
+       {
+        "Id": "1560169506",
+        "Name": "Boss",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicState\\Boss",
+        "GUID": "{7687F220-56AB-45AC-9D39-5F6012388024}"
+       },
+       {
+        "Id": "2607556080",
+        "Name": "Menu",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicState\\Menu",
+        "GUID": "{F3C081F2-8D1C-4AD1-90CC-133664E33F1D}"
+       },
+       {
+        "Id": "2764240573",
+        "Name": "Combat",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicState\\Combat",
+        "GUID": "{0EB934BE-2DAC-47C4-A812-F2164FB1AD17}"
        }
       ]
      }
@@ -695,6 +733,6 @@
     ]
    }
   ],
-  "FileHash": "{0E280870-B7E2-6639-2A58-9B398584FD05}"
+  "FileHash": "{AF67B1F9-7A83-1002-CD8E-7B9C1C11680E}"
  }
 }
