@@ -1,7 +1,6 @@
 extends Control
 
 signal options_closed
-signal targeting_mode_changed(mode: int)
 
 @onready var targeting_checkbox = %Auto
 @onready var music_volume = %MusicVolume

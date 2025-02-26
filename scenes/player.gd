@@ -15,7 +15,6 @@ var level: int = 1
 
 const HEALTH_SCALE_FACTOR: float = 1.15
 const DAMAGE_RESISTANCE_FACTOR: float = 0.98
-const SPEED_SCALE_FACTOR: float = 1.02
 
 @export var xp_attraction_radius: float = 50.0
 
@@ -92,8 +91,6 @@ func _on_game_level_up() -> void:
 	
 	%HealthBar.max_value = max_health
 	%HealthBar.value = current_health
-	
-	current_speed = BASE_SPEED * pow(SPEED_SCALE_FACTOR, level - 1)
 	
 	display_level_up_effects()
 

@@ -70,6 +70,5 @@ shape = SubResource("CircleShape2D_ccvhh")
 debug_color = Color(0.902571, 0, 0.246526, 0.42)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.9, 0.9)
 
 [connection signal="health_depleted" from="." to="." method="_on_health_depleted"]

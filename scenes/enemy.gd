@@ -4,11 +4,10 @@ extends CharacterBody2D
 var damage_popup = preload("res://scenes/damage_popup.tscn")
 
 const BASE_HEALTH: float = 1.0
-const BASE_SPEED: float = 50.0
 const HEALTH_SCALE_FACTOR: float = 1.85
 const SPEED_SCALE_FACTOR: float = 1.05
 
-var enemy_speed = 50
+var enemy_speed = 30
 var health: float = 2.0
 
 signal enemy_dead(position: Vector2)
@@ -57,5 +56,3 @@ func take_damage(damage_amount):
 
 func _on_game_level_up() -> void:
 	health = BASE_HEALTH * pow(HEALTH_SCALE_FACTOR, player.level - 1)
-	
-	enemy_speed = BASE_SPEED * pow(SPEED_SCALE_FACTOR, player.level - 1)

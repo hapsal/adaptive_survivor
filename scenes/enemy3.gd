@@ -12,7 +12,7 @@ var projectile = preload("res://scenes/enemy_projectile.tscn")
 
 signal enemy_dead(position: Vector2)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var distance_to_player = global_position.distance_to(player.global_position)
 	var direction = global_position.direction_to(player.global_position)
 	

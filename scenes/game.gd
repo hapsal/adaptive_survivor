@@ -17,6 +17,9 @@ var enemies_killed = 0
 
 var time_multiplier: float = 0.8
 
+var present_spawned = false
+const PRESENT_SPAWN_TIME = 5.0
+
 signal level_up
 
 const ENEMY_SCENES = {
@@ -66,8 +69,11 @@ const ENEMY_DATA = {
 }
 
 @onready var xp_drop = preload("res://scenes/xp_treat.tscn")
+@onready var present = preload("res://scenes/present.tscn")
+@onready var boss_scene = preload("res://scenes/boss_enemy.tscn")
 @onready var spawn_timer = %EnemySpawner
 @onready var pause_menu = %PauseMenu
+
 
 func _ready() -> void:
 	update_xp_requirement()
@@ -85,7 +91,8 @@ func _process(delta: float) -> void:
 	update_time(delta)
 	update_time_multiplier()
 	update_experience_bar()
-	
+	handle_present_spawn()
+
 func update_time(delta: float) -> void:
 	time_elapsed += delta
 	minutes = time_elapsed / 60
@@ -231,6 +238,32 @@ func _on_enemy_spawner_timeout():
 			spawn_enemy(enemy.type)
 			break
 
+func handle_present_spawn() -> void:
+	if !present_spawned and time_elapsed >= PRESENT_SPAWN_TIME:
+		present_spawned = true
+		stop_enemy_spawning()
+		spawn_final_present()
+
+func stop_enemy_spawning() -> void:
+	spawn_timer.stop()
+	for enemy in get_tree().get_nodes_in_group("enemies"):
+		enemy.queue_free()
+
+func spawn_final_present() -> void:
+	var spawn_position = %EnemySpawn.global_position
+	var new_present = present.instantiate()
+	new_present.global_position = spawn_position
+	new_present.experience_value = 1000
+	new_present.picked_up.connect(_on_present_picked_up)
+	call_deferred("add_child", new_present)
+
+func _on_present_picked_up() -> void:
+	var timer = get_tree().create_timer(2.0)
+	await timer.timeout
+	
+	var boss = boss_scene.instantiate()
+	boss.global_position = %EnemySpawn.global_position
+	add_child(boss)
 
 func _on_retry_button_pressed() -> void:
 	get_tree().paused = false

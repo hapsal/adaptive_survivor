@@ -7,7 +7,7 @@ var health = 10
 
 signal enemy_dead(position: Vector2)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var direction = global_position.direction_to(player.global_position)
 	velocity = direction * enemy_speed
 	move_and_slide()

@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://dd3alcwd84asb"]
+
+[ext_resource type="Texture2D" uid="uid://ct8v81my6e1vp" path="res://sprites/boss.png" id="1_f6bdh"]
+[ext_resource type="Script" path="res://scenes/boss_enemy.gd" id="1_mjq3v"]
+[ext_resource type="Theme" uid="uid://bvuyyxstk13dj" path="res://themes/def_theme.tres" id="3_vj47o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lwweh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_f6bdh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yoxbc"]
+radius = 13.0384
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ot76i"]
+bg_color = Color(0.880417, 0, 0.150384, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pyrhl"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="BossEnemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_mjq3v")
+
+[node name="BossSprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_lwweh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+shape = SubResource("CircleShape2D_yoxbc")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -100.0
+offset_top = -56.0
+offset_right = 100.0
+offset_bottom = -40.0
+theme = ExtResource("3_vj47o")
+theme_override_styles/background = SubResource("StyleBoxFlat_ot76i")
+theme_override_styles/fill = SubResource("StyleBoxFlat_pyrhl")
+rounded = true
+fill_mode = 1
+show_percentage = false
+
+[node name="HealthLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -57.0
+offset_top = -56.0
+offset_right = 67.0
+offset_bottom = -39.0
+theme = ExtResource("3_vj47o")
+theme_override_font_sizes/font_size = 12

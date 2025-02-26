@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://b14k4rqwluia8"]
+
+[ext_resource type="Script" path="res://scenes/present.gd" id="1_03ft1"]
+[ext_resource type="Texture2D" uid="uid://boxbx37i1v6rn" path="res://sprites/present.png" id="1_y2hag"]
+[ext_resource type="Theme" uid="uid://bvuyyxstk13dj" path="res://themes/def_theme.tres" id="2_rklng"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5f35v"]
+radius = 21.0238
+
+[node name="Present" type="Area2D"]
+script = ExtResource("1_03ft1")
+
+[node name="PickupText" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -6.0
+offset_top = -47.0
+offset_right = 18.0
+offset_bottom = -17.0
+theme = ExtResource("2_rklng")
+theme_override_font_sizes/font_size = 24
+text = "E"
+
+[node name="Present" type="Sprite2D" parent="."]
+texture = ExtResource("1_y2hag")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5f35v")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
