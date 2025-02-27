@@ -9,7 +9,7 @@ var rng = RandomNumberGenerator.new()
 
 var health = 1000
 var max_health = 1000
-var enemy_speed = 40
+var enemy_speed = 10
 
 @export var attack_range: float = 250.0
 var can_attack: bool = true

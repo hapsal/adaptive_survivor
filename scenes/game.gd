@@ -82,8 +82,8 @@ func _ready() -> void:
 	spawn_timer.start()
 	%GameOver.hide()
 	
-	Wwise.set_state("MusicState", "Combat")
 	Wwise.set_state("EnemyTypes", "NoEnemy")
+	Wwise.set_state("MusicState", "Combat")
 	Wwise.set_state("PlayerLife", "Alive")
 
 func _process(delta: float) -> void:

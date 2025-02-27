@@ -1,7 +1,7 @@
 extends Area2D
 
-@export var rotation_speed: float = 5.0
-@export var target_detection_radius: float = 150.0
+@export var rotation_speed: float = 10.0
+@export var target_detection_radius: float = 250.0
 
 var current_target: Node2D = null
 var target_position: Vector2 = Vector2.ZERO
@@ -29,7 +29,6 @@ func _physics_process(delta: float) -> void:
 			handle_mouse_targeting(delta)
 
 func _on_targeting_mode_changed(new_mode: GameEnums.TargetingMode) -> void:
-
 	targeting_mode = new_mode
 
 func handle_auto_targeting(delta: float) -> void:
@@ -77,15 +76,11 @@ func get_best_target(enemies: Array) -> Node2D:
 	
 	return best_target
 
-# Visualize the detection radius
-#func _draw() -> void:
-	#draw_arc(Vector2.ZERO, target_detection_radius, 0, TAU, 32, Color(1, 0, 0, 0.2))
-
 func shoot():
 	const BULLET = preload("res://scenes/bullet.tscn")
 	var new_bullet = BULLET.instantiate()
 	new_bullet.global_position = %ShootingPoint.global_position
-	new_bullet.global_rotation = %ShootingPoint.global_rotation
+	new_bullet.global_rotation = global_rotation
 	%ShootingPoint.add_child(new_bullet)
 
 func _on_timer_timeout() -> void:

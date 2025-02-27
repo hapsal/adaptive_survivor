@@ -36,9 +36,10 @@ animations = [{
 radius = 9.21954
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ccvhh"]
-radius = 12.0416
+radius = 11.0
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 2
 wall_min_slide_angle = 0.361283
 platform_floor_layers = 0
 script = ExtResource("1_lsixj")

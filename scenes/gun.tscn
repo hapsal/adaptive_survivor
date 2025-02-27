@@ -4,22 +4,23 @@
 [ext_resource type="Texture2D" uid="uid://b1tlq2ksrferc" path="res://sprites/fshh.png" id="2_tqyi8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b3gk4"]
-radius = 94.9191
+radius = 121.918
 
 [node name="Gun" type="Area2D"]
 rotation = 0.00858274
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_sf6jc")
+rotation_speed = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(5.02582, -6.98368)
 shape = SubResource("CircleShape2D_b3gk4")
 
 [node name="WeaponPivot" type="Marker2D" parent="."]
-position = Vector2(8.02582, -6.98368)
 
 [node name="Fshh" type="Sprite2D" parent="WeaponPivot"]
+position = Vector2(24.9991, -0.214566)
 texture = ExtResource("2_tqyi8")
 
 [node name="ShootingPoint" type="Marker2D" parent="WeaponPivot/Fshh"]

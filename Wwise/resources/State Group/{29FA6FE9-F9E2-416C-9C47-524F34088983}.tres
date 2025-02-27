@@ -1,0 +1,7 @@
+[gd_resource type="WwiseStateGroup" format=3 uid="uid://vyg7wjskeg6m"]
+
+[resource]
+name = "MusicState"
+id = 1021618141
+guid = "{29FA6FE9-F9E2-416C-9C47-524F34088983}"
+dummy = true

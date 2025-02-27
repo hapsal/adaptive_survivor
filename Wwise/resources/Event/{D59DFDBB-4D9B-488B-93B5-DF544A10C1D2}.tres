@@ -1,0 +1,8 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://6td5kyouu0da"]
+
+[resource]
+is_in_user_defined_sound_bank = true
+name = "Stop_Adaptive_Music"
+id = 2452122506
+guid = "{D59DFDBB-4D9B-488B-93B5-DF544A10C1D2}"
+dummy = true

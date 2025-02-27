@@ -10,7 +10,6 @@ const MAX_LEVEL: int = 99
 var current_speed: float = BASE_SPEED
 var current_health: float = BASE_HEALTH
 var max_health: float = BASE_HEALTH
-var damage_rate: float = BASE_DAMAGE_RATE
 var level: int = 1
 
 const HEALTH_SCALE_FACTOR: float = 1.15
@@ -52,16 +51,16 @@ func handle_movement(delta: float) -> void:
 func handle_damage(delta: float) -> void:
 	var overlapping_mobs = %HurtBox.get_overlapping_bodies()
 	Wwise.set_rtpc_value("PlayerHealth", current_health, null)
-
-	var damage_multiplier = pow(DAMAGE_RESISTANCE_FACTOR, level - 1)
-	var total_damage = damage_rate * overlapping_mobs.size() * delta * damage_multiplier
-		
-	current_health -= total_damage
-	%HealthBar.value = current_health
+	
+	if overlapping_mobs.size() > 0:
+		var damage_multiplier = pow(DAMAGE_RESISTANCE_FACTOR, level - 1)
+		var total_damage = overlapping_mobs.size() * damage_multiplier * delta * BASE_DAMAGE_RATE
+		current_health -= total_damage
+		%HealthBar.value = current_health
 		
 	if current_health <= 0.0:
-		health_depleted.emit()
 		Wwise.set_state("PlayerLife", "Defeated")
+		health_depleted.emit()
 
 func take_damage(damage_amount: float) -> void:
 	print("Taking damage: " ,damage_amount)

@@ -20,7 +20,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yoxbc"]
-radius = 19.0
+radius = 28.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ot76i"]
 bg_color = Color(0.880417, 0, 0.150384, 1)
@@ -30,7 +30,6 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="BossEnemy" type="CharacterBody2D"]
 collision_layer = 2
-collision_mask = 3
 script = ExtResource("1_mjq3v")
 attack_range = 450.0
 
@@ -41,7 +40,7 @@ animation = &"jump"
 frame_progress = 0.408266
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 7)
+position = Vector2(-1, 1)
 shape = SubResource("CircleShape2D_yoxbc")
 
 [node name="HealthBar" type="ProgressBar" parent="."]

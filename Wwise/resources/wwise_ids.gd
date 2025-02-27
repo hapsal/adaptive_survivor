@@ -3,7 +3,10 @@ class_name AK
 class EVENTS:
 
 	const HIT : int = 1116398592
+	const PAUSE_ADAPTIVE_MUSIC : int = 2940364306
 	const PLAY_MUSIC : int = 2932040671
+	const RESUME_ADAPTIVE_MUSIC : int = 458359289
+	const STOP_ADAPTIVE_MUSIC : int = 2452122506
 
 class STATES:
 
@@ -81,3 +84,4 @@ class ACOUSTIC_TEXTURES:
 	const WOOD : int = 2058049674
 	const WOOD_BRIGHT : int = 4262522749
 	const WOOD_DEEP : int = 1755085759
+

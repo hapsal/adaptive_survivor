@@ -14,7 +14,10 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID HIT = 1116398592U;
+        static const AkUniqueID PAUSE_ADAPTIVE_MUSIC = 2940364306U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
+        static const AkUniqueID RESUME_ADAPTIVE_MUSIC = 458359289U;
+        static const AkUniqueID STOP_ADAPTIVE_MUSIC = 2452122506U;
     } // namespace EVENTS
 
     namespace STATES

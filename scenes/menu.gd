@@ -5,6 +5,9 @@ extends Control
 func _ready() -> void:
 	focus_button()
 	add_to_group("main_menu")
+	
+	Wwise.set_state("MusicState", "Menu")
+	Wwise.set_state("PlayerLife", "Defeated")
 
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/game.tscn")

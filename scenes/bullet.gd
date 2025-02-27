@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 	bullet_distance += BULLET_SPEED * delta
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.has_method("take_damage"):
+	if body.has_method("take_damage") and body.is_in_group("enemy"):
 		body.take_damage(damage)
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:

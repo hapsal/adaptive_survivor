@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{0E602EA4-FD81-4EB4-9E40-A042FD84D92B}",
     "Language": "SFX",
-    "Hash": "{E1BC7375-5B3E-DACE-47C4-F574174BA950}",
+    "Hash": "{8C569D3F-6591-2963-2765-D27DD946C180}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -384,6 +384,16 @@
       ]
      },
      {
+      "Id": "2940364306",
+      "Name": "Pause_Adaptive_Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Pause_Adaptive_Music",
+      "GUID": "{0A909664-8A78-4551-9CF1-10639DDE0EE4}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
       "Id": "2932040671",
       "Name": "Play_Music",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Music",
@@ -561,9 +571,6 @@
             "Id": "337117695"
            },
            {
-            "Id": "366247412"
-           },
-           {
             "Id": "366555021"
            },
            {
@@ -603,42 +610,7 @@
             "Id": "680958059"
            },
            {
-            "Id": "693763053"
-           },
-           {
             "Id": "872934590"
-           },
-           {
-            "Id": "899697410"
-           }
-          ]
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "State",
-         "GroupId": "444815956",
-         "Id": "655265632",
-         "GUID": "{EC9338D1-7C5B-4377-B401-A15441B0E977}"
-        },
-        "Children": [
-         {
-          "SwitchValue": {
-           "GroupType": "State",
-           "GroupId": "1021618141",
-           "Id": "2607556080",
-           "GUID": "{F3C081F2-8D1C-4AD1-90CC-133664E33F1D}"
-          },
-          "MediaRefs": [
-           {
-            "Id": "252216728"
-           },
-           {
-            "Id": "337117695"
-           },
-           {
-            "Id": "899697410"
            }
           ]
          }
@@ -674,6 +646,26 @@
         ]
        }
       ]
+     },
+     {
+      "Id": "458359289",
+      "Name": "Resume_Adaptive_Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Resume_Adaptive_Music",
+      "GUID": "{23C9A913-C51D-4304-9AB4-FE6DFDBAEC63}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2452122506",
+      "Name": "Stop_Adaptive_Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_Adaptive_Music",
+      "GUID": "{A4172E3F-0E9D-49D6-AD2B-E030A0D7109A}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ],
     "GameParameters": [
@@ -766,6 +758,6 @@
     ]
    }
   ],
-  "FileHash": "{7DE3C2D0-E8EF-8810-C3CC-08BCC839CE2F}"
+  "FileHash": "{74C9C616-9963-94F2-2430-E422179EDFFE}"
  }
 }
