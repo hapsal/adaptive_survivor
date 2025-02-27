@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dd3alcwd84asb"]
+[gd_scene load_steps=9 format=3 uid="uid://dd3alcwd84asb"]
 
 [ext_resource type="Texture2D" uid="uid://ct8v81my6e1vp" path="res://sprites/boss.png" id="1_f6bdh"]
 [ext_resource type="Script" path="res://scenes/boss_enemy.gd" id="1_mjq3v"]
+[ext_resource type="Texture2D" uid="uid://cynq7vcpyoykp" path="res://sprites/boss2.png" id="3_b83s8"]
 [ext_resource type="Theme" uid="uid://bvuyyxstk13dj" path="res://themes/def_theme.tres" id="3_vj47o"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lwweh"]
@@ -9,14 +10,17 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_f6bdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b83s8")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"jump",
+"speed": 1.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yoxbc"]
-radius = 13.0384
+radius = 19.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ot76i"]
 bg_color = Color(0.880417, 0, 0.150384, 1)
@@ -28,13 +32,16 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_mjq3v")
+attack_range = 450.0
 
 [node name="BossSprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_lwweh")
+animation = &"jump"
+frame_progress = 0.408266
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -1)
+position = Vector2(-1, 7)
 shape = SubResource("CircleShape2D_yoxbc")
 
 [node name="HealthBar" type="ProgressBar" parent="."]

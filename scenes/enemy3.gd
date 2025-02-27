@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var player = get_node("/root/Game/Player")
 var damage_popup = preload("res://scenes/damage_popup.tscn")
-var enemy_speed = 30
+var enemy_speed = 5
 var health = 150
 
 @export var attack_range: float = 200.0
@@ -11,6 +11,9 @@ var can_attack: bool = true
 var projectile = preload("res://scenes/enemy_projectile.tscn")
 
 signal enemy_dead(position: Vector2)
+
+func _ready() -> void:
+	add_to_group("enemy")
 
 func _physics_process(_delta: float) -> void:
 	var distance_to_player = global_position.distance_to(player.global_position)

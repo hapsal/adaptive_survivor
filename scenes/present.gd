@@ -3,6 +3,7 @@ extends Area2D
 var can_pickup = false
 @onready var pickup_label = %PickupText
 @onready var arrow = preload("res://scenes/arrow.tscn")
+@onready var confetti = preload("res://scenes/confetti.tscn") 
 var experience_value: float
 var arrow_instance
 
@@ -56,9 +57,16 @@ func update_arrow_position() -> void:
 	var direction_to_present = (present_pos - edge_point).angle()
 	arrow_instance.rotation = direction_to_present + PI/2
 
+
+func spawn_confetti() -> void:
+	var conf = confetti.instantiate()
+	conf.global_position = global_position
+	get_parent().add_child(conf)
+	
 func pickup_item():
 	var game = get_node("/root/Game")
 	game.add_experience(experience_value)
+	spawn_confetti()
 	picked_up.emit()
 	queue_free()
 

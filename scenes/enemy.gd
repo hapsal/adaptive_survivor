@@ -5,16 +5,14 @@ var damage_popup = preload("res://scenes/damage_popup.tscn")
 
 const BASE_HEALTH: float = 1.0
 const HEALTH_SCALE_FACTOR: float = 1.85
-const SPEED_SCALE_FACTOR: float = 1.05
 
-var enemy_speed = 30
-var health: float = 2.0
+var enemy_speed = 20
+var health: float = 1.0
 
 signal enemy_dead(position: Vector2)
 
 func _ready() -> void:
-	var game = get_node("/root/Game")
-	game.level_up.connect(_on_game_level_up)
+	add_to_group("enemy")
 
 func _physics_process(delta: float) -> void:
 	var direction = global_position.direction_to(player.global_position)
@@ -53,6 +51,3 @@ func take_damage(damage_amount):
 		await get_tree().create_timer(0.2).timeout
 		popup.queue_free()
 		queue_free()
-
-func _on_game_level_up() -> void:
-	health = BASE_HEALTH * pow(HEALTH_SCALE_FACTOR, player.level - 1)

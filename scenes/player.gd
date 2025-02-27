@@ -51,18 +51,17 @@ func handle_movement(delta: float) -> void:
 
 func handle_damage(delta: float) -> void:
 	var overlapping_mobs = %HurtBox.get_overlapping_bodies()
-	#print("Overlapping bodies:", overlapping_mobs)
 	Wwise.set_rtpc_value("PlayerHealth", current_health, null)
-	
-	if overlapping_mobs.size() > 0:
-		var damage_multiplier = pow(DAMAGE_RESISTANCE_FACTOR, level - 1)
-		var total_damage = damage_rate * overlapping_mobs.size() * delta * damage_multiplier
+
+	var damage_multiplier = pow(DAMAGE_RESISTANCE_FACTOR, level - 1)
+	var total_damage = damage_rate * overlapping_mobs.size() * delta * damage_multiplier
 		
-		current_health -= total_damage
-		%HealthBar.value = current_health
+	current_health -= total_damage
+	%HealthBar.value = current_health
 		
-		if current_health <= 0.0:
-			health_depleted.emit()
+	if current_health <= 0.0:
+		health_depleted.emit()
+		Wwise.set_state("PlayerLife", "Defeated")
 
 func take_damage(damage_amount: float) -> void:
 	print("Taking damage: " ,damage_amount)
@@ -73,7 +72,7 @@ func take_damage(damage_amount: float) -> void:
 	%HealthBar.value = current_health
 	
 	if current_health <= 0.0:
-		Wwise.set_state("PlayerHealth", "Defeated")
+		Wwise.set_state("PlayerLife", "Defeated")
 		health_depleted.emit()
 
 func heal(amount: float) -> void:
@@ -93,13 +92,6 @@ func _on_game_level_up() -> void:
 	%HealthBar.max_value = max_health
 	%HealthBar.value = current_health
 	
-	display_level_up_effects()
-
-func display_level_up_effects() -> void:
-	# Add visual/audio feedback for level up
-	# This is where you'd add particles, sounds, etc.
-	pass
-
 
 func _on_xp_entered_attraction_range(area: Area2D) -> void:
 	if area.has_method("start_moving_to_player"):

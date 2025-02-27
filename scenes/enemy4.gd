@@ -2,10 +2,13 @@ extends CharacterBody2D
 
 @onready var player = get_node("/root/Game/Player")
 var damage_popup = preload("res://scenes/damage_popup.tscn")
-var enemy_speed = 20
+var enemy_speed = 15
 var health = 10
 
 signal enemy_dead(position: Vector2)
+
+func _ready() -> void:
+	add_to_group("enemy")
 
 func _physics_process(_delta: float) -> void:
 	var direction = global_position.direction_to(player.global_position)

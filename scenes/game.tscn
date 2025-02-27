@@ -144,7 +144,7 @@ autostart = true
 
 [node name="GameOver" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
-visible = false
+process_mode = 3
 
 [node name="ColorRect" type="ColorRect" parent="GameOver"]
 anchors_preset = 8

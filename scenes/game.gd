@@ -18,7 +18,7 @@ var enemies_killed = 0
 var time_multiplier: float = 0.8
 
 var present_spawned = false
-const PRESENT_SPAWN_TIME = 5.0
+const PRESENT_SPAWN_TIME = 1.0
 
 signal level_up
 
@@ -80,10 +80,11 @@ func _ready() -> void:
 	%Level.text = "Level: " + str(level)
 	%Killed.text = "Killed: " + str(enemies_killed)
 	spawn_timer.start()
+	%GameOver.hide()
 	
 	Wwise.set_state("MusicState", "Combat")
 	Wwise.set_state("EnemyTypes", "NoEnemy")
-	Wwise.set_state("PlayerHealth", "Alive")
+	Wwise.set_state("PlayerLife", "Alive")
 
 func _process(delta: float) -> void:
 	if timer_stopped:
@@ -213,9 +214,8 @@ func calculate_catch_up_bonus() -> float:
 
 func _on_player_health_depleted() -> void:
 	timer_stopped = true
-	%GameOver.visible = true
 	get_tree().paused = true
-
+	%GameOver.show()
 
 func _on_enemy_spawner_timeout():
 	var total_weight = 0.0

@@ -13,7 +13,7 @@ var enemy_speed = 40
 
 @export var attack_range: float = 250.0
 var can_attack: bool = true
-var current_phase = 2
+var current_phase = 1
 
 enum AttackPattern {
 	SINGLE_SHOT,
@@ -32,6 +32,7 @@ signal enemy_dead(position: Vector2)
 signal phase_changed(phase: int)
 
 func _ready() -> void:
+	add_to_group("enemy")
 	update_phase()
 	setup_health_bar()
 	randomize()
@@ -43,9 +44,7 @@ func _physics_process(_delta: float) -> void:
 	if distance_to_player > attack_range:
 		velocity = direction * enemy_speed
 		move_and_slide()
-		
-		#if velocity.length() > 0:
-		#	%BossSprite.play("walk")
+
 	else:
 		velocity = Vector2.ZERO
 		if can_attack:
@@ -65,7 +64,7 @@ func update_health_display() -> void:
 
 func execute_attack_pattern() -> void:
 	can_attack = false
-	
+	%BossSprite.play("jump")
 	var patterns = phase_patterns[current_phase]
 	var chosen_pattern = patterns[randi() % patterns.size()]
 	

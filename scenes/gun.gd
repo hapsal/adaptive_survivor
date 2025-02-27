@@ -10,7 +10,7 @@ var base_shoot_time: float = 2.0
 var min_shoot_time: float = 0.1 
 var shoot_time_reduction: float = 0.1
 
-@export var targeting_mode: GameEnums.TargetingMode = GameEnums.TargetingMode.AUTO
+@export var targeting_mode: GameEnums.TargetingMode = GameEnums.TargetingMode.MOUSE
 
 func _ready() -> void:
 	add_to_group("gun")
@@ -19,6 +19,7 @@ func _ready() -> void:
 	%ShootTimer.wait_time = base_shoot_time
 	
 	targeting_mode = GameState.targeting_mode
+	GameState.targeting_mode_changed.connect(_on_targeting_mode_changed)
 
 func _physics_process(delta: float) -> void:
 	match targeting_mode:
@@ -26,6 +27,10 @@ func _physics_process(delta: float) -> void:
 			handle_auto_targeting(delta)
 		GameEnums.TargetingMode.MOUSE:
 			handle_mouse_targeting(delta)
+
+func _on_targeting_mode_changed(new_mode: GameEnums.TargetingMode) -> void:
+
+	targeting_mode = new_mode
 
 func handle_auto_targeting(delta: float) -> void:
 	var enemies_in_range = get_overlapping_bodies()
@@ -95,5 +100,4 @@ func _on_game_level_up() -> void:
 	%ShootTimer.start()
 	
 func set_targeting_mode(new_mode: GameEnums.TargetingMode) -> void:
-	print("Changing targeting mode to:", new_mode)
 	targeting_mode = new_mode

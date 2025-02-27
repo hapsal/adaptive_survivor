@@ -6,10 +6,9 @@ signal options_closed
 @onready var music_volume = %MusicVolume
 
 func _ready() -> void:
-	targeting_checkbox.toggled.connect(_on_auto_toggled)
-	targeting_checkbox.button_pressed = (GameState.targeting_mode == GameEnums.TargetingMode.AUTO)
 	music_volume.value = Wwise.get_rtpc_value("MusicVolume", null)
-	
+	targeting_checkbox.set_pressed_no_signal(GameState.targeting_mode == GameEnums.TargetingMode.AUTO)
+
 func _on_back_pressed() -> void:
 	options_closed.emit()
 	hide()
