@@ -63,7 +63,7 @@ func handle_damage(delta: float) -> void:
 		health_depleted.emit()
 
 func take_damage(damage_amount: float) -> void:
-	print("Taking damage: " ,damage_amount)
+	#print("Taking damage: " ,damage_amount)
 	var damage_multiplier = pow(DAMAGE_RESISTANCE_FACTOR, level - 1)
 	var final_damage = damage_amount * damage_multiplier 
 	

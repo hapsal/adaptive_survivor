@@ -2,13 +2,13 @@ extends CharacterBody2D
 
 @onready var player = get_node("/root/Game/Player")
 var damage_popup = preload("res://scenes/damage_popup.tscn")
-var projectile = preload("res://scenes/enemy_projectile.tscn")
+var projectile = preload("res://scenes/boss_projectile.tscn")
 @onready var health_label = %HealthLabel
 
 var rng = RandomNumberGenerator.new()
 
-var health = 1000
-var max_health = 1000
+var health = 10
+var max_health = 10
 var enemy_speed = 10
 
 @export var attack_range: float = 250.0
@@ -30,6 +30,7 @@ var phase_patterns = {
 
 signal enemy_dead(position: Vector2)
 signal phase_changed(phase: int)
+signal boss_defeated
 
 func _ready() -> void:
 	add_to_group("enemy")
@@ -77,10 +78,10 @@ func execute_attack_pattern() -> void:
 			await get_tree().create_timer(3.0, true).timeout
 		AttackPattern.CIRCLE_SHOT:
 			circle_shot()
-			await get_tree().create_timer(4.0, true).timeout
+			await get_tree().create_timer(5.0, true).timeout
 		AttackPattern.SPIRAL_SHOT:
 			spiral_shot()
-			await get_tree().create_timer(5.0, true).timeout
+			await get_tree().create_timer(4.0, true).timeout
 	
 	can_attack = true
 
@@ -112,7 +113,8 @@ func circle_shot() -> void:
 
 func spiral_shot() -> void:
 	for i in range(16):
-		var angle = Vector2.RIGHT.rotated(PI/8 * i)
+		var direction = global_position.direction_to(player.global_position)
+		var angle = direction.rotated(PI/4 * i)
 		shoot_projectile(angle)
 		await get_tree().create_timer(0.1, true).timeout
 
@@ -126,7 +128,7 @@ func shoot_projectile(direction: Vector2) -> void:
 func update_phase() -> void:
 	if health <= max_health * 0.3:
 		current_phase = 3
-		enemy_speed = 60
+		enemy_speed = 100
 		phase_changed.emit(3)
 	elif health <= max_health * 0.6:
 		current_phase = 2
@@ -162,6 +164,7 @@ func take_damage(damage_amount) -> void:
 		hurt_tween.chain().tween_property(%BossSprite, "modulate", Color(1, 1, 1), 0.2)
 	else:
 		enemy_dead.emit(global_position)
+		boss_defeated.emit()
 		await get_tree().create_timer(0.2).timeout
 		popup.queue_free()
 		queue_free()

@@ -266,6 +266,15 @@ func _on_present_picked_up() -> void:
 	var boss = boss_scene.instantiate()
 	boss.global_position = %EnemySpawn.global_position
 	add_child(boss)
+	boss.boss_defeated.connect(_on_boss_defeated)
+
+func _on_boss_defeated() -> void:
+	await get_tree().create_timer(0.2).timeout
+	show_victory_screen()
+
+func show_victory_screen() -> void:
+	get_tree().paused = true
+	%VictoryScreen.show()
 
 func _on_retry_button_pressed() -> void:
 	get_tree().paused = false

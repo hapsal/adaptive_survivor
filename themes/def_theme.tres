@@ -16,7 +16,21 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4krnu"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w66sy"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7wwuc"]
+bg_color = Color(0.027451, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0.952941, 0.541176, 0.439216)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_61u1b"]
 
@@ -60,7 +74,7 @@ Button/styles/hover = SubResource("StyleBoxEmpty_ivxbq")
 Button/styles/hover_mirrored = SubResource("StyleBoxEmpty_50ssc")
 Button/styles/hover_pressed = SubResource("StyleBoxEmpty_cjtup")
 Button/styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_4krnu")
-Button/styles/normal = SubResource("StyleBoxEmpty_w66sy")
+Button/styles/normal = SubResource("StyleBoxFlat_7wwuc")
 Button/styles/normal_mirrored = SubResource("StyleBoxEmpty_61u1b")
 Button/styles/pressed = SubResource("StyleBoxEmpty_i1wta")
 Button/styles/pressed_mirrored = SubResource("StyleBoxEmpty_isbsa")
