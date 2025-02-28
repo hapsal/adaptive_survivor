@@ -24,6 +24,16 @@ radius = 28.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ot76i"]
 bg_color = Color(0.880417, 0, 0.150384, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pyrhl"]
 bg_color = Color(0.6, 0.6, 0.6, 0)

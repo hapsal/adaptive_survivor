@@ -17,12 +17,17 @@ corner_detail = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n4pil"]
 bg_color = Color(0.388235, 0.839216, 0, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
 corner_detail = 4
-shadow_size = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_adm0c"]
 bg_color = Color(0, 0.686275, 0.701961, 0)
@@ -209,9 +214,9 @@ visible = false
 
 [connection signal="level_up" from="." to="Player" method="_on_game_level_up"]
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
-[connection signal="timeout" from="EnemySpawner" to="." method="_on_enemy_spawner_timeout"]
-[connection signal="timeout" from="EnemySpawner" to="." method="_on_ball_spawner_timeout"]
 [connection signal="timeout" from="EnemySpawner" to="." method="_on_spawner_timer_timeout"]
+[connection signal="timeout" from="EnemySpawner" to="." method="_on_ball_spawner_timeout"]
+[connection signal="timeout" from="EnemySpawner" to="." method="_on_enemy_spawner_timeout"]
 [connection signal="pressed" from="GameOver/ColorRect/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
 [connection signal="pressed" from="GameOver/ColorRect/VBoxContainer/QuitToMenuButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="GameOver/ColorRect/VBoxContainer/QuitToMenuButton" to="." method="_on_quit_to_menu_button_pressed"]
