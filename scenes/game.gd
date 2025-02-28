@@ -254,7 +254,7 @@ func spawn_final_present() -> void:
 	var spawn_position = %EnemySpawn.global_position
 	var new_present = present.instantiate()
 	new_present.global_position = spawn_position
-	new_present.experience_value = 1000
+	new_present.experience_value = 10000
 	new_present.picked_up.connect(_on_present_picked_up)
 	call_deferred("add_child", new_present)
 

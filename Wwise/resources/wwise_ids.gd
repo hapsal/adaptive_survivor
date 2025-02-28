@@ -41,6 +41,7 @@ class SWITCHES:
 
 class GAME_PARAMETERS:
 
+	const BOSSHEALTH : int = 131068444
 	const KILLCOUNT : int = 790457970
 	const MUSICVOLUME : int = 2346531308
 	const PLAYERHEALTH : int = 151362964
@@ -84,3 +85,4 @@ class ACOUSTIC_TEXTURES:
 	const WOOD : int = 2058049674
 	const WOOD_BRIGHT : int = 4262522749
 	const WOOD_DEEP : int = 1755085759
+

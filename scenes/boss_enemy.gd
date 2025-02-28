@@ -7,8 +7,8 @@ var projectile = preload("res://scenes/boss_projectile.tscn")
 
 var rng = RandomNumberGenerator.new()
 
-var health = 10
-var max_health = 10
+var health = 1000
+var max_health = 1000
 var enemy_speed = 10
 
 @export var attack_range: float = 250.0
@@ -139,6 +139,7 @@ func take_damage(damage_amount) -> void:
 	health -= damage_amount
 	%HealthBar.value = health
 	update_health_display()
+	Wwise.set_rtpc_value("BossHealth", health, null)
 	
 	var popup = damage_popup.instantiate()
 	popup.text = str(damage_amount)

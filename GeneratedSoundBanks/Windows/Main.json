@@ -10,11 +10,19 @@
     "Type": "User",
     "GUID": "{0E602EA4-FD81-4EB4-9E40-A042FD84D92B}",
     "Language": "SFX",
-    "Hash": "{8C569D3F-6591-2963-2765-D27DD946C180}",
+    "Hash": "{FFAFFC60-F2E9-DB3A-ABA7-8C8204DCDEEB}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
     "Media": [
+     {
+      "Id": "20015107",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SIMPLE MELODY (kick beat) 7-8.wav",
+      "CachePath": "17/{17C218C7-60FD-D16B-DE97-DDCA07017341}.wem"
+     },
      {
       "Id": "74584525",
       "Language": "SFX",
@@ -78,6 +86,14 @@
       "Location": "Memory",
       "ShortName": "MAIN BASS PROG #2_7-8.wav",
       "CachePath": "57/{5733C556-0E92-311D-47FE-CFD3C1200444}.wem"
+     },
+     {
+      "Id": "218717830",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Melody suspension and release 7-8.wav",
+      "CachePath": "D8/{D8DC0F99-18C5-127F-745F-AEDEF058B930}.wem"
      },
      {
       "Id": "252216728",
@@ -344,6 +360,14 @@
       "CachePath": "E8/{E886FCFC-9A77-38D9-3643-388022EE15BE}.wem"
      },
      {
+      "Id": "867783846",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Block_Chords 7-8.wav",
+      "CachePath": "A1/{A13A7F94-9B04-160A-BF9D-9A1FFA4762FD}.wem"
+     },
+     {
       "Id": "872934590",
       "Language": "SFX",
       "Streaming": "false",
@@ -547,6 +571,9 @@
           },
           "MediaRefs": [
            {
+            "Id": "20015107"
+           },
+           {
             "Id": "153911174"
            },
            {
@@ -560,6 +587,9 @@
            },
            {
             "Id": "203632783"
+           },
+           {
+            "Id": "218717830"
            },
            {
             "Id": "252216728"
@@ -608,6 +638,9 @@
            },
            {
             "Id": "680958059"
+           },
+           {
+            "Id": "867783846"
            },
            {
             "Id": "872934590"
@@ -669,6 +702,12 @@
      }
     ],
     "GameParameters": [
+     {
+      "Id": "131068444",
+      "Name": "BossHealth",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\BossHealth",
+      "GUID": "{CFE6D015-E3AD-4951-BA62-80C1B9D755D4}"
+     },
      {
       "Id": "151362964",
       "Name": "PlayerHealth",
@@ -758,6 +797,6 @@
     ]
    }
   ],
-  "FileHash": "{74C9C616-9963-94F2-2430-E422179EDFFE}"
+  "FileHash": "{689FC1E0-DAAA-C246-1C31-8A40BDA68DEA}"
  }
 }

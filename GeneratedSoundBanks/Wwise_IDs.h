@@ -63,6 +63,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID BOSSHEALTH = 131068444U;
         static const AkUniqueID KILLCOUNT = 790457970U;
         static const AkUniqueID MUSICVOLUME = 2346531308U;
         static const AkUniqueID PLAYERHEALTH = 151362964U;

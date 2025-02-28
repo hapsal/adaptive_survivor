@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{C00535F6-A135-21B3-4172-33A271F3229A}",
+    "Hash": "{843C03A8-4D8C-AFF7-D0DB-9014485A914A}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -83,6 +83,12 @@
      }
     ],
     "GameParameters": [
+     {
+      "Id": "131068444",
+      "Name": "BossHealth",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\BossHealth",
+      "GUID": "{CFE6D015-E3AD-4951-BA62-80C1B9D755D4}"
+     },
      {
       "Id": "151362964",
       "Name": "PlayerHealth",
@@ -733,6 +739,6 @@
     ]
    }
   ],
-  "FileHash": "{AF67B1F9-7A83-1002-CD8E-7B9C1C11680E}"
+  "FileHash": "{8F24D78D-5CAD-99F3-8C52-9C3E82FDAA0B}"
  }
 }
