@@ -8,6 +8,7 @@
 radius = 21.0238
 
 [node name="Present" type="Area2D"]
+collision_layer = 2
 script = ExtResource("1_03ft1")
 
 [node name="PickupText" type="Label" parent="."]

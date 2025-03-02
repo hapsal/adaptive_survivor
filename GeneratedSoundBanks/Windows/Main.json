@@ -10,19 +10,11 @@
     "Type": "User",
     "GUID": "{0E602EA4-FD81-4EB4-9E40-A042FD84D92B}",
     "Language": "SFX",
-    "Hash": "{FFAFFC60-F2E9-DB3A-ABA7-8C8204DCDEEB}",
+    "Hash": "{E85F24AD-A34A-4BF7-5F1B-616E49CBCF35}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
     "Media": [
-     {
-      "Id": "20015107",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "SIMPLE MELODY (kick beat) 7-8.wav",
-      "CachePath": "17/{17C218C7-60FD-D16B-DE97-DDCA07017341}.wem"
-     },
      {
       "Id": "74584525",
       "Language": "SFX",
@@ -104,6 +96,14 @@
       "CachePath": "68/{688E2674-6584-CB55-1076-1E2CF66C8127}.wem"
      },
      {
+      "Id": "259900831",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SIMPLE MELODY #10 (merged) (consolidated).wav",
+      "CachePath": "0D/{0D23D7C4-602C-7CB6-DBEA-53BB25D3CF21}.wem"
+     },
+     {
       "Id": "274155727",
       "Language": "SFX",
       "Streaming": "false",
@@ -168,6 +168,14 @@
       "CachePath": "DE/{DE0DF98C-0FA3-3EA3-A88D-11F64D66B8FF}.wem"
      },
      {
+      "Id": "381407576",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "boss_transition reverse.wav",
+      "CachePath": "B5/{B5625E76-67A0-46C0-748B-C7B5DEA1EC88}.wem"
+     },
+     {
       "Id": "389512069",
       "Language": "SFX",
       "Streaming": "false",
@@ -190,6 +198,14 @@
       "Location": "Memory",
       "ShortName": "BASS RUMBLE THANG_remainder.wav",
       "CachePath": "2B/{2B578190-E372-5E98-8D88-C77CA466DB92}.wem"
+     },
+     {
+      "Id": "395447697",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Drone2.wav",
+      "CachePath": "52/{52C9E074-36D0-6F27-25A0-63944A1295DA}.wem"
      },
      {
       "Id": "398405005",
@@ -336,6 +352,14 @@
       "CachePath": "9C/{9C428CA4-DAE3-ADFD-0EE9-31B02124A509}.wem"
      },
      {
+      "Id": "807751036",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "boss_transition.wav",
+      "CachePath": "94/{948CCDD6-037E-3B7B-91AD-2A7A7399CE49}.wem"
+     },
+     {
       "Id": "829784446",
       "Language": "SFX",
       "Streaming": "false",
@@ -368,20 +392,20 @@
       "CachePath": "A1/{A13A7F94-9B04-160A-BF9D-9A1FFA4762FD}.wem"
      },
      {
-      "Id": "872934590",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "MAIN BASS PROG_1_130bpm.wav",
-      "CachePath": "35/{35BA5D22-C0DD-D957-E440-4D407B081B49}.wem"
-     },
-     {
       "Id": "899697410",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "High_Pad_130bpm.wav",
       "CachePath": "74/{7422FCF0-0666-3254-4E1A-DEC351AFE01E}.wem"
+     },
+     {
+      "Id": "953269421",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MAIN BASS PROG #4 (.wav",
+      "CachePath": "BA/{BABB8628-8685-B928-5540-33F4E4249D0B}.wem"
      }
     ],
     "Events": [
@@ -423,6 +447,20 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Music",
       "GUID": "{D46C1225-3091-4D8E-970B-D4BF5F5EFB7C}",
       "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "274155727"
+       },
+       {
+        "Id": "337117695"
+       },
+       {
+        "Id": "680958059"
+       },
+       {
+        "Id": "807751036"
+       }
+      ],
       "AuxBusRefs": [
        {
         "Id": "348963605",
@@ -497,6 +535,9 @@
             "Id": "395398434"
            },
            {
+            "Id": "395447697"
+           },
+           {
             "Id": "398405005"
            },
            {
@@ -545,9 +586,6 @@
             "Id": "838866130"
            },
            {
-            "Id": "872934590"
-           },
-           {
             "Id": "899697410"
            }
           ]
@@ -571,9 +609,6 @@
           },
           "MediaRefs": [
            {
-            "Id": "20015107"
-           },
-           {
             "Id": "153911174"
            },
            {
@@ -595,6 +630,9 @@
             "Id": "252216728"
            },
            {
+            "Id": "259900831"
+           },
+           {
             "Id": "274155727"
            },
            {
@@ -602,6 +640,9 @@
            },
            {
             "Id": "366555021"
+           },
+           {
+            "Id": "381407576"
            },
            {
             "Id": "389512069"
@@ -643,7 +684,7 @@
             "Id": "867783846"
            },
            {
-            "Id": "872934590"
+            "Id": "953269421"
            }
           ]
          }
@@ -797,6 +838,6 @@
     ]
    }
   ],
-  "FileHash": "{689FC1E0-DAAA-C246-1C31-8A40BDA68DEA}"
+  "FileHash": "{74A0F513-23F3-D0CF-DB60-19FE308111CE}"
  }
 }

@@ -18,7 +18,7 @@ var enemies_killed = 0
 var time_multiplier: float = 0.8
 
 var present_spawned = false
-const PRESENT_SPAWN_TIME = 1.0
+const PRESENT_SPAWN_TIME = 120.0
 
 signal level_up
 
@@ -46,11 +46,11 @@ const ENEMY_DATA = {
 		"final_weight": 0.05    
 	},
 	"enemy3": { # Elite
-		"time_requirement": 120,
+		"time_requirement": 80,
 		"experience_value": 45,
 		"initial_weight": 0.5,
-		"mid_weight": 0.8,     
-		"final_weight": 4.5     
+		"mid_weight": 1.0,     
+		"final_weight": 1.5     
 	},
 	"enemy4": {
 		"time_requirement": 50,
@@ -260,7 +260,7 @@ func spawn_final_present() -> void:
 
 func _on_present_picked_up() -> void:
 	Wwise.set_state("MusicState", "Boss")
-	var timer = get_tree().create_timer(2.0)
+	var timer = get_tree().create_timer(20.0)
 	await timer.timeout
 	
 	var boss = boss_scene.instantiate()
