@@ -30,6 +30,11 @@ window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
 
+[gui]
+
+theme/custom="res://themes/def_theme.tres"
+theme/custom_font="res://fonts/Early GameBoy.ttf"
+
 [input]
 
 move_left={

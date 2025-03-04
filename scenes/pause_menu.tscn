@@ -1,12 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs4kvlnlgg67t"]
+[gd_scene load_steps=6 format=3 uid="uid://bs4kvlnlgg67t"]
 
 [ext_resource type="Theme" uid="uid://bvuyyxstk13dj" path="res://themes/def_theme.tres" id="1_ps3m2"]
 [ext_resource type="Script" path="res://scenes/pause_menu.gd" id="2_yfcs6"]
 [ext_resource type="PackedScene" uid="uid://dwyimh8jdu4kb" path="res://scenes/options.tscn" id="3_0itrl"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51gph"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k8l34"]
 
 [node name="PauseMenu" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,17 +25,16 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_51gph")
 
-[node name="PauseList" type="VBoxContainer" parent="MarginContainer"]
+[node name="PauseList" type="VBoxContainer" parent="PanelContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -39,33 +42,33 @@ size_flags_vertical = 4
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Label" type="Label" parent="MarginContainer/PauseList"]
+[node name="Label" type="Label" parent="PanelContainer/PauseList"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 22
 text = "Paused"
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/PauseList"]
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/PauseList"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_k8l34")
 
-[node name="Resume_Button" type="Button" parent="MarginContainer/PauseList"]
+[node name="Resume_Button" type="Button" parent="PanelContainer/PauseList"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Resume"
 
-[node name="Options_Button" type="Button" parent="MarginContainer/PauseList"]
+[node name="Options_Button" type="Button" parent="PanelContainer/PauseList"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Options"
 
-[node name="Quit_Button" type="Button" parent="MarginContainer/PauseList"]
+[node name="Quit_Button" type="Button" parent="PanelContainer/PauseList"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Quit to Menu"
 
-[connection signal="pressed" from="MarginContainer/PauseList/Resume_Button" to="." method="_on_resume_button_pressed"]
-[connection signal="pressed" from="MarginContainer/PauseList/Options_Button" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="MarginContainer/PauseList/Quit_Button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="PanelContainer/PauseList/Resume_Button" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PanelContainer/PauseList/Options_Button" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="PanelContainer/PauseList/Quit_Button" to="." method="_on_quit_button_pressed"]

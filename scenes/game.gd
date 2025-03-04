@@ -18,7 +18,7 @@ var enemies_killed = 0
 var time_multiplier: float = 0.8
 
 var present_spawned = false
-const PRESENT_SPAWN_TIME = 120.0
+const PRESENT_SPAWN_TIME = 10.0
 
 signal level_up
 
@@ -72,8 +72,6 @@ const ENEMY_DATA = {
 @onready var present = preload("res://scenes/present.tscn")
 @onready var boss_scene = preload("res://scenes/boss_enemy.tscn")
 @onready var spawn_timer = %EnemySpawner
-@onready var pause_menu = %PauseMenu
-
 
 func _ready() -> void:
 	update_xp_requirement()
