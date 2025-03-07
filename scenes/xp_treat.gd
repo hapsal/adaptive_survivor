@@ -9,6 +9,7 @@ var player: Node2D = null
 func _ready() -> void:
 	position += Vector2(randf_range(-10, 10), randf_range(-10, 10))
 	%Treat.play("bounce")
+	add_to_group("xp_treats")
 
 func _physics_process(delta: float) -> void:
 	if is_moving_to_player and player:

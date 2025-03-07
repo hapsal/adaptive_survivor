@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var player = get_node("/root/Game/Player")
 var damage_popup = preload("res://scenes/damage_popup.tscn")
 var enemy_speed = 5
-var health = 50
+var health = 40
 
 @export var attack_range: float = 200.0
 @export var attack_cooldown: float = 2.0

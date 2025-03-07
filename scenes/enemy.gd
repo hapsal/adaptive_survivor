@@ -3,9 +3,6 @@ extends CharacterBody2D
 @onready var player = get_node("/root/Game/Player")
 var damage_popup = preload("res://scenes/damage_popup.tscn")
 
-const BASE_HEALTH: float = 1.0
-const HEALTH_SCALE_FACTOR: float = 1.85
-
 var enemy_speed = 20
 var health: float = 1.0
 
