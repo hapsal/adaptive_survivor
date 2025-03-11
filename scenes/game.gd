@@ -20,7 +20,7 @@ var last_elite_spawn_time = -15.0
 var time_multiplier: float = 0.8
 
 var present_spawned = false
-const PRESENT_SPAWN_TIME = 140.0
+const PRESENT_SPAWN_TIME = 0.0
 
 signal level_up
 
@@ -44,8 +44,8 @@ const ENEMY_DATA = {
 		"time_requirement": 30,
 		"experience_value": 10,
 		"initial_weight": 0.0,
-		"mid_weight": 1.0,      
-		"final_weight": 0.5    
+		"mid_weight": 0.8,      
+		"final_weight": 0.1    
 	},
 	"enemy3": { # Elite
 		"time_requirement": 60,
@@ -270,7 +270,8 @@ func _on_present_picked_up() -> void:
 	boss.boss_defeated.connect(_on_boss_defeated)
 
 func _on_boss_defeated() -> void:
-	await get_tree().create_timer(0.2).timeout
+	Wwise.set_rtpc_value("PlayerHealth", 100, null)
+	Wwise.set_state("BossState", "Defeated")
 	show_victory_screen()
 
 func show_victory_screen() -> void:

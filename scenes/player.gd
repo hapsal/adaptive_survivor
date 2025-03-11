@@ -70,6 +70,8 @@ func take_damage(damage_amount: float) -> void:
 	current_health -= final_damage
 	%HealthBar.value = current_health
 	
+	Wwise.set_rtpc_value("PlayerHealth", current_health, null)
+	
 	if current_health <= 0.0:
 		Wwise.set_state("PlayerLife", "Defeated")
 		health_depleted.emit()

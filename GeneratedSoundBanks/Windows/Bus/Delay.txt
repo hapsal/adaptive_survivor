@@ -1,0 +1,6 @@
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	357718954	Delay			\Default Work Unit\Master Audio Bus\Delay	
+
+Effect plug-ins	ID	Name	Type				Notes
+	2180422931	One_Tap_Quarter_Second	Wwise Delay			
+

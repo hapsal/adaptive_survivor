@@ -22,6 +22,17 @@ namespace AK
 
     namespace STATES
     {
+        namespace BOSSSTATE
+        {
+            static const AkUniqueID GROUP = 3011728793U;
+
+            namespace STATE
+            {
+                static const AkUniqueID DEFEATED = 2791675679U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace BOSSSTATE
+
         namespace ENEMYTYPES
         {
             static const AkUniqueID GROUP = 520339718U;
@@ -98,6 +109,7 @@ namespace AK
 
     namespace AUX_BUSSES
     {
+        static const AkUniqueID DELAY = 357718954U;
         static const AkUniqueID REVERB = 348963605U;
     } // namespace AUX_BUSSES
 

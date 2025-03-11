@@ -2,6 +2,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 	444815956	PlayerLife			\Default Work Unit\PlayerLife	
 	520339718	EnemyTypes			\Default Work Unit\EnemyTypes	
 	1021618141	MusicState			\Default Work Unit\MusicState	
+	3011728793	BossState			\Default Work Unit\BossState	
 
 State	ID	Name	State Group			Notes
 	655265632	Alive	PlayerLife			
@@ -14,6 +15,8 @@ State	ID	Name	State Group			Notes
 	1560169506	Boss	MusicState			
 	2607556080	Menu	MusicState			
 	2764240573	Combat	MusicState			
+	748895195	None	BossState			
+	2791675679	Defeated	BossState			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	
@@ -36,10 +39,12 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	348963605	Reverb			\Default Work Unit\Master Audio Bus\Reverb	
+	357718954	Delay			\Default Work Unit\Master Audio Bus\Delay	
 
 Effect plug-ins	ID	Name	Type				Notes
 	418265525	Gentle_Program_Compressor_Minus_14dB_RMS	Wwise Compressor			
 	1990128658	Room_Medium	Wwise RoomVerb			
+	2180422931	One_Tap_Quarter_Second	Wwise Delay			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

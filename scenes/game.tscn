@@ -203,7 +203,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="VictoryScreen" parent="CanvasLayer" instance=ExtResource("6_qvh2p")]
 unique_name_in_owner = true

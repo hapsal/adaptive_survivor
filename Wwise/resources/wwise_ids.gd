@@ -10,6 +10,13 @@ class EVENTS:
 
 class STATES:
 
+	class BOSSSTATE:
+		const GROUP : int = 3011728793
+	
+		class STATE:
+			const DEFEATED : int = 2791675679
+			const NONE : int = 748895195
+
 	class ENEMYTYPES:
 		const GROUP : int = 520339718
 	
@@ -67,6 +74,7 @@ class BANKS:
 
 class AUX_BUSSES:
 
+	const DELAY : int = 357718954
 	const REVERB : int = 348963605
 
 class ACOUSTIC_TEXTURES:
@@ -85,3 +93,4 @@ class ACOUSTIC_TEXTURES:
 	const WOOD : int = 2058049674
 	const WOOD_BRIGHT : int = 4262522749
 	const WOOD_DEEP : int = 1755085759
+

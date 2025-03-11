@@ -9,6 +9,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 	444815956	PlayerLife			\Default Work Unit\PlayerLife	
 	520339718	EnemyTypes			\Default Work Unit\EnemyTypes	
 	1021618141	MusicState			\Default Work Unit\MusicState	
+	3011728793	BossState			\Default Work Unit\BossState	
 
 State	ID	Name	State Group			Notes
 	655265632	Alive	PlayerLife			
@@ -21,6 +22,8 @@ State	ID	Name	State Group			Notes
 	1560169506	Boss	MusicState			
 	2607556080	Menu	MusicState			
 	2764240573	Combat	MusicState			
+	748895195	None	BossState			
+	2791675679	Defeated	BossState			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	131068444	BossHealth			\Default Work Unit\BossHealth	
@@ -30,7 +33,6 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 
 Modulator LFO	ID	Name			Wwise Object Path	Notes
 	213155204	Modulator LFO (Custom)				
-	348258710	Modulator LFO (Custom)				
 	822690407	Modulator LFO (Custom)				
 
 Trigger	ID	Name			Wwise Object Path	Notes
@@ -47,11 +49,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	203632783	MAIN BASS PROG #2_7-8	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\57\{5733C556-0E92-311D-47FE-CFD3C1200444}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Boss\Verse2\MAIN BASS PROG #2_7-8		1139976
 	218717830	Melody suspension and release 7-8	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\D8\{D8DC0F99-18C5-127F-745F-AEDEF058B930}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Boss\Verse2\Melody suspension and release 7-8		2279792
 	252216728	Pad_Transition	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\68\{688E2674-6584-CB55-1076-1E2CF66C8127}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Bridge\Pad_Transition		325756
+	255456676	Melody_R	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\55\{5523B687-6D9D-BC03-90A1-097AA9A2D0C3}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Chorus\Melody_R		2605388
 	259900831	SIMPLE MELODY #10 (merged) (consolidated)	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\0D\{0D23D7C4-602C-7CB6-DBEA-53BB25D3CF21}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Boss\Start\SIMPLE MELODY #10 (merged) (consolidated)		4559452
 	274155727	KICK #2_7-8	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\C9\{C97A8579-A00E-FB84-B984-C83E5CBE417B}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Boss\Start\KICK #2_7-8		1139976
 	294574773	RHYTM CHORDS_1	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\A8\{A83ACB6A-43F8-A1F8-E925-B16AA009A843}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Chorus\RHYTM CHORDS_1		1302744
 	304362533	RHYTM CHORDS_1	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\24\{2421E33C-3B75-85A7-837B-03D1BA2360CE}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Chorus\RHYTM CHORDS_1		2605452
 	324823548	Sub_Chorus	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\29\{29DEA046-2899-853E-933B-3E30CEC579D8}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Chorus\Sub_Chorus		2605388
+	326025217	Melody_L	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\D0\{D0DD0E48-CDAF-CCE3-4445-B909183EEB79}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Chorus\Melody_L		2605388
 	327775708	COUNTER MELODY	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\61\{61787E78-2D36-C62B-9E2C-31B8E9341EB0}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Chorus\COUNTER MELODY		1302744
 	337117695	Crash_Transition	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\D7\{D79E5C75-9458-A35C-B0B4-E41750C76A0E}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Boss\Verse2\Crash_Transition		651420
 	366247412	Simple Melody_1_130bpm	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\C5\{C50F148C-7BC7-75D6-7E8B-0597668A1A71}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Verse\Simple Melody_1_130bpm		1302744
@@ -67,12 +71,12 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	435504794	Crash	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\D4\{D4910105-2E38-5C77-3437-965C7EEA41E2}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Chorus\Crash		651420
 	435678477	Kick_4-4_130bpm	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\75\{75867F8F-ED91-5176-1139-C7B0652459F3}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Boss\Verse\Kick_4-4_130bpm		325756
 	437233209	BLOCK CHORDS	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\F1\{F1E55B3A-89A5-9503-2667-0517E8D0FB76}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Verse\BLOCK CHORDS		2605436
-	547763391	Pulsing	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\B2\{B243163F-6B3E-459D-411A-19BE186B1BB0}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Chorus\Pulsing		1139976
+	547763391	Pulsing	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\B2\{B243163F-6B3E-459D-411A-19BE186B1BB0}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Boss\Verse2\Pulsing		1139976
 	548314693	Intro Bass_130pbm	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\4A\{4A2802C6-240F-4100-F372-C8AD3C97A6EE}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Intro\Intro Bass_130pbm		1302744
 	549068336	Arp_1	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\A0\{A0B1A2EC-D304-8F2C-6DE5-A755D73566AE}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Bridge\Arp_1		2605388
 	582465895	Hit2	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\46\{460D01E9-5C4C-ED67-DEE0-05D755D1EE1F}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hit2		172704
 	594028830	COUNTER MELODY	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\68\{6886CA87-2E84-C510-5502-51E34F2EFE42}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Chorus\COUNTER MELODY		1302744
-	609155587	SIMPLE MELODY #2_7-8	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\C6\{C6E4EC0E-5A7A-0E89-29E9-D0F939DEB241}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Boss\Verse2\SIMPLE MELODY #2_7-8		2279792
+	609155587	SIMPLE MELODY #2_7-8	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\C6\{C6E4EC0E-5A7A-0E89-29E9-D0F939DEB241}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Boss\Verse\SIMPLE MELODY #2_7-8		2279792
 	616204461	Melody2_Bridge_130bpm	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\95\{95A98B71-810C-BB4A-A048-7B3D14B76920}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Chorus\Melody2_Bridge_130bpm		2605388
 	631560474	Melody1_Bridge_130bpm	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\7A\{7AFC503B-6703-F587-CB15-9F9C1364BBDE}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Bridge\Melody1_Bridge_130bpm		2605436
 	651469519	HIHAT #3_7-8	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\30\{30653C31-CB94-1A06-E824-1642C29C1966}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Boss\Verse2\HIHAT #3_7-8		1139976
@@ -80,9 +84,11 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	680958059	Sub_7-8	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\E9\{E985E934-6189-D47F-9E84-BD1C937FB94F}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Boss\Verse2\Sub_7-8		1139976
 	693763053	Simple Melody_1_130bpm	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\9C\{9C428CA4-DAE3-ADFD-0EE9-31B02124A509}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Verse\Simple Melody_1_130bpm		1302744
 	807751036	boss_transition	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\94\{948CCDD6-037E-3B7B-91AD-2A7A7399CE49}.wem		\Interactive Music Hierarchy\Default Work Unit\Loops\boss_transition\boss_transition		4559356
+	809870411	Crash_4x4	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\AD\{AD67DC7C-4370-D336-8199-E31077B688C7}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Chorus\Crash_4x4		325756
 	829784446	PERCS	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\E2\{E2068276-9676-35FD-4ABF-0840FF56144E}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Chorus\PERCS		325804
 	832027755	MAIN BASS PROG_Chorus_130pbm	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\C7\{C7315A56-469A-3657-4799-C6B2E5660B42}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Chorus\MAIN BASS PROG_Chorus_130pbm		2605388
 	838866130	Melody2_Bridge_130bpm	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\E8\{E886FCFC-9A77-38D9-3643-388022EE15BE}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Chorus\Melody2_Bridge_130bpm		2605388
+	864256416	Victory	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\23\{23AF9B69-9D54-824B-6FD4-A9AACFC6801D}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Victory\Victory\Victory		1628404
 	867783846	RHYTM CHORDS #2_7-8	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\A1\{A13A7F94-9B04-160A-BF9D-9A1FFA4762FD}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Boss\Verse2\RHYTM CHORDS #2_7-8		2279792
 	899697410	MID PAD	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\74\{7422FCF0-0666-3254-4E1A-DEC351AFE01E}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Music\Chorus\MID PAD		1302744
 	953269421	MAIN BASS PROG #2_7-8	C:\Users\hannu\Documents\WwiseProjects\adaptive_survivor\.cache\BA\{BABB8628-8685-B928-5540-33F4E4249D0B}.wem		\Interactive Music Hierarchy\Default Work Unit\Adaptive Music\Boss\Start\MAIN BASS PROG #2_7-8		4559452

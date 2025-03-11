@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{843C03A8-4D8C-AFF7-D0DB-9014485A914A}",
+    "Hash": "{AAC6F36D-F47F-8AE9-F966-35E1CADF8605}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -31,6 +31,14 @@
        "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
+      },
+      {
+       "Id": "2180422931",
+       "Name": "One_Tap_Quarter_Second",
+       "ObjectPath": "\\Effects\\Factory Effects\\Delay\\One_Tap_Quarter_Second",
+       "GUID": "{6BD2D67D-601A-45A6-AD4C-2C089078EBED}",
+       "LibName": "Wwise Delay",
+       "LibId": "6946819"
       }
      ],
      "AudioDevices": [
@@ -77,6 +85,19 @@
        "ShareSets": [
         {
          "Id": "1990128658"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "357718954",
+      "Name": "Delay",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Delay",
+      "GUID": "{C0B24D57-72C5-44E7-BDE6-A76376ABB0C9}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2180422931"
         }
        ]
       }
@@ -256,6 +277,26 @@
         "Name": "Combat",
         "ObjectPath": "\\States\\Default Work Unit\\MusicState\\Combat",
         "GUID": "{0EB934BE-2DAC-47C4-A812-F2164FB1AD17}"
+       }
+      ]
+     },
+     {
+      "Id": "3011728793",
+      "Name": "BossState",
+      "ObjectPath": "\\States\\Default Work Unit\\BossState",
+      "GUID": "{1E21DD13-4EB6-4056-9069-94D87DEF67B3}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\BossState\\None",
+        "GUID": "{68EE6E73-86E1-4DB3-8E13-9C8266E49883}"
+       },
+       {
+        "Id": "2791675679",
+        "Name": "Defeated",
+        "ObjectPath": "\\States\\Default Work Unit\\BossState\\Defeated",
+        "GUID": "{3907B264-33B3-4920-972E-6453E8504AAE}"
        }
       ]
      }
@@ -739,6 +780,6 @@
     ]
    }
   ],
-  "FileHash": "{8F24D78D-5CAD-99F3-8C52-9C3E82FDAA0B}"
+  "FileHash": "{A4583B7F-8B0C-7D27-C503-8496D3EA0D27}"
  }
 }
