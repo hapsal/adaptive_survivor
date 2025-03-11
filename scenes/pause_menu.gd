@@ -38,6 +38,7 @@ func _on_resume_button_pressed() -> void:
 func _on_options_button_pressed() -> void:
 	%PauseList.hide()
 	%Options.show()
+	%Options.move_to_front()
 	
 func _on_options_closed() -> void:
 	%Options.hide()

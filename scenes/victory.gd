@@ -1,14 +1,11 @@
-extends CanvasLayer
+extends Control
 
 
 func _ready() -> void:
-	pass # Replace with function body.
+	process_mode = Node.PROCESS_MODE_ALWAYS
 
 func _on_menu_button_pressed() -> void:
-	Wwise.post_event("Stop_Adaptive_Music", self)
-	
-	await get_tree().create_timer(1, true).timeout
-	
+	Wwise.post_event("Stop_Adaptive_Music", self)	
 	Wwise.set_state("PlayerLife", "Defeated")
 	Wwise.set_state("MusicState", "Menu")
 	Wwise.set_rtpc_value("PlayerHealth", 100, self)

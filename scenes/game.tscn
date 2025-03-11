@@ -67,31 +67,11 @@ color = Color(0.732872, 0.799153, 1, 1)
 energy = 0.2
 blend_mode = 1
 
-[node name="VictoryScreen" parent="." instance=ExtResource("6_qvh2p")]
-unique_name_in_owner = true
-visible = false
-
 [node name="GameOver" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
 process_mode = 3
-visible = false
 
-[node name="ColorRect" type="ColorRect" parent="GameOver"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -246.0
-offset_top = -161.0
-offset_right = 246.0
-offset_bottom = 161.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.568627)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="GameOver/ColorRect"]
-layout_mode = 1
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOver"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -106,21 +86,21 @@ grow_vertical = 2
 theme = ExtResource("6_i0e42")
 theme_override_constants/separation = 30
 
-[node name="Label" type="Label" parent="GameOver/ColorRect/VBoxContainer"]
+[node name="Label" type="Label" parent="GameOver/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "Game Over"
 
-[node name="RetryButton" type="Button" parent="GameOver/ColorRect/VBoxContainer"]
+[node name="RetryButton" type="Button" parent="GameOver/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Retry"
 
-[node name="QuitToMenuButton" type="Button" parent="GameOver/ColorRect/VBoxContainer"]
+[node name="QuitToMenuButton" type="Button" parent="GameOver/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -219,23 +199,19 @@ metadata/_edit_use_anchors_ = true
 
 [node name="PauseMenu" parent="Pause" instance=ExtResource("4_d0x7a")]
 unique_name_in_owner = true
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 320.0
-offset_top = 180.0
-offset_right = 320.0
-offset_bottom = 180.0
-grow_horizontal = 1
-grow_vertical = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="VictoryScreen" parent="CanvasLayer" instance=ExtResource("6_qvh2p")]
+unique_name_in_owner = true
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [connection signal="level_up" from="." to="Player" method="_on_game_level_up"]
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="EnemySpawner" to="." method="_on_enemy_spawner_timeout"]
-[connection signal="timeout" from="EnemySpawner" to="." method="_on_ball_spawner_timeout"]
-[connection signal="timeout" from="EnemySpawner" to="." method="_on_spawner_timer_timeout"]
-[connection signal="pressed" from="GameOver/ColorRect/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
-[connection signal="pressed" from="GameOver/ColorRect/VBoxContainer/QuitToMenuButton" to="." method="_on_quit_to_menu_button_pressed"]
-[connection signal="pressed" from="GameOver/ColorRect/VBoxContainer/QuitToMenuButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="GameOver/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="GameOver/VBoxContainer/QuitToMenuButton" to="." method="_on_quit_to_menu_button_pressed"]
