@@ -42,9 +42,9 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	357718954	Delay			\Default Work Unit\Master Audio Bus\Delay	
 
 Effect plug-ins	ID	Name	Type				Notes
-	418265525	Gentle_Program_Compressor_Minus_14dB_RMS	Wwise Compressor			
 	1990128658	Room_Medium	Wwise RoomVerb			
 	2180422931	One_Tap_Quarter_Second	Wwise Delay			
+	2755291684	Pumping_and_Breathing_1	Wwise Compressor			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

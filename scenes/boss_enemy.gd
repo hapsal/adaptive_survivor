@@ -7,8 +7,8 @@ var projectile = preload("res://scenes/boss_projectile.tscn")
 
 var rng = RandomNumberGenerator.new()
 
-var health = 1000
-var max_health = 1000
+var health = 1250
+var max_health = 1250
 var enemy_speed = 50
 
 @export var attack_range: float = 250.0

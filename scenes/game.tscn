@@ -9,9 +9,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_gon1p"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -836.062, -614.843, 0, 0, 0, 0, 464.572, -588.219, 0, 0, 0, 0, 1291.35, -594.363, 0, 0, 0, 0, 1268.85, 727.956, 0, 0, 0, 0, -798.391, 722.512, 0, 0, 0, 0, -822.183, -625.083)
+"points": PackedVector2Array(0, 0, 0, 0, -438.775, -534.88, 0, 0, 0, 0, 441.24, -523.011, 0, 0, 0, 0, 469.007, -518.264, 0, 0, 0, 0, 951.734, -518.264, 0, 0, 0, 0, 951.734, 637.753, 0, 0, 0, 0, -464.406, 614.016, 0, 0, 0, 0, -470.814, -539.628)
 }
-point_count = 6
+point_count = 7
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l7cpf"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -55,8 +55,8 @@ curve = SubResource("Curve2D_gon1p")
 
 [node name="EnemySpawn" type="PathFollow2D" parent="Player/Path2D"]
 unique_name_in_owner = true
-position = Vector2(-836.062, -614.843)
-rotation = 0.0204672
+position = Vector2(-438.775, -534.88)
+rotation = 0.0134865
 
 [node name="EnemySpawner" type="Timer" parent="."]
 unique_name_in_owner = true

@@ -10,20 +10,12 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{AAC6F36D-F47F-8AE9-F966-35E1CADF8605}",
+    "Hash": "{0A2926AF-4689-9310-1462-96B9E936DF2D}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
      "ShareSets": [
-      {
-       "Id": "418265525",
-       "Name": "Gentle_Program_Compressor_Minus_14dB_RMS",
-       "ObjectPath": "\\Effects\\Factory Effects\\Compressor\\Gentle_Program_Compressor_Minus_14dB_RMS",
-       "GUID": "{1595E6B0-DD58-4363-A3F0-DF0C96EC7C17}",
-       "LibName": "Wwise Compressor",
-       "LibId": "7077891"
-      },
       {
        "Id": "1990128658",
        "Name": "Room_Medium",
@@ -39,6 +31,14 @@
        "GUID": "{6BD2D67D-601A-45A6-AD4C-2C089078EBED}",
        "LibName": "Wwise Delay",
        "LibId": "6946819"
+      },
+      {
+       "Id": "2755291684",
+       "Name": "Pumping_and_Breathing_1",
+       "ObjectPath": "\\Effects\\Factory Effects\\Compressor\\Pumping_and_Breathing_1",
+       "GUID": "{87BE3270-3D27-45BB-9E46-7F2D9380F523}",
+       "LibName": "Wwise Compressor",
+       "LibId": "7077891"
       }
      ],
      "AudioDevices": [
@@ -69,7 +69,7 @@
       "PluginRefs": {
        "ShareSets": [
         {
-         "Id": "418265525"
+         "Id": "2755291684"
         }
        ]
       }
@@ -780,6 +780,6 @@
     ]
    }
   ],
-  "FileHash": "{A4583B7F-8B0C-7D27-C503-8496D3EA0D27}"
+  "FileHash": "{44412E2C-6E94-AB4A-9CDE-041CCB43B6B8}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{0E602EA4-FD81-4EB4-9E40-A042FD84D92B}",
     "Language": "SFX",
-    "Hash": "{B1D17684-1D5C-F9B3-6F3D-DE14FB6D6042}",
+    "Hash": "{49112DFF-08D3-2736-6EF9-F1AA3357E30B}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -30,6 +30,14 @@
       "Location": "Memory",
       "ShortName": "Intro Bass2_130pbm.wav",
       "CachePath": "64/{6481EEAE-4C43-D8C0-6B1C-BD1CF992BF2E}.wem"
+     },
+     {
+      "Id": "100383622",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MAIN BASS PROG #5 (consolidated)_2.wav",
+      "CachePath": "0D/{0D79FB59-09E5-5635-3F49-D29DDA4D80F3}.wem"
      },
      {
       "Id": "132022467",
@@ -118,14 +126,6 @@
       "Location": "Memory",
       "ShortName": "KICK #2_7-8.wav",
       "CachePath": "C9/{C97A8579-A00E-FB84-B984-C83E5CBE417B}.wem"
-     },
-     {
-      "Id": "294574773",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "RHYTM CHORDS #3_4-4.wav",
-      "CachePath": "A8/{A83ACB6A-43F8-A1F8-E925-B16AA009A843}.wem"
      },
      {
       "Id": "304362533",
@@ -272,6 +272,14 @@
       "CachePath": "F1/{F1E55B3A-89A5-9503-2667-0517E8D0FB76}.wem"
      },
      {
+      "Id": "469004218",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MAIN BASS PROG #5 (consolidated).wav",
+      "CachePath": "F6/{F60D48C1-559F-BBEF-3FA1-8CA12DD12C4C}.wem"
+     },
+     {
       "Id": "547763391",
       "Language": "SFX",
       "Streaming": "false",
@@ -310,6 +318,14 @@
       "Location": "Memory",
       "ShortName": "COUNTER MELODY.wav",
       "CachePath": "68/{6886CA87-2E84-C510-5502-51E34F2EFE42}.wem"
+     },
+     {
+      "Id": "603933569",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Melody_Verbed.wav",
+      "CachePath": "63/{63B000F6-9826-1FD3-CF46-4C7545465335}.wem"
      },
      {
       "Id": "609155587",
@@ -438,8 +454,28 @@
       "Location": "Memory",
       "ShortName": "MAIN BASS PROG #4 (.wav",
       "CachePath": "BA/{BABB8628-8685-B928-5540-33F4E4249D0B}.wem"
+     },
+     {
+      "Id": "1062349376",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Melody_Variation.wav",
+      "CachePath": "50/{50A5CA2E-0FDC-1CEE-6136-04AEF1B81404}.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1125262053",
+       "Name": "Blue_Distant_Echoes",
+       "ObjectPath": "\\Effects\\Factory Effects\\Stereo Delay\\Blue_Distant_Echoes",
+       "GUID": "{ABFA9875-521E-451F-AAB9-AB148847B9C0}",
+       "LibName": "Wwise Stereo Delay",
+       "LibId": "8847363"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1116398592",
@@ -536,6 +572,9 @@
               "Id": "94988520"
              },
              {
+              "Id": "100383622"
+             },
+             {
               "Id": "132022467"
              },
              {
@@ -552,9 +591,6 @@
              },
              {
               "Id": "255456676"
-             },
-             {
-              "Id": "294574773"
              },
              {
               "Id": "304362533"
@@ -602,6 +638,9 @@
               "Id": "437233209"
              },
              {
+              "Id": "469004218"
+             },
+             {
               "Id": "547763391"
              },
              {
@@ -612,6 +651,9 @@
              },
              {
               "Id": "594028830"
+             },
+             {
+              "Id": "603933569"
              },
              {
               "Id": "616204461"
@@ -639,6 +681,9 @@
              },
              {
               "Id": "899697410"
+             },
+             {
+              "Id": "1062349376"
              }
             ]
            }
@@ -716,7 +761,7 @@
               "Id": "389512069"
              },
              {
-              "Id": "395398434"
+              "Id": "398405005"
              },
              {
               "Id": "433290577"
@@ -754,7 +799,14 @@
              {
               "Id": "953269421"
              }
-            ]
+            ],
+            "PluginRefs": {
+             "ShareSets": [
+              {
+               "Id": "1125262053"
+              }
+             ]
+            }
            }
           ]
          }
@@ -823,6 +875,9 @@
              "GUID": "{3907B264-33B3-4920-972E-6453E8504AAE}"
             },
             "MediaRefs": [
+             {
+              "Id": "435504794"
+             },
              {
               "Id": "864256416"
              }
@@ -971,6 +1026,6 @@
     ]
    }
   ],
-  "FileHash": "{9D08BE76-0F5B-2222-6660-30343A11795F}"
+  "FileHash": "{8D262814-20D2-8E39-383B-D28F378DBCD6}"
  }
 }

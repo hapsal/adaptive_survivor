@@ -20,7 +20,7 @@ var last_elite_spawn_time = -15.0
 var time_multiplier: float = 0.8
 
 var present_spawned = false
-const PRESENT_SPAWN_TIME = 0.0
+const PRESENT_SPAWN_TIME = 120.0
 
 signal level_up
 
@@ -36,12 +36,12 @@ const ENEMY_DATA = {
 	"enemy1": {
 		"time_requirement": 0,
 		"experience_value": 5,
-		"initial_weight": 1.0,
-		"mid_weight": 0.6,      
-		"final_weight": 0.3   
+		"initial_weight": 5.0,
+		"mid_weight": 0.8,      
+		"final_weight": 0.4  
 	},
 	"enemy2": {
-		"time_requirement": 30,
+		"time_requirement": 20,
 		"experience_value": 10,
 		"initial_weight": 0.0,
 		"mid_weight": 0.8,      
@@ -51,21 +51,21 @@ const ENEMY_DATA = {
 		"time_requirement": 60,
 		"experience_value": 45,
 		"initial_weight": 0.0,
-		"mid_weight": 0.3,     
+		"mid_weight": 0.4,    
 		"final_weight": 0.1    
 	},
 	"enemy4": {
-		"time_requirement": 40,
+		"time_requirement": 30,
 		"experience_value": 10,
 		"initial_weight": 0.0,
-		"mid_weight": 0.7,     
+		"mid_weight": 0.4,     
 		"final_weight": 0.2    
 	},
 	"enemy5": {
-		"time_requirement": 40,
+		"time_requirement": 30,
 		"experience_value": 15,
 		"initial_weight": 0.0,
-		"mid_weight": 0.4,      
+		"mid_weight": 0.3,      
 		"final_weight": 0.2
 	}
 }
@@ -151,8 +151,8 @@ func spawn_enemy(enemy_type: String) -> void:
 func calculate_spawn_chance(enemy_type: String) -> float:
 	var enemy_data = ENEMY_DATA[enemy_type]
 	
-	const EARLY_GAME = 45.0
-	const MID_GAME = 90.0
+	const EARLY_GAME = 30.0
+	const MID_GAME = 60.0
 	
 	var phase_progress: float
 	
@@ -248,7 +248,7 @@ func spawn_final_present() -> void:
 	var spawn_position = %EnemySpawn.global_position
 	var new_present = present.instantiate()
 	new_present.global_position = spawn_position
-	new_present.experience_value = 5000
+	new_present.experience_value = 3000
 	new_present.picked_up.connect(_on_present_picked_up)
 	call_deferred("add_child", new_present)
 
@@ -260,7 +260,9 @@ func _on_present_picked_up() -> void:
 	
 	for treat in xp_treats:
 		treat.start_moving_to_player(player)
-		
+	
+	player.heal(100)
+	
 	var timer = get_tree().create_timer(20.0)
 	await timer.timeout
 	
@@ -271,10 +273,10 @@ func _on_present_picked_up() -> void:
 
 func _on_boss_defeated() -> void:
 	Wwise.set_rtpc_value("PlayerHealth", 100, null)
-	Wwise.set_state("BossState", "Defeated")
 	show_victory_screen()
 
 func show_victory_screen() -> void:
+	Wwise.set_state("BossState", "Defeated")
 	timer_stopped = true
 	get_tree().paused = true
 	%VictoryScreen.show()

@@ -25,6 +25,13 @@
     "StaticLib": "AkRoomVerbFX"
    },
    {
+    "LibName": "Wwise Stereo Delay",
+    "LibId": "8847363",
+    "Type": "Effect",
+    "DLL": "AkStereoDelay",
+    "StaticLib": "AkStereoDelayFX"
+   },
+   {
     "LibName": "System",
     "LibId": "11403271",
     "Type": "AudioDevice"
@@ -35,6 +42,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{F69E19C6-AA93-8E0E-B0CE-3CE56AF134EF}"
+  "FileHash": "{757E871E-D78F-2E43-FFF1-333F408CBEE6}"
  }
 }
